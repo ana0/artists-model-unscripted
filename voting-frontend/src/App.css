@@ -1,0 +1,222 @@
+.App {
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: start;
+  }
+  .header p {
+    margin-bottom: 5px;
+  }
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.background-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  background: rgba(0, 0, 0, 0.5); /* Adjust the opacity and color as needed */
+  pointer-events: none; /* Ensure the overlay does not interfere with interactions */
+}
+
+.container {
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+}
+
+@font-face {
+  font-family: "FrauenScript";
+  src: url(../public/FrauenScript.otf);
+}
+
+h1 {
+  font-size: 76px;
+  font-weight: 400;
+  font-family: 'FrauenScript', serif; /* Fancy font for the title */
+  margin-bottom: 2rem;
+  line-height: 120px;
+}
+
+h2 {
+  font-size: 76px;
+  font-weight: 400;
+  font-family: 'FrauenScript', serif; /* Fancy font for the title */
+  margin-bottom: 2rem;
+  line-height: 76px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+h3 {
+  font-size: 54px;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  margin-top: 0rem;
+  font-family: "FrauenScript", serif;
+  padding: 2rem 0rem;
+  line-height: 59px;
+}
+
+.thank-you-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+button {
+  width: 100%;
+  padding: 37px 15px;
+  margin-bottom: 1rem;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  font-size: 22px;
+  font-weight: 700;
+  font-family: "Arial", sans-serif;
+  letter-spacing: 0.02em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+/* .results {
+  width: 100%;
+  padding: 15px 15px;
+  margin-bottom: 1rem;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  font-size: 22px;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+} */
+
+.results {
+  border: 1px solid white;
+  border-radius: 8px;
+  padding: 37px 30px;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Arial", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.note {
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 3rem 0rem;
+  font-family: "Arial", sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.results .option {
+  flex: 1;
+  text-align: left;
+  margin: 0px;
+  padding: 0px;
+  max-width: 80%;
+}
+
+.results:last-of-type {
+  margin-bottom: 2rem;
+}
+
+.results .count {
+  text-align: right;
+  flex: 0 0 auto;
+  margin: 0px;
+  padding: 0px  0px 0px 1rem;
+}
+
+.won {
+  border: 4px solid white;
+}
+
+.submit {
+  padding: 15px;
+}
+
+.submit {
+  background-color: white;
+  color: black;
+}
+
+/* Style for the unselected button */
+.options button.unselected {
+  color: rgb(93, 93, 93);
+  border: 1px solid rgb(93, 93, 93);
+}
+
+button:last-of-type {
+  margin-bottom: 2rem;
+}
+
+.submit:disabled {
+  color: rgb(93, 93, 93) !important;
+  cursor: not-allowed;
+  background-color: unset;
+  border: 1px solid rgb(93, 93, 93) !important;
+}
+
+/* Velvet curtain background effect */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

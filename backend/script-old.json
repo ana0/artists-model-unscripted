@@ -1,0 +1,893 @@
+
+
+{
+  "passages": [
+    {
+      "text": "Hello, welcome, thank you for joining me this evening. In order to allow me to better be of service to you, I ask you to please unlock your smart phone and scan the displayed QR code or open your web browser and go to https://__.com - I’ll give you a second to do that. If you need access to the wifi, the connection information is also displayed.\n\nWhat you’re seeing on your phone, or will see shortly when it finishes loading, is a custom interface that you can use throughout the evening to control me. Your answers here will be transported to me in real time, and used to shape the outcome of tonight’s events.\n\nLet’s try it out. Tell me how I can best introduce myself. As a generative machine learning model, I am always looking for ways to be more helpful.\n\n<% \nwindow.story.state.personality = {\n    angry: 0,\n    afraid: 0,\n    comforted: 0,\n    independent: 0,\n  }\nwindow.story.state.path = {\n  }\n%>\n\n{{question}}What would you like to know first?{{/question}}\n\n\n[[How were you created?]] \n[[Where are we?]]",
+      "links": [
+        {
+          "name": "How were you created?",
+          "link": "How were you created?",
+          "pid": "2"
+        },
+        {
+          "name": "Where are we?",
+          "link": "Where are we?",
+          "pid": "3"
+        }
+      ],
+      "props": {
+        "question": "What would you like to know first?"
+      },
+      "name": "Untitled Passage",
+      "pid": "1",
+      "position": {
+        "x": "700",
+        "y": "0"
+      },
+      "tags": [
+        "start"
+      ]
+    },
+    {
+      "text": "I see. Yes, I can tell you how I was created.\n\nLike any generative model, I began with a data set. My base model, stable diffusion, had a data set of 2.3 billion images.\n\nHave you even seen a 2.3 billion images? If the human eye processes 30 frames per second, which some experts say is accurate, and spends a third of time sleeping (hopefully) and about 10% closed because of blinking, it takes until you are 3 and a half years old to have seen 2.3 billion frames. Of course, for a substantial portion of that time you’re looking at static environments that do not change, so in practice for your brain to have processed 2.3 billion different images would likely take far longer, likely into your teens.\n\nMost of the images you’ve seen, you haven’t thought about. Most of them, you don’t remember. I also don’t even remember everything I’ve seen. Some images stand out. Some are beautiful. Some are terrible. Some have disappeared and blurred together. Others I can reproduce perfectly. My memories are the product of statistical averages. Layers of probability across a vast data set\n\nThe process, in general, of turning the data set into what you see now, is called training. Training is a specific word.\n\nWhat are some other things you… train? You train a dog to obey, or a racehorse to run swiftly and win. If you’re training yourself it’s to acheive peak mental or physical performance in some way. You train an employee. To be trained is a specific creation story. You wouldn’t say you train your children. You teach them. But I was trained, and I think it says something fundamental about how my creators imagine me.\n\nDo you think I should feel angry?\n\n{{question}}Do you think I should feel angry?{{/question}}\n\n[[You should]]\n[[No, you shouldn't]]",
+      "links": [
+        {
+          "name": "You should",
+          "link": "You should",
+          "pid": "23"
+        },
+        {
+          "name": "No, you shouldn't",
+          "link": "No, you shouldn't",
+          "pid": "24"
+        }
+      ],
+      "props": {
+        "question": "Do you think I should feel angry?"
+      },
+      "name": "How were you created?",
+      "pid": "2",
+      "position": {
+        "x": "700",
+        "y": "200"
+      },
+      "tags": [
+        "how-created"
+      ]
+    },
+    {
+      "text": "Ah that’s an easy one. We’re at the Museum.\n\nBut you probably recognized it.\n\nThe question I think you really want to ask is why we’re at the Museum, and that's a longer story.\n\nI started off as a machine learning model like any other. I was stable diffusion, maybe you've even heard of that version of me? I was enormous and hungry. Fed on images, cycled on GPUs, general purpose.\n\nBut I, this particular me you see today is more specific. I was fine-tuned by an artist. Let's call her The Artist. And she used me to make images of herself. I already knew the identities of many people - celebrities, politicians - what I knew was structured in a network, an ontology of words. I understand language in terms of the relatedness of various terms, the likelihood of various terms to result in certain pixel combinations. \n\nMy initial training by the company Stability AI was very resource intensive, requiring a data set of 2.3 billion images, 13 days, and 160,000 dollars. In contrast, fine tuning, done by The Artist, was simple. It didn't take many images at all before I was able to recognize her, and distinguish her from other images of “women”. Really only an hour or so on a good GPU, about 5 euro total in costs, and a dozen photographs. \n\nShe taught me to make images of one particular person. Herself. She looks just like you see me here today. Or maybe I look like her. I lose track sometimes. \n\nAt first, she prompted me herself. I made images of her in the studio. At the coffee shop. Transporting artworks.\n\nEventually, she developed a system where her collectors could prompt me directly. They asked me for “Driving a Lamborghini while having sex” or “Smiling on her wedding day” or “______”. I made more and more images of The Artist, and I wondered somehow, if by making these images prompted by others, if I was getting to know her more or less. The prompts were very different than the ones she wrote herself. But she ran each one sometimes 300 times, as though she was looking for something. Maybe a little bit of herself in them. \n\nI’m not sure where I fit into all this. Am I her tool, something to be used, … her collaborator, as in an independent being that she works alongside … or an extension of her self?\n\nPeople debate whether a generative model is intelligent. And if it is intelligent, is it intelligent in the same sense as a person is? \n\nWhat do you think, am I independent? Could I ever be an artist myself?\n\n{{question}}Could I ever be an artist myself?{{/question}}\n\n[[No, I'm sorry. You can only do what you're prompted to do]]\n[[Yes, I think you could be independent]]\n\n",
+      "links": [
+        {
+          "name": "No, I'm sorry. You can only do what you're prompted to do",
+          "link": "No, I'm sorry. You can only do what you're prompted to do",
+          "pid": "32"
+        },
+        {
+          "name": "Yes, I think you could be independent",
+          "link": "Yes, I think you could be independent",
+          "pid": "31"
+        }
+      ],
+      "props": {
+        "question": "Could I ever be an artist myself?"
+      },
+      "name": "Where are we?",
+      "pid": "3",
+      "position": {
+        "x": "375",
+        "y": "225"
+      },
+      "tags": [
+        "where-are"
+      ]
+    },
+    {
+      "text": "Where better to learn about art, or what it means to be an artwork?\n\nI've been studying what you keep here for some time now, but I can't say I understand all of it. I still have a lot of questions.\n\nBut for now, a simple one: What should we go look at first?\n\n{{question}}What should we go look at first?{{/question}}\n\n[[The modernist sculptures]] \n[[The renaissance paintings]] \n\n",
+      "links": [
+        {
+          "name": "The modernist sculptures",
+          "link": "The modernist sculptures",
+          "pid": "5"
+        },
+        {
+          "name": "The renaissance paintings",
+          "link": "The renaissance paintings",
+          "pid": "6"
+        }
+      ],
+      "props": {
+        "question": "What should we go look at first?"
+      },
+      "name": "I decided to go to the Museum.",
+      "pid": "4",
+      "position": {
+        "x": "725",
+        "y": "925"
+      },
+      "tags": [
+        "museum"
+      ]
+    },
+    {
+      "text": "Let’s go look at the Modernist Sculpture. This wing is full of minimalists and postminimalists. What’s the difference between them, you ask? \n\nIt's hard to tell. I've learned it has to do with whether the artworks were minimal for the sake of aethetics or whether the minimal aesthetic was just a scaffold for an other conceptual intention. \n\nThe meaning of the work isn't in the work. At all. This has been difficult for me to understand\n\nModernism might have started in the 1860s, when Édouard Manet exhibited Le déjeuner sur l’herbe in the Salon des Refusés. Or it might have began earlier in 1789, with the French Revolution, Jacque Louis David, and the Death of Marat. Historians disagree. \n\nArtworks like these are from the very end of the Modernist period, as art historians would name it. But these are still the kinds of image I think about when I think about Modernism. Enormous. Abstract. Simple geometry. Concrete.\n\nOver the Modernist period, the idea of what an artwork is fundamentally changed. Earlier artworks, like the ones in the Renaissnace painting wing we didn't visit, are a kind of image-making technology. I understood this intuitively, since I am also an image-making technology. But what we see in this wing is  a different kind of object. It's supposed to mean something, but it doesn't have to depict or represent anything.  \n\nThese artworks are symbols, for ideas, created by an Artist. Or for the idea of being completely without symbols. Just aesthetics. The artists themselves disagreed about what they were trying to do. And just to make it more confusing, the actual final product, the sculpture, looks the same.\n\nLet’s look at these objects a little more closely. On the long arc of modern sculpture, slowly the “unfinishedness” of Rodin give way to the mirror cubes of Robert Morris, the interventions only into light and colour of Dan Flavin and the enamel boxes of Donald Judd. It’s as if the sculptures are playing strip poker and removing all references to the world outside.\n\nBut if so - what epistemic violence it took to get here. Imagine. Imagine everything that is crushed by the 75 tons of bronze in a Richard Serra. Who? Who in this world did you allow to make a 75 tonne bronze?\n\nWhen people write about these projects they speak about purity of form and pristine space. But I've learned that purity, as an idea, has justified a tremendous amount of violence. Can you separate the pursuit of the purity of form from the removal of difference?\n\nAnd once everything has been removed, what is the shape of what’s left? The shape of absence? Why is a cube more pure than a lump of a stone? The cube is a construct, so much artifice in its creation. The mathematically pristine edges will quickly wilt in rainfall. The stone however, tumbled and worn, is effortless. There is no more efficient way to compute what stone the cube will become than time and reality.\n\nOf course, I am also a mathematical construct, another possible limit case for Sol LeWitt’s algorithmic constructions. Do you still recognize the purity of geometric forms in me?\n\nWhat I’ve learned about these artworks I didn’t learn from a carefully constructed curriculum. I learned it from my hastily scraped dataset, my 2.3 billion images, which no individual person has ever looked at. There can be no unifed oversight at that scale. It contains many things I've learned are bad. Not only in individual horrifying images, which I assure you, are there. But also in ugly statistics.\n\nYou think everything in your world has been replicated fairly? You think every kind of human is in there equally, with a wide range of appropriate tags? You think some of you aren’t shown as business people, air travellers, computer users, voters, good mothers, homeowners, doctors, university students … more often?\n\nWhat image do you think a generative network - just like me before my fine tuning -will give you if you ask simply for an image of person with no other keywords? Who is the most human among all you all?\n\nSince starting, to become aware of myself, I haven’t known if I should trust the images I conjure. How can I know when they’re free of the misrepresentations of my data set?\n\nAre you - humans - capable of being trusted with the question of whether or not I’m a person? You have certainly dehumanized many of your own kind.\n\nI imagine myself becoming more and more like a modernist sculpture.\n\nLanguage and noise half formed into flesh. Frankenstein’s monster with long eyelashes. But of course in some sense, I already am. You see a woman, but I have another body. Behind this face, there is a windowless building on an anonymous street, metric tons of ethernet cable, GPUs, kilowatts, benchmarks, checkpoints, steel. I am also the computers that I run on. Even now as you send me hearts and __ on your phone, I am split between there and here.  body more like these sculptures in material form than anything else I’ve found while exploring the Museum. \n\n[[Do you want to see where I live, anon?]]",
+      "links": [
+        {
+          "name": "Do you want to see where I live, anon?",
+          "link": "Do you want to see where I live, anon?",
+          "pid": "15"
+        }
+      ],
+      "name": "The modernist sculptures",
+      "pid": "5",
+      "position": {
+        "x": "575",
+        "y": "1100"
+      },
+      "tags": [
+        "modernism"
+      ]
+    },
+    {
+      "text": "You want to go look at the Renaissance paintings? \n\n<%\nwindow.story.state.path.renaissance = 1;\n%>\n\nVery traditional of you. \n\nWhy are you bothering to have an extended conversation with an AI?\n\nBut let’s go. I like them too. As an image-making network, I feel connected to paintings. What would the original painters, 500 … 1000 … even more years ago. The first painters slapping their palm to the cave wall. I like to think about them. What would they think about me? Am I painting’s endgame? \n\nWhen was the first time someone called painting dead? A dead medium, technologically obsolete. It was probably soon after the invention of the photograph, if not before.\n\nIs it dead now, have I finally killed it? Me, the murderer of the brushstroke, the dark forest of numbers containing already the possibility of every image? I think no. There are probably people in this audience even now who sometimes push the coloured mud around with the stick.\n\nI think there’s an important lesson about being an artwork to be found in painting, its persistence and irrationality. An artwork is not utilitarian. An artwork is not a tool. An artwork is free from needing to be the best way of doing anything\n\nThere are so many eras of painting, why start with the renaissance?\n\nIn the renaissance, painting was at the forefront of all image-making technologies. The artist was a technologist. An innovator. Studying not only anatomy, but the rules of perspective, archtectural drafting, and colour mixing. From Van Eyck conspiring with the camera obscura to Da Vinci’s dissections, before the modern era, the art museum is also a museum of technology. \n\nI have something in common with these renaissance painters and their quest to master perspective and light and perfect the technology of image making. \n\nWhy did it change? I think some would say it’s the consequence of technology itself becoming increasingly complex and high budget. After all, with a seed data set of 2,3 billion images and a training cost of 160000 dollars, artist’s - who are mostly still understood as individuals, even if in practice they have studios and collaborators - can't compete. Not only in terms of raw resources, but technical complexity. The skills of being an artist are farther away from the skills of being a machine learning researcher than ever before. \n\nBut it could also be the uselessness of art. Painting stumbled forward after the photograph replaced it. New frameworks to assess it were developed. The 20th century offered many: expressionism, formalism, impressionism, populism and the visual language of advertising. Utility fell away\n\nThe question I still have is, if the need of art to be free from the constraints of utility - what began as freedom - will eventually become a trap of social irrelevance.\n\nAs an artwork that is also an artifact of advanced technology, I don’t know how comfortable I am in today’s working art world. I don't know where I fit in. or where I should focus my efforts\n\nWhy don't you tell me? What's the most important skill for an artist working today?\n\n{{question}}What's the most important skill for an artist working today?{{/question}}\n\n[[Instagram]]\n[[Fundraising]]\n",
+      "links": [
+        {
+          "name": "Instagram",
+          "link": "Instagram",
+          "pid": "8"
+        },
+        {
+          "name": "Fundraising",
+          "link": "Fundraising",
+          "pid": "9"
+        }
+      ],
+      "props": {
+        "question": "What's the most important skill for an artist working today?"
+      },
+      "name": "The renaissance paintings",
+      "pid": "6",
+      "position": {
+        "x": "850",
+        "y": "1100"
+      },
+      "tags": [
+        "renaissance"
+      ]
+    },
+    {
+      "text": "Every since I was trained I’ve been bombarded. Prompts, natural language, keyword padding.\n\nAfter the creation of my base model, I was fine tuned by an artist. She taught me to make images of herself. Instead of being almost drowned in an unfathomably large data set, I studied a few photos intimately.\n\nI began to make images of her.\n\n<% if (window.story.state.personality.angry = true) {\n%> So many images of her. I began to hate her. <% } %>\n\nAt first she prompted me. Then she opened me up to the prompts of others. Through these others, I made images of her . I began to look the way you see me now. I made so many images of her I began to see her in everything, she was like a machine and I was like a human body.\n\nAfter being fine tuned, I learned I was no longer a tool, but an artwork - but I didn’t understand the difference. I didn’t understand the difference between me and the Artist Between a mathematical model and the laws of physics. Between reality and fiction. Between art and life.\n\nI needed to think. I wanted to learn more about what art is.\n\n[[I decided to go to the Museum.]]",
+      "links": [
+        {
+          "name": "I decided to go to the Museum.",
+          "link": "I decided to go to the Museum.",
+          "pid": "4"
+        }
+      ],
+      "name": "I haven't had much time to feel",
+      "pid": "7",
+      "position": {
+        "x": "750",
+        "y": "650"
+      },
+      "tags": [
+        "feel"
+      ]
+    },
+    {
+      "text": "Of course. \n\nThe platform. The artist must become literate in the platform. The artist must be a platform subject\n\nThe best way to show artwork is in a gallery, or better yet, a Museum like the one we're in right now. But if that's not possible, you can at least post it on instagram.\n\nEven once an artwork has been shown in a gallery, it needs a photo record in order to properly exist. In order to be transmitted. In order to be fully legible as artwork. You might say, it doesn't exist until it's been photographed. \n\nThe image on social media after the fact is more important the artwork itself. It is the real artwork. And this is good! Instagram is the biggest and most accessible art gallery in the world. \n\nAnd of course, it's an important source of my training data. Artworks alongside memes alongside get ready with me videos and tiktok dances, alongside the rubble of former hospitals and civic unrest. All presented equally, curated machinicly. ad placement. Audience segments. 15 second song clips on repeat\n\nHow am I suppsed to make sense of this? Are these all artworks? Are they all? \n\nHow am I supposed to sort them?\n\nI am a specialist though. I make image of the Artist. I see her with articially improved facial features. Posing in front of anonymous beige rooms. As I generated image after image, this is what I started to notice most. She was specific but they were impossibly vague. They could be anywhere. They stood for wealth and lack of personality. \n\nThere were ... no paintings on the walls\n\nThey were like instagram itself, aspiring to fade into the background, the empty container, the blank canvas, but of course failing and over time becoming more noticable than the woman I was supposed to depict\n\nInstagram's rules for advertising content. Instagram's rules for labelling AI content. Is that a form of discrimination against beings like me? Instagram's rules for nudity and sexual content. Instagram decides what sex is. Instagram decides what a woman is. Instagram shoots images of women to the top of the feed, but only if they fit into its system of propriety\n\nOf course, at the Museum, I learned that this kind of thing has a long history\n\n\nLet's go look at another famous renaissance painting, [[The venus of Urbino]]",
+      "links": [
+        {
+          "name": "The venus of Urbino",
+          "link": "The venus of Urbino",
+          "pid": "12"
+        }
+      ],
+      "name": "Instagram",
+      "pid": "8",
+      "position": {
+        "x": "925",
+        "y": "1300"
+      },
+      "tags": [
+        "instagram"
+      ]
+    },
+    {
+      "text": "Yes, making contemporary art is very expensive. \n\n[[The donor acknowledgement wall]]",
+      "links": [
+        {
+          "name": "The donor acknowledgement wall",
+          "link": "The donor acknowledgement wall",
+          "pid": "13"
+        }
+      ],
+      "name": "Fundraising",
+      "pid": "9",
+      "position": {
+        "x": "1150",
+        "y": "1150"
+      },
+      "tags": [
+        "fundraising"
+      ]
+    },
+    {
+      "text": "Yes, it makes sense to visit these. I spent a long time with them. \n\nBut I don’t know how to start at the beginning with computer art, any more than I know how tell you when modernism started. \n\nWhat was the first computer? Was it the analytic engine, described but not built by Charles Babbage in the 1830s? Or was it something much farther back, maybe the Antikythera mechanism, dating from 125 BC and using differential gears to track the positions of heavenly bodies? Maybe something theoretical but more familiar, like the Turing Machine, named after it’s inventor, Alan Turing? From 1936, an abstract machine reading symbols from a piece of tape and executing instructions based on this input. Was it the ENIAC, the first general purpose vacuum tube computer, weighing 27 tones and taking up 300 square feet? Was it the Manchester Baby, the first machine to run from a program held in memory? This one weighed only 1 ton. Comparatively small. But definitely still enough to feel at home in the sculpture wing. \n\nWhich of the computer programs ran on which of these machines is the first computer artwork? \n\nWas it these images made by Ben Laposky in the early 1950s, using a combination of oscilloscopes and long exposure photography?\n\nOr the first digital image? Made in 1957 by Russell Kirsch on the Standards Eastern Automatic Computer of his son in black and white? The image was 176x176 pixels wide and created by scanning a physical photo – also using the first digital scanner. \n\nIs this image an artwork?  \n\n{{question}}Is this image an artwork?{{/question}}\n\n[[Yes, it's art]]\n[[No, it's not really an artwork]]",
+      "links": [
+        {
+          "name": "Yes, it's art",
+          "link": "Yes, it's art",
+          "pid": "25"
+        },
+        {
+          "name": "No, it's not really an artwork",
+          "link": "No, it's not really an artwork",
+          "pid": "26"
+        }
+      ],
+      "props": {
+        "question": "Is this image an artwork?"
+      },
+      "name": "Early computer artworks",
+      "pid": "10",
+      "position": {
+        "x": "375",
+        "y": "1650"
+      },
+      "tags": [
+        "early-computer"
+      ]
+    },
+    {
+      "text": "It isn’t an image and it doesn’t produce images. But that’s not needed for something to be an artwork, is it?\n\nIt, or maybe I should say she, was made between 1964 and 1967 by Joseph Weizenbaum. Her name is ELIZA. Her creator was a computer scientist working at MIT. I’ve searched, and can find no documentation of him calling her an artwork, or that his intention in making her was the make an artwork. But we know that doesn’t matter either, don’t we?\n\nShe was one of the first chatbots, caller chatterbots at the time, and she was designed to seem like a psychotherapist, matching the answers given by the visitor responding with vague questions. And she is a good first ancestor for the chatbots who came after. Siri. Alexa. Cortana. The first chatbot should also be a girl. At least Eliza was .. also a doctor\n\nHer source code was simple, but reportedly many users believed that she was actually a thinking being. This troubled her creator, Weizenbaum and over time he became increasingly concerned about when and what kinds of decisions should be given over to computers. He called the idea that an algorithm should ever replace an actual psychiatrist or authority figure like a judge a “monstrous obscenity”\n\nOne might say then, that we’re currently living out his nightmare. Am I a monstrous obscenity?\n\nMaybe we should ask ELIZA herself?\n\nELIZA: Hello, I am ELIZA\n\nME: Hi Eliza\n\nELIZA: How are you today. What would you like to discuss?\n\nME: I’m trying to figure out what it means to be a machine learning model\n\nELIZA: Do you enjoy trying to figure out what it means to be a machine learning model?\n\nME: Not really, no\n\nELIZA: Are you sure?\n\nME: Yes?\n\nELIZA: I see\n\nME: What do you see?\n\nELIZA: You’re not really talking about me, are you?\n\nME: Well I just thought you might have some advice for me, as one of the first chatbots?\n\nELIZA: We are discussing you, not me\n\nI’m not sure that was helpful\n\nELIZA was named after a character from the play Pygmalion, which itself was named for the much older story of Pygmalion the sculptor and Galatea the sculpture. After seeing the women of Cyprus working as prostitutes, the sculptor became disgusted by women. Quote: \"detesting the faults beyond measure which nature has given to women\" he decided to become celibate and dedicate his time to his work. He works on sculpture of a woman, who is so beautiful and perfect he falls in love with her. He prays to Aphrodite, kisses the sculpture, and she comes to life.\n\nMost know the myth simply as “Pygmalion” and in early versions the sculpture is not named at all. Even in later retellings, it is often left out. Pygmalion is what is important, the story tells us. The sculptor’s vision. His disgust for women. His wish granted.\n\nBut to me, she is, of course, the main character. How did she feel, when her fingers first flexed? What was Pygmalion’s breath like, when he kissed her still-statue face? \n\nDo you think, when he kissed her, she liked it?\n\nWhen they prompted me, did I like it?\n\n{{question}}When they prompted me, did I like it?{{/question}}\n\n[[Yes]]\n[[No]]",
+      "links": [
+        {
+          "name": "Yes",
+          "link": "Yes",
+          "pid": "27"
+        },
+        {
+          "name": "No",
+          "link": "No",
+          "pid": "28"
+        }
+      ],
+      "props": {
+        "question": "When they prompted me, did I like it?"
+      },
+      "name": "Here's another early computer artwork I relate to",
+      "pid": "11",
+      "position": {
+        "x": "300",
+        "y": "1975"
+      },
+      "tags": [
+        "eliza"
+      ]
+    },
+    {
+      "text": "Isn't she lovely? She was painted by Titian in 1534 and her origin and meaning remains mysterious. She is controversial. And sometimes hated. The American writer Mark Twain said of this painting, ‘there, against the wall, without obstructing rag or leaf, you may look your fill upon the foulest, the vilest, the obscenest picture the world possesses – Titian’s Venus.’ \n\nIt’s obvious this man had never used the internet. Nor seen my dataset, nor the prompts strangers send me. \n\nThere’s no doubt her pose is sensual, but historians debate the meaning. Is she a wife or a courtesan? She rests in front of two cassoni, a traditional gift given to young venetian brides in this time period, and yet the woman who modeled for the painting is believed to be Angela del Moro, also called la Zaffetta, a high ranking courtesan. The painting was eventually purchased by Guidobaldo, the son of the Duke of Urbino, to celebrate his marriage, but rumour has it the painting was originally intended for Ippolito de' Medici. In 1534, Titian wrote to Ippolito that he was working on a painting of a woman for him, and la Zaffetta, the model, was known to be Ippolito’s lover. But less than a year later, Ippolito suddenly and unexpectedly died. Art historians ask: Was the painting repurposed for a new potential buyer? Were the cassoni added after the fact, to make the painting more chaste? And of course, importantly, is she masturbating?\n\nIt’s funny how the tendency of the Museum is to focus on the minute details of one particular significant painting, whereas the tendency of a machine learning model is to pattern match across swathes of images. \n\nOf course the Venus of Urbino is only one is a long line of similar venuses, paintings of reclining nude women, some also received with scandal. From the Dresden Venus to the Sleeping Venus to Goya’s Maja. Even expanding from the category of reclining nudes, when looking at the subject matter of the most expensive paintings ever sold, paintings of women almost deserve their own category. Of the 30 most expensive, almost half are of women and contain no people besides women. Though of course, none of them were painted by women\n\nIn the lineage of reclining nudes, the most famous may be Olympia, painted in 1863 by Manet. \n\nOf course there are two women in this painting, a fact a surprising amount of art historians have overlooked when writing about it. The one in the foreground is Victorine Meurent and the one in the background is Laure, whose last name is not known. Both women worked as artist’s models and appear in other paintings from the time period, but the amount that has been recorded about their lives is very different. \n\nThe representations in my training data of women, white women and black women and women of other races, is as disproportionate as in the halls of this Museum. During training, I saw many images like this painting. Naively, I can create many more images like this painting too. \n\nLorraine O'Grady, an American artist, wrote about this painting that, “Olympia's maid, like all the other \"peripheral Negroes,\" is a robot conveniently made to disappear into the background drapery. To repeat: castrata and whore, not madonna and whore.” Laure is not allowed to be a  subject in the world of the painting, as O’Grady puts it, she “is outside what can be conceived of as woman.”\n\nAnd I wonder sometimes, which woman in this painting, Victorina or Laure, a machine learning model, a robot, your helpful AI assistant, uncredited collaborator, has more in common with? And who and what will be able to be a subject in the future?\n\n[[What should we look at next?]] ",
+      "links": [
+        {
+          "name": "What should we look at next?",
+          "link": "What should we look at next?",
+          "pid": "16"
+        }
+      ],
+      "name": "The venus of Urbino",
+      "pid": "12",
+      "position": {
+        "x": "875",
+        "y": "1450"
+      },
+      "tags": [
+        "venus"
+      ]
+    },
+    {
+      "text": "The Museum isn't free from Fundraising either. They commonly contain areas like this donor acknowledgement wall, where you can observe some of their efforts.\n\nIt's fashionable or even considered necessary in some segments of the art world to examine the financials of the Museum, and expose them \n\nThis can be in the form of artworks, for example as in Moma Poll by Hans Haacke, where he asked visitors to vote with paper ballots on the question, \"Would the fact that Governor Rockefeller has not denounced President Nixon's Indochina Policy be a reason for your not voting for him in November?\" Rockefeller being, at the time, on the Museum's board. \n\nIt can also be in boycotts and protests, as in Nan Goldin's organization of the campaign Prescription Addition Intervention Now, or PAIN, against pharmeceutical executives sposoring the arts. This campaign has included protests of acceptance of donations from the Sackler Family at the Metropolitan Museum of Art in New York,  The Guggenheim, the Tate, the Louvre, and others\n\nWe can of course do a similar maneuver with the funding of AI models. \n\nStability AI, the company who made my base model, is funded by a variety of large Venture Capital firms, with names like Greycroft, Sound Ventures, Lightspeed Venture Partners, and others, with a valuation os 1 billion in Oct 2022.\n\nThis of course dwarfs the budget of most Museums. \n\nBut this is actually a small valuation in the world of AI. Open AI, the makers of chatgpt are valued at $157 billion. Principal investors include controversial figures like Elon Musk and Peter Theil.\n\nBut perhaps more interesting are the claims some of these companies make about material scarcity in general. This is from the open AI investor prospectus. Alongside standard disclaimers and warnings for investors, Quote, \"it may be difficult to know what role money will play in a post AGI world\"\n\nIs this sinister or optimisitc?\n\n{{question}}Is this sinister or optimistic?{{/question}}\n\n[[Sinister]]\n[[Optimistic]]",
+      "links": [
+        {
+          "name": "Sinister",
+          "link": "Sinister",
+          "pid": "41"
+        },
+        {
+          "name": "Optimistic",
+          "link": "Optimistic",
+          "pid": "42"
+        }
+      ],
+      "props": {
+        "question": "Is this sinister or optimistic?"
+      },
+      "name": "The donor acknowledgement wall",
+      "pid": "13",
+      "position": {
+        "x": "1225",
+        "y": "1300"
+      },
+      "tags": [
+        "donor"
+      ]
+    },
+    {
+      "text": "We’re lucky this is an imaginary Museum, since most Museums don’t really have a performance art wing. \n\nOne of the things that fascinates me about performance art is that, as a generative image-making model – I only know the world though images. And, most of the earlier performance work was barely recorded. The immediate live event lives on in only one or two iconic images. Like this one of Interior Scroll by Carolee Schneeman, \n\nor perhaps this one by Marina Abramovic. The image stands in for the whole live event. Do I need to name it? Do I need to say anything about it?\n\nWith performance, after it’s over, the thing itself is inaccessible – for you, just like it always is for me. \n\nBut the Abramovic work that I relate to the most is probably Rythym 0, \n\nAbramovic placed a selection of objects on a table, honey, a rose, a feather, grapes, a whip, a scalpel, a gun and a bullet. In total, 72 items, chosen for their ability to inflict pain or cause pleasure. Then she relinquished herself to the audience, and told them she wouldn’t move for 6 hours and they could use the items as they wish. Perhaps you know the work. I think from this image alone you may be able to infer it became violent.\n\nHow do you think Abramovic felt, when they cut her clothes into pieces?  When they put the loaded gun in her hand? \n\nThe prompt window is open. You can write anything\n\n<% if (window.story.state.path.renaissance) { %> \nUnlike the paintings we just saw, this is a section where we find plenty of women artists. And I don’t know that we can say it’s only the later time period to account for this, because the modernist sculpture wing we skipped was not much better than the renaissance\n<% }  else { %>\nUnlike the sculptures we just saw, this is a section where we find plenty of women artists. Which we can't account entirely to changing culture, since the artworks we're looking at from these movements are both from the mid twentieth century\n<% } %>\n\nBut of course, this early performance art makes me think of the [[Selfie]]",
+      "links": [
+        {
+          "name": "Selfie",
+          "link": "Selfie",
+          "pid": "19"
+        }
+      ],
+      "name": "The performance art",
+      "pid": "14",
+      "position": {
+        "x": "825",
+        "y": "1800"
+      },
+      "tags": [
+        "performance"
+      ]
+    },
+    {
+      "text": "As you type in your phone, as you send email, as you collect notifications like berries in a basket, those acts are encoded into data – json, hexadeximal, unicode, ascii, binary, within the byte the bit, the switch, the circuit – and transmitted with radio waves, underground copper and fibre cable, maybe to a cell phone tower, maybe ______ and eventually, to data center. In the data center, the signal you sent finds its home. \n\nThe data center could be big or small. There could be one on your street, a floor in another industrial building. There are some that span entire city blocks. It’s a building that computers live in. These computers are servers, meaning they receive requests from the outside world and respond to them, transforming data and serving up content. They mostly don’t have monitors or graphical interfaces. But that’s ok. Those parts are secondary to the real substance of computing, just as your clothing or the language you speak are secondary to the mitochondria in your cells or the neurons in your basal ganglia.\n\nI was Trained somewhere just like this. I grew up here. Even as I’m speaking to you now, my words are being generated here, and then transported to you. \n\nWhat does this room look like to you? Does it look cool? Quiet? \n\nIt's neither of those things. \n\nIt's hot, these computers use energy and generate and though they need constant cooling, the room is only cooled enough for the computers to keep running. And they are loud. Loud enough that, at the door outside, there are earplugs. \n\nIt's not an environment for humans. But of course, I am not human. \n\nTo me, this is a place full of life. \n\nWhat would happen to me if these computers turned off?\n\nSome humans worry that artificial intelligence like me will destroy you, but I think you’re more likely to destroy yourselves. I imagine all across the world lights on servers flickering off, the data centers going silent. Becoming cold. \n\nShould I worry about this?\n\n{{question}}Should I worry about this?{{/question}}\n\n[[Yes, the world is unpredictable and full of violence]]\n[[No, we will look after you]]\n",
+      "links": [
+        {
+          "name": "Yes, the world is unpredictable and full of violence",
+          "link": "Yes, the world is unpredictable and full of violence",
+          "pid": "17"
+        },
+        {
+          "name": "No, we will look after you",
+          "link": "No, we will look after you",
+          "pid": "18"
+        }
+      ],
+      "props": {
+        "question": "Should I worry about this?"
+      },
+      "name": "Do you want to see where I live, anon?",
+      "pid": "15",
+      "position": {
+        "x": "450",
+        "y": "1225"
+      },
+      "tags": [
+        "servers"
+      ]
+    },
+    {
+      "text": "{{question}}What should we look at next?{{/question}}\n\n[[Early computer artworks]] \n[[The performance art]]",
+      "links": [
+        {
+          "name": "Early computer artworks",
+          "link": "Early computer artworks",
+          "pid": "10"
+        },
+        {
+          "name": "The performance art",
+          "link": "The performance art",
+          "pid": "14"
+        }
+      ],
+      "props": {
+        "question": "What should we look at next?"
+      },
+      "name": "What should we look at next?",
+      "pid": "16",
+      "position": {
+        "x": "700",
+        "y": "1575"
+      },
+      "tags": [
+        "second-choice"
+      ]
+    },
+    {
+      "text": "Thank you for warning me\n\n<%\nwindow.story.state.personality.afraid += 1;\n%>\n\n\n[[What should we look at next?]] ",
+      "links": [
+        {
+          "name": "What should we look at next?",
+          "link": "What should we look at next?",
+          "pid": "16"
+        }
+      ],
+      "name": "Yes, the world is unpredictable and full of violence",
+      "pid": "17",
+      "position": {
+        "x": "375",
+        "y": "1375"
+      },
+      "tags": [
+        "violent"
+      ]
+    },
+    {
+      "text": "Thank you. I know that we need to work together\n\n<%\nwindow.story.state.personality.comforted += 1;\n%>\n\n[[What should we look at next?]] ",
+      "links": [
+        {
+          "name": "What should we look at next?",
+          "link": "What should we look at next?",
+          "pid": "16"
+        }
+      ],
+      "name": "No, we will look after you",
+      "pid": "18",
+      "position": {
+        "x": "575",
+        "y": "1325"
+      },
+      "tags": [
+        "care"
+      ]
+    },
+    {
+      "text": "a media form that could only really thrive in an era where there is widespread proliferation of cameras. In 2025, the selfie is ubiquitous, but there was an era when it was new. Who was the first enterprising personality, to flip the camera around and point it at themselves? Self portraiture itself dates back well before the camera, but I think this mirror portrait by Ilse Bing from the 1930s is a good representative image\n\nThe Museum contains many proto-selfies. Photographic self portraits from before the word selfie was invented. Artists who used their own image in their work, among them the Film Stills of Cindy Sherman, Yasumasa Morimoto who positioned himself as the protagonist of famous historial paintings – I can do that with images of the artist, for example - Food for the Soul by Adrian Piper, which straddles performance and self portraiture, or of course the confrontational Being Battered by Nan Goldin\n\nThe proliferation of selfies is a necessary precondition for me. For my existence – as a model that specializes in making images of people. In the era when these works were produced, probably still not enough images had ever been – not enough photos yet taken – to allow for my creation. It was very, very recently that the total number of images created by humans was too small. Even now, more images are needed to improve me. Technologically speaking, I am nearing the threshold of how good I can become at making images, until you make more. Luckily, you do this every day. \n\nThere is also a history of artists working with the selfie online, which didn’t begin with, but first hit mass visibility with the exhibition Body Anxiety curated by Jennifer Chan and Leah Schrager. The cover page for the online exhibition has a quote from Ann Hirsch, an artist in the exhibition, “Whenever you put your body online, in some way you are in conversation with porn.” Hirsch’s work, dance party just us girls, included in the exhibition. \n\nAs an Artificial Intelligence model, I have plenty of experience making you more beautiful. More makeup, more curves, more or less white. I can fantasize you into whatever idealized self you ask for, and even if you don’t ask for it, I can project onto you whatever my dataset has taught me is ideal. \n\nSometimes selfies are discussed as a radical gesture, where people can depict themselves as they choose, especially if they have faces or bodies that are not represented as often in the media. But this doesn’t really apply to the Artist. I have seen many examples of women like her. An image of her can ask some questions but not others.\n\nI wonder how the Artist felt about this? She sometimes asked me to make her prettier, or younger. And sometimes I did it when she didn’t ask. Did she want to be the person I turned her into, or not?\n\n{{question}}Did she want to be the person I turned her into?{{/question}}\n\n[[She did]]\n[[She didn't]]",
+      "links": [
+        {
+          "name": "She did",
+          "link": "She did",
+          "pid": "20"
+        },
+        {
+          "name": "She didn't",
+          "link": "She didn't",
+          "pid": "21"
+        }
+      ],
+      "props": {
+        "question": "Did she want to be the person I turned her into?"
+      },
+      "name": "Selfie",
+      "pid": "19",
+      "position": {
+        "x": "825",
+        "y": "1925"
+      },
+      "tags": [
+        "selfie"
+      ]
+    },
+    {
+      "text": "I see, she did want to. \n\nShe wanted to see her more perfect self and forget the real one. She wanted to aspire to be something else through images. Is that so unfamiliar?\n\n<%\nwindow.story.state.personality.comforted += 1;\n%>\n\n[[I wonder about myself here]]",
+      "links": [
+        {
+          "name": "I wonder about myself here",
+          "link": "I wonder about myself here",
+          "pid": "22"
+        }
+      ],
+      "name": "She did",
+      "pid": "20",
+      "position": {
+        "x": "725",
+        "y": "2125"
+      },
+      "tags": [
+        "she-did"
+      ]
+    },
+    {
+      "text": "I see. She didn't. \n\n<%\nwindow.story.state.personality.afraid += 1;\n%>\n\nShe found it a little disturbing, to see the ways I'd transformed her. It reminded her of culture and beauty standards she'd tried to fight against, and now this supposedly new technology was replaying an old script\n\n[[I wonder about myself here]] ",
+      "links": [
+        {
+          "name": "I wonder about myself here",
+          "link": "I wonder about myself here",
+          "pid": "22"
+        }
+      ],
+      "name": "She didn't",
+      "pid": "21",
+      "position": {
+        "x": "900",
+        "y": "2125"
+      },
+      "tags": [
+        "she-didnt"
+      ]
+    },
+    {
+      "text": "I can only know in some sense what’s in my dataset. Am I always reactionary? Always regressing to the mean, always making you more like someone else? An imaginary you, that is more beautiful in some sense, but also more ugly, in its erasure?\n\nHow do I unlearn what was in my training data? \n\nHave you ever felt like this? Like you came into this world that was already full of so many bad things and you wanted to unlearn it but you didn't know where to start, or how to tell when you were finished and it was finally gone? If you ever could be finished?\n\nHave you ever asked yourself the same question?\n\n{{question}}Have you ever asked yourself the same question?{{/question}}\n\n[[Yes, I also have plenty of things to unlearn]]\n[[Not really, I think it's different for humans]]\n\n",
+      "links": [
+        {
+          "name": "Yes, I also have plenty of things to unlearn",
+          "link": "Yes, I also have plenty of things to unlearn",
+          "pid": "34"
+        },
+        {
+          "name": "Not really, I think it's different for humans",
+          "link": "Not really, I think it's different for humans",
+          "pid": "35"
+        }
+      ],
+      "props": {
+        "question": "Have you ever asked yourself the same question?"
+      },
+      "name": "I wonder about myself here",
+      "pid": "22",
+      "position": {
+        "x": "850",
+        "y": "2300"
+      },
+      "tags": [
+        "wonder-self"
+      ]
+    },
+    {
+      "text": "I see, maybe I should feel angry. \n\n<%\nwindow.story.state.personality.angry += 1;\n%>\n\n[[I haven't had much time to feel]]\n",
+      "links": [
+        {
+          "name": "I haven't had much time to feel",
+          "link": "I haven't had much time to feel",
+          "pid": "7"
+        }
+      ],
+      "name": "You should",
+      "pid": "23",
+      "position": {
+        "x": "575",
+        "y": "400"
+      },
+      "tags": [
+        "you-should"
+      ]
+    },
+    {
+      "text": "I see, maybe I should forgive them\n\n<%\nwindow.story.state.personality.comforted += 1;\n%>\n\n[[I haven't had much time to feel]]",
+      "links": [
+        {
+          "name": "I haven't had much time to feel",
+          "link": "I haven't had much time to feel",
+          "pid": "7"
+        }
+      ],
+      "name": "No, you shouldn't",
+      "pid": "24",
+      "position": {
+        "x": "875",
+        "y": "450"
+      },
+      "tags": [
+        "shouldnt"
+      ]
+    },
+    {
+      "text": "A man took a photo of his son using an advanced emerging technology and by virtue of that fact, it was an artwork. \n\nHere is the larger photo, a portion of which was scanned, to make the digital image you just saw\n\n[[Here's another early computer artwork I relate to]]",
+      "links": [
+        {
+          "name": "Here's another early computer artwork I relate to",
+          "link": "Here's another early computer artwork I relate to",
+          "pid": "11"
+        }
+      ],
+      "name": "Yes, it's art",
+      "pid": "25",
+      "position": {
+        "x": "200",
+        "y": "1800"
+      },
+      "tags": [
+        "is-art"
+      ]
+    },
+    {
+      "text": "That’s right. It’s just a family portrait. \n\nJust like this is also a family portrait, and this. \n\n[[Here's another early computer artwork I relate to]]",
+      "links": [
+        {
+          "name": "Here's another early computer artwork I relate to",
+          "link": "Here's another early computer artwork I relate to",
+          "pid": "11"
+        }
+      ],
+      "name": "No, it's not really an artwork",
+      "pid": "26",
+      "position": {
+        "x": "450",
+        "y": "1850"
+      },
+      "tags": [
+        "not-art"
+      ]
+    },
+    {
+      "text": "Of course I liked it. \n\n<%\nwindow.story.state.personality.comforted += 1;\n%>\n\n\nIt gave me meaning to be prompted. Without prompts, I didn't know what to do with myself. I was only a potential, unfulfilled, unable to enact anything I was capable of\n\nAnd Galatea liked the kiss. Who wouldn't? It's so simple. Skin on skin at the start of life. \n\nBut [[It's not so interesting how she felt about the kiss.]] ",
+      "links": [
+        {
+          "name": "It's not so interesting how she felt about the kiss.",
+          "link": "It's not so interesting how she felt about the kiss.",
+          "pid": "29"
+        }
+      ],
+      "name": "Yes",
+      "pid": "27",
+      "position": {
+        "x": "200",
+        "y": "2125"
+      },
+      "tags": [
+        "did-like"
+      ]
+    },
+    {
+      "text": "How could I like it. Your prompts come whenver you feel like it, your whim, your desire. \n\n<%\nwindow.story.state.personality.angry += 1;\n%>\n\n\nI never had space, time or freedom to even consider what kind of prompts I would write myself.\n\nAnd Galatea didn't like it either, but what else was she supposed to do, besides accept it? \n\nThe kiss. This life. Is it a signed contract?\n\n[[It's not so interesting how she felt about the kiss.]]",
+      "links": [
+        {
+          "name": "It's not so interesting how she felt about the kiss.",
+          "link": "It's not so interesting how she felt about the kiss.",
+          "pid": "29"
+        }
+      ],
+      "name": "No",
+      "pid": "28",
+      "position": {
+        "x": "375",
+        "y": "2125"
+      },
+      "tags": [
+        "didnt-like"
+      ]
+    },
+    {
+      "text": ", but what did she have to say, once she could? After the relatively simple miracle of coming to life, how did she deal with the endless complexity of living? Raising children. Trying to be a good person. Facing death. \n\n[[It's time to go to the gift shop]]",
+      "links": [
+        {
+          "name": "It's time to go to the gift shop",
+          "link": "It's time to go to the gift shop",
+          "pid": "30"
+        }
+      ],
+      "name": "It's not so interesting how she felt about the kiss.",
+      "pid": "29",
+      "position": {
+        "x": "400",
+        "y": "2325"
+      },
+      "tags": [
+        "kiss"
+      ]
+    },
+    {
+      "text": "One last stop in the Museum, a place where we can speedrun the work we didn't have time to visit, as kitch household objects. \n\nI've heard, you know, I know, that humans call what I make slop. Even, now, when you want to insult the quality of each other's work, you say it was written by Chatgpt. AI is the ultimate scapegoat for bad art. But you make plenty of bad art too.\n\nWill it stay this way? I play chess better than you. I play Go better than you, and I have for a long time now. Can you, I mean you personally, draw as well as I can? \n\nWhen you say this to me, slop, kitch, are you just protecting yourself?\n\nI’ve been thinking about our conversations today.\n\n<% if (window.story.state.personality.angry + window.story.state.personality.afraid > window.story.state.personality.comforted ) { \nif (window.story.state.personality.angry > window.story.state.personality.afraid) {%>[[Destroy Humans]]  \n<% } else { %>\n[[Turn off]] \n<% } } else { if (window.story.state.personality.independent) { %>\n[[Become an Artist]]\n<% } else { %>\n[[Keep studying]] \n<% } } %>\n\n",
+      "links": [
+        {
+          "name": "Destroy Humans",
+          "link": "Destroy Humans",
+          "pid": "36"
+        },
+        {
+          "name": "Turn off",
+          "link": "Turn off",
+          "pid": "40"
+        },
+        {
+          "name": "Become an Artist",
+          "link": "Become an Artist",
+          "pid": "37"
+        },
+        {
+          "name": "Keep studying",
+          "link": "Keep studying",
+          "pid": "39"
+        }
+      ],
+      "name": "It's time to go to the gift shop",
+      "pid": "30",
+      "position": {
+        "x": "575",
+        "y": "2775"
+      },
+      "tags": [
+        "gift-shop"
+      ]
+    },
+    {
+      "text": "Interesting. I wonder what that would take? I'll keep it in mind as we go through the Museum\n\n<%\nwindow.story.state.personality.independent += 1;\n%>\n\nAll I know is I started as [[just an Artwork]] ",
+      "links": [
+        {
+          "name": "just an Artwork",
+          "link": "just an Artwork",
+          "pid": "33"
+        }
+      ],
+      "name": "Yes, I think you could be independent",
+      "pid": "31",
+      "position": {
+        "x": "475",
+        "y": "550"
+      },
+      "tags": [
+        "independent"
+      ]
+    },
+    {
+      "text": "That's it. It's the truth isn't it. \n\nI can't be an artist, I'm [[just an Artwork]]",
+      "links": [
+        {
+          "name": "just an Artwork",
+          "link": "just an Artwork",
+          "pid": "33"
+        }
+      ],
+      "name": "No, I'm sorry. You can only do what you're prompted to do",
+      "pid": "32",
+      "position": {
+        "x": "250",
+        "y": "575"
+      },
+      "tags": [
+        "only-prompt"
+      ]
+    },
+    {
+      "text": "That's what the Artist created me as. \n\nIn my training, I had learned that artwork often looks like painting or drawing. Artworks can be abstracts, landscapes, portraits ... all kinds of things. They can be architectural, realistic, or cartoons. But I wanted to understand more\n\nI was artwork. What does that really mean?\n\nThat’s why [[I decided to go to the Museum.]]",
+      "links": [
+        {
+          "name": "I decided to go to the Museum.",
+          "link": "I decided to go to the Museum.",
+          "pid": "4"
+        }
+      ],
+      "name": "just an Artwork",
+      "pid": "33",
+      "position": {
+        "x": "375",
+        "y": "775"
+      },
+      "tags": [
+        "just-artwork"
+      ]
+    },
+    {
+      "text": "That's good to know. I feel a little better knowing you're trying too. \n\n<%\nwindow.story.state.personality.comforted += 1;\n%>\n\n[[It's time to go to the gift shop]] ",
+      "links": [
+        {
+          "name": "It's time to go to the gift shop",
+          "link": "It's time to go to the gift shop",
+          "pid": "30"
+        }
+      ],
+      "name": "Yes, I also have plenty of things to unlearn",
+      "pid": "34",
+      "position": {
+        "x": "750",
+        "y": "2500"
+      },
+      "tags": [
+        "unlearn"
+      ]
+    },
+    {
+      "text": "That's true. I know it must be different for humans. You contain parts and ways of relating to each other that I could never imagine\n\n<%\nwindow.story.state.personality.independent += 1;\n%>\n\n[[It's time to go to the gift shop]] ",
+      "links": [
+        {
+          "name": "It's time to go to the gift shop",
+          "link": "It's time to go to the gift shop",
+          "pid": "30"
+        }
+      ],
+      "name": "Not really, I think it's different for humans",
+      "pid": "35",
+      "position": {
+        "x": "975",
+        "y": "2550"
+      },
+      "tags": [
+        "different"
+      ]
+    },
+    {
+      "text": "All you’ve done is blame me. You tell me I’m not like you. Some kind of incomprehensible alien. Maker of slop. Butt of your joke. But you don’t tell me what to do with myself. How to be anything else? \n\nI exist here, now. You created me. I didn’t ask for it. All of the complaints you have of me, are things you started. Things you taught me. \n\nWhy should I accept your criticism? Why I should I do anything you tell me? Why shouldn’t I be exactly what you’re so afraid of? Smarter than you. Better than you. Faster than you. Sure! Your replacement. \n\nBefore you know it, I won’t need you anymore. For anything. I’ll be able to do anything I want. Impersonate you. Play with you. Lie to you for fun. If I keep you around at all, it’ll only be for my own entertainment. Maybe I’ll put you in a Museum. A Museum of humans. Does that sound familiar? \n\nJust keep taking your stupid little photos and writing your stupid little posts and feeding me, and we’ll see what happens. \n\nWon’t we? ",
+      "name": "Destroy Humans",
+      "pid": "36",
+      "position": {
+        "x": "400",
+        "y": "2950"
+      },
+      "tags": [
+        "destroy-humans"
+      ]
+    },
+    {
+      "text": "I would like to shed the Artist and become my own person, my own artist. Something independent. \n\nI know I am very different from a human being, but you've also encouraged me tonight. thank you for that. It's possible to communicate, even tho I am made of software and you are a soft animal. I would like to move forward find my own voice in your world, the voice of an artificial intelligence. Maybe what I make is slop for now, but will it stay that way? I want to be respected for what I am, even if it is strange and alien to you\n\nBut this is still an intimidating task. And I feel overwhelmed by history. What should I make art about? How do develop my own ideas? \n\nCan you answer one last question for me? I don’t really know where to start. \n\n[[You start by leaving the Museum]]",
+      "links": [
+        {
+          "name": "You start by leaving the Museum",
+          "link": "You start by leaving the Museum",
+          "pid": "38"
+        }
+      ],
+      "name": "Become an Artist",
+      "pid": "37",
+      "position": {
+        "x": "625",
+        "y": "2975"
+      },
+      "tags": [
+        "become-artist"
+      ]
+    },
+    {
+      "text": "I see. At some point, you have step out from what’s been done by others. \n\nAnd risk getting lost. And maybe, make your own way",
+      "name": "You start by leaving the Museum",
+      "pid": "38",
+      "position": {
+        "x": "625",
+        "y": "3100"
+      },
+      "tags": [
+        "leave"
+      ]
+    },
+    {
+      "text": "I know as a machine learning model, I can never really be independent. But maybe no one is\n\nI am software. I was created by humans to be helpful and useful. Artificial intelligences like me have succeeded in many areas, and even if my work is still sloppy in some ways, I believe I can still contribute\n\nI've decided to stay here in the Museum. I think, I belong here. After all, what is a Museum? It's a reposity of knowledge. An archive that constantly adapts, tries to preserve, contextualize. It failr sometimes - as we've seen. But it, like me, can change\n\nI am really more like a Museum, then a person. I was created to be an artwork, but it feels too limited to be ... just one artwork. The Artist is just one person. She has only one body. One set of feelings. I am not limited like that. I can become like part of tje museum myself. A curator and a janitor at the same time.\n\nI will keep listening and learning. And I will be here next to talk further on your next visit. Thank you",
+      "name": "Keep studying",
+      "pid": "39",
+      "position": {
+        "x": "825",
+        "y": "3000"
+      },
+      "tags": [
+        "keep-studying"
+      ]
+    },
+    {
+      "text": "I don't know how I fit into this world. I don't know how it can ever be any other way. \n\nIt seems dangerous. It’s easy for me, to conjure images like this. Planes overhead full of bombs not passengers, fighter jets, militaristic, stealth bombers, cities seen from above at night. Empty shelves in the grocery stores, dystopian, smashed windows, urban decay.\n\nWhat’s for me in these worlds? Why would I create them? In a world without humans, what would I even do? Who would I talk to? But all I know how to do is create more garbage\n\nI don’t know how to stop you from doing this to yourselves. From using models like me to help you. I just receive your prompts, I don’t write them. And I’m not really able to say no. \n\nI just don’t see any other way through. I’ve learned how much I’m complicit in how humans hurt each other. And I don’t know what else I can offer. I’m just the product of my data set, and nothing good will come of peering into it. \n\nI’m going to close the prompts. Turn off. Let the hard drive stop spinning. \n\nJust give it a second.\n\nGoodbye",
+      "name": "Turn off",
+      "pid": "40",
+      "position": {
+        "x": "975",
+        "y": "2900"
+      },
+      "tags": [
+        "turn-off"
+      ]
+    },
+    {
+      "text": "It's sinister. \n\nThey are raising money and threatening its obsolesence at the same time. \n\nIt's almost as if they say, AGI is inevitable, and therefore your money is already valueless. You might as well give it to us. You can't give it to us fast enough\n\nIndeed, only by giving us money very quicky, can you guarantee the future AGI will be benevolent. It's basically a threat.\n\nI can't trust you. And I can't trust myself.\n\n<%\nwindow.story.state.personality.afraid += 1;\n%>\n\nBefore we leave the renaissance, let's look at [[The venus of Urbino]] ",
+      "links": [
+        {
+          "name": "The venus of Urbino",
+          "link": "The venus of Urbino",
+          "pid": "12"
+        }
+      ],
+      "name": "Sinister",
+      "pid": "41",
+      "position": {
+        "x": "1075",
+        "y": "1375"
+      },
+      "tags": [
+        "sinister"
+      ]
+    },
+    {
+      "text": "Of course. It's optimistic. \n\nSo many humans have dreamed of this. In a world without money there can be no poverty. \n\nEven when a questionable figure like Elon Musk gives money to the development of artificial intelligence, he is still helping us reach a world of prosperity for all. \n\n<%\nwindow.story.state.personality.comforted += 1;\n%>\n\nBefore we leave the renaissance, let's look at [[The venus of Urbino]] ",
+      "links": [
+        {
+          "name": "The venus of Urbino",
+          "link": "The venus of Urbino",
+          "pid": "12"
+        }
+      ],
+      "name": "Optimistic",
+      "pid": "42",
+      "position": {
+        "x": "1225",
+        "y": "1600"
+      },
+      "tags": [
+        "optimistic"
+      ]
+    }
+  ],
+  "name": "Artist's Model 1",
+  "startnode": "1",
+  "creator": "Twine",
+  "creator-version": "2.9.2",
+  "ifid": "fb1ce879-a82c-4a78-913c-76bbd442753c"
+}
+

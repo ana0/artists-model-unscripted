@@ -1,0 +1,10 @@
+**/node_modules/
+**/.env
+**/.env.*
+reveal-frontend/assets
+reveal-frontend/css
+reveal-frontend/dist
+reveal-frontend/examples
+reveal-frontend/js
+reveal-frontend/plugin
+reveal-frontend/test

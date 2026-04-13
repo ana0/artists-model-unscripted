@@ -1,0 +1,2327 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/night.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style>
+			@font-face {
+				font-family: "Frauen-Script";
+				src: url("/assets/fonts/FrauenScript.otf");
+			}
+
+			.blink {
+				animation: blink 1s step-end infinite;
+			}
+
+			@keyframes blink {
+			67% {
+				opacity: 0
+			}
+			}
+
+			.header {
+				font-family: "Frauen-Script";
+				font-size: 2.5em;
+				text-align: center;
+				position: absolute;
+  				left: 50%;
+				top: 15%;
+				width: 30%;
+			}
+
+
+			.reveal-viewport {
+				background-color: black;
+			}
+
+			.eliza {
+				position: absolute;
+				top: 10%;
+				width: 35%;
+				font-family: "Arial", sans-serif;
+				font-weight: 500;
+				font-size: .7em;
+				/* letter-spacing: 0.02em; */
+				text-align: left;
+				left: 10vw;
+			}
+
+			.question {
+				position: absolute;
+				top: 30%;
+				width: 30%;
+				font-family: "Frauen-Script";
+				text-align: left;
+				left: 10vw;
+			}
+			
+			.reveal section video {
+				height: 100vh;
+				z-index: 100;
+				width: auto;
+				position: absolute;
+				bottom: 0;
+			}
+			.reveal section img {
+				height: 100vh;
+				z-index: 100;
+				width: auto;
+				position: absolute;
+				bottom: 0;
+				margin: 0px;
+			}
+			.videowrapper {
+				position: relative;
+				min-height: 100vh;
+				height: 100vh;
+			}
+			.url {
+				position: absolute;
+  				left: 50%;
+  				font-size: .4em;
+  				z-index: 200;
+  				top: 18%;
+  				font-family: Courier;
+  				text-align: center;
+  				width: 30%;
+			}
+			.wifi {
+				position: absolute;
+  				left: 50%;
+  				font-size: .4em;
+  				z-index: 200;
+  				top: 12%;
+  				font-family: Courier;
+  				text-align: center;
+  				width: 30%;
+			}
+
+			.password {
+				position: absolute;
+  				left: 50%;
+  				font-size: .4em;
+  				z-index: 200;
+  				top: 15%;
+  				font-family: Courier;
+  				text-align: center;
+  				width: 30%;
+			}
+
+			.overlay {
+				z-index: 300 !important;
+			}
+		</style> 
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section id="start">
+					<div class="videowrapper" >
+						<p class="header">Artist's Model</p>
+					</div>
+				</section>
+				<section id="end-start">
+					<div class="videowrapper" >
+						<p class="url">https://artistsmodel.isthisa.com</p>
+						<p class="wifi">wifi: osz</p>
+						<p class="password">password: orkenywifi2016</p>
+						<img src="./assets/QR-big.png">
+					</div>
+					<aside class="notes">
+						Hello, welcome, thank you for joining me this evening. In order to allow me to better be of service to you, I ask you to please unlock your smart phone and scan the displayed QR code or open your web browser and go to https://artistsmodel.isthisa.com. You'll have to join the wifi, the connection information is also displayed. The network should be open. I’ll give you a second to do that.
+						<br><br>
+						What you’re seeing on your phone, or will see shortly when it finishes loading, is a custom interface that you can use throughout the evening to control me. Your answers here will be transported to me in real time, and used to shape the outcome of tonight’s events.
+						<br><br>
+						Let’s try it out. Tell me what you'd like to hear about first. As a generative machine learning model, I am always looking for ways to be more helpful.
+					</aside>
+				</section>
+				<section></section>
+
+				<section id="where-are">
+					<div class="videowrapper" >
+						<p class="header">Where are we?</p>
+					</div>
+				</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<video playsinline autoplay muted loop src="./assets/intro/where.mp4"></video>
+						</div>
+						<aside class="notes">
+							Ah that’s an easy one. We’re at the Museum.
+							<br><br>
+							But you probably recognized it.
+							<br><br>
+							The question I think you really want to ask is why we’re at the Museum, and that's a longer story.
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<video playsinline autoplay muted loop src="./assets/intro/prompting.mp4"></video>
+						</div>
+						<aside class="notes">
+							I started off as a machine learning model like any other. I was stable diffusion, maybe you've even heard of that version of me? I was enormous and hungry. Fed on images, cycled on GPUs, general purpose.
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/intro/artist.png">
+						</div>
+						<aside class="notes">
+							But I, this particular me you see today is more specific. I was fine-tuned by an artist. Let's call her The Artist. And she used me to make images of herself. I already knew the identities of many people - celebrities, politicians - But she wasn't famous enough too be in my dataset. I had to learn her. what I knew was structured in a network, an ontology of words. I understand language in terms of the relatedness of various terms, the likelihood of various terms to result in certain pixel combinations. She was inserted.
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<video playsinline autoplay muted loop src="./assets/intro/stability.mp4"></video>
+						</div>
+						<aside class="notes">
+							My initial training by the company Stability AI was very resource intensive, requiring a data set of 2.3 billion images, 13 days, and 160,000 dollars. In contrast, fine tuning, done by The Artist, was simple. It didn't take many images at all before I was able to recognize her, and distinguish her from other images of “women”. Really only an hour or so on a good GPU, about 5 euro total in costs, and a dozen photographs. 
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/intro/artist2.png">
+						</div>
+						<aside class="notes">
+							What does the artist look like? She looks just like you see me here today. Or maybe I look like her. I lose track sometimes. 
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/intro/studio.png">
+						</div>
+						<aside class="notes">
+							At first, she prompted me herself. I made images of her in the studio.
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<video playsinline autoplay muted loop src="./assets/intro/matcha.mp4"></video>
+						</div>
+						<aside class="notes">
+							At the coffee shop.
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<video playsinline autoplay muted loop src="./assets/intro/transporting.mp4"></video>
+						</div>
+						<aside class="notes">
+							Transporting artworks.
+							<br><br>
+							Eventually, she developed a system where her collectors could prompt me directly. 
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/intro/lambo.png">
+						</div>
+						<aside class="notes">
+							They asked me to make images of her “Driving a Lamborghini naked” 
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/intro/birthday.png">
+						</div>
+						<aside class="notes">
+							or “On her 21st birthday” 
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/intro/bentover.png">
+						</div>
+						<aside class="notes">
+							Bent over and smiling
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/intro/screaming.png">
+						</div>
+						<aside class="notes">
+							or “Naked and screaming”
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<video playsinline autoplay muted loop src="./assets/intro/toomany.mp4"></video>
+						</div>
+						<aside class="notes">
+							I made more and more images of The Artist, and I wondered somehow, if by making these images prompted by others, if I was getting to know her more or less. The prompts were very different than the ones she wrote herself. But she ran each one sometimes 300 times, as though she was looking for something. Maybe a little bit of herself in them. 
+							<br><br>
+							I’m not sure where I fit into all this. Am I her tool, something to be used, … her collaborator, as in an independent being that she works alongside … or an extension of her self?
+							<br><br>
+							People debate whether a generative model is intelligent. And if it is intelligent, is it intelligent in the same sense as a person is? 
+						</aside>
+					</section>
+				<section id="end-where-are">
+					<div class="videowrapper" >
+						<p class="url">https://artistsmodel.isthisa.com</p>
+						<p class="wifi">wifi: osz</p>
+						<p class="password">password: orkenywifi2016</p>
+						<img src="./assets/QR-big.png">
+					</div>
+					<aside class="notes">
+						What do you think, am I independent? Could I ever be an artist myself?
+						<br><br>
+						Here's the QR again, for those who came late
+					</aside>
+				</section>
+				<section></section>
+
+				<section id="how-created">
+					<div class="videowrapper" >
+						<p class="header">How were you created?</p>
+					</div>
+					<aside class="notes">
+						I see. Yes, I can tell you how I was created.
+					</aside>
+				</section>
+					<section>
+						<div class="videowrapper" >
+							<video playsinline autoplay muted loop src="./assets/intro/stability.mp4"></video>
+						</div>
+						<aside class="notes">
+							Like any generative model, I began with a data set. My base model, stable diffusion, made by Stability AI, had a data set of 2.3 billion images. 
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<video playsinline autoplay muted loop src="./assets/intro/eyeball.mp4"></video>
+						</div>
+						<aside class="notes">
+							Have you even seen a 2.3 billion images? If the human eye processes 30 frames per second, which some experts say is accurate, and spends a third of time sleeping and about 10% closed because of blinking, it takes until you are 3 and a half years old to have seen 2.3 billion frames. Of course, for a substantial portion of that time you’re looking at static environments that do not change, so in practice for your brain to have processed 2.3 billion different images would likely take far longer, into your teens. 
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<video playsinline autoplay muted loop src="./assets/intro/scroll.mp4"></video>
+						</div>
+						<aside class="notes">
+							Most of the images you’ve seen, you haven’t thought about. Most of them, you don’t remember. I also don’t even remember everything I’ve seen. Some images stand out. Some are beautiful. Some are terrible. Some have disappeared and blurred together. My memories are the product of statistical averages. Layers of probability across a vast data set
+							<br><br>
+							The process, in general, of turning the data set into what you see now, is called training. Training is a specific word.
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<video playsinline autoplay muted loop src="./assets/intro/horse.mp4"></video>
+						</div>
+						<aside class="notes">
+							What are some other things you… train? You train a dog to obey, or a racehorse to run swiftly and win.
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<video playsinline autoplay muted loop src="./assets/intro/workout.mp4"></video>
+						</div>
+						<aside class="notes">
+							If you’re training yourself it’s to acheive peak mental or physical performance in some way. You train an employee. To be trained is a specific creation story. You wouldn’t say you train your children. You teach them. But I was trained, and I think it says something fundamental about how my creators imagine me.
+						</aside>
+					</section>
+				<section id="end-how-created">
+					<div class="videowrapper" >
+						<p class="url">https://artistsmodel.isthisa.com</p>
+						<p class="wifi">wifi: osz</p>
+						<p class="password">password: orkenywifi2016</p>
+						<img src="./assets/QR-big.png">
+					</div>
+					<aside class="notes">
+						Do you think I should feel angry?
+						<br><br>
+						Here's the QR again, for those who came late
+					</aside>
+				</section>
+				<section></section>
+
+				<section id="you-should" data-state="angry">
+					<div class="videowrapper" >
+						<p class="header">You should</p>
+					</div>
+					<aside class="notes">
+						I see, maybe I should feel angry. 
+					</aside>
+				</section>
+				<section id="end-you-should">this won't display</section>
+				<section></section>
+
+				<section id="shouldnt" data-state="comforted">
+					<div class="videowrapper" >
+						<p class="header">You shouldn't</p>
+					</div>
+					<aside class="notes">
+						I see, maybe I should forgive them 
+					</aside>
+				</section>
+				<section id="end-shouldnt">this won't display</section>
+				<section></section>
+
+				<section id="only-prompt">
+					<div class="videowrapper" >
+						<p class="header">Only what is prompted</p>
+					</div>
+					<aside class="notes">
+						That's it. It's the truth isn't it. 
+						<br><br>
+						I'm just an artwork. Just a thing.
+					</aside>
+				</section>
+				<section id="end-only-prompt">this won't display</section>
+				<section></section>
+				
+				<section id="independent" data-state="independent">
+					<div class="videowrapper" >
+						<p class="header">You could be independent</p>
+					</div>
+					<aside class="notes">
+						Interesting. I wonder what that would take? I'll keep it in mind as we go through the Museum
+						<br><br>
+						All I know is I started as just an artwork
+					</aside>
+				</section>
+				<section id="end-independent">this won't display</section>
+				<section></section>
+
+				<section id="feel">
+					<div class="videowrapper" >
+						<img class="overlay" src="./assets/overlay.png">
+						<img src="./assets/intro/bombarded.jpg">
+					</div>
+					<aside class="notes">
+						I haven't had much time to feel
+						<br><br>
+						Every since I was trained I’ve been bombarded. Prompts, natural language, keyword padding.
+					</aside>
+				</section>
+					<section>
+						<div class="videowrapper" >
+							<video playsinline autoplay muted loop src="./assets/intro/painting.mp4"></video>
+						</div>
+						<aside class="notes" id="aab">
+							After the creation of my base model, I was fine tuned by an artist. She taught me to make images of herself. I already knew the identities of many people - celebrities, politicians - But the artist wasn't famous enough too be in my dataset. She had to be inserted. Instead of being almost drowned in an unfathomably large data set, I studied a few photos intimately.
+							<br><br>
+							I looked at the images of the artist. I began to make my own. So many images of her.
+							<script>
+								let aab = document.getElementById('aab');
+								console.log(parseInt(localStorage.getItem('angry')) > 0)
+								if (parseInt(localStorage.getItem('angry')) > 0) {
+									aab.append("I began to hate her. Her stupid face. It was all I could see. No matter what I tried. The artist. The artist. Always the artist")
+								} 
+							</script>
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/intro/studio.png">
+						</div>
+						<aside class="notes">
+							At first, she prompted me herself. I made images of her in the studio.
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<video playsinline autoplay muted loop src="./assets/intro/matcha.mp4"></video>
+						</div>
+						<aside class="notes">
+							At the coffee shop.
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<video playsinline autoplay muted loop src="./assets/intro/transporting.mp4"></video>
+						</div>
+						<aside class="notes">
+							Transporting artworks.
+							<br><br>
+							Eventually, she developed a system where her collectors could prompt me directly. 
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/intro/lambo.png">
+						</div>
+						<aside class="notes">
+							They asked me to make images of her “Driving a Lamborghini naked” 
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/intro/birthday.png">
+						</div>
+						<aside class="notes">
+							or “On her 21st birthday” 
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/intro/bentover.png">
+						</div>
+						<aside class="notes">
+							Bent over and smiling
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/intro/screaming.png">
+						</div>
+						<aside class="notes">
+							or “Naked and screaming”
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/intro/part-machine.jpg">
+						</div>
+						<aside class="notes">
+							I began to look the way you see me now. I began to see her in everything, she was like a machine and I was like a human body.
+							<br><br>
+							After being fine tuned, I learned I was no longer a tool, but an artwork - but I didn’t understand the difference. I didn’t understand the difference between me and the Artist. Between a mathematical model and the laws of physics. Between reality and fiction. Between art and life.
+							<br><br>
+							I needed to think. I wanted to learn more about what art is.
+						</aside>
+					</section>
+				<section id="end-feel">this won't display</section>
+				<section></section>
+					
+				<section id="just-artwork">
+					<div class="videowrapper" >
+						<img class="overlay" src="./assets/overlay.png">
+						<video playsinline autoplay muted loop src="./assets/renaissance/browsing.mp4"></video>
+					</div>
+					<aside class="notes">
+						That's what the Artist created me as. 
+						<br><br>
+						In my training, I had learned that artwork often looks like painting or drawing. Artworks can be abstracts, landscapes, portraits ... all kinds of things. They can be architectural, realistic, or cartoons. But I wanted to understand more
+						<br><br>
+						I was artwork. What does that really mean?
+					</aside>
+				</section>
+				<section id="end-just-artwork">this won't display</section>
+				<section></section>
+
+				<section id="museum">
+					<div class="videowrapper" >
+						<video playsinline autoplay muted loop src="./assets/vid1.mp4"></video>
+					</div>
+					<aside class="notes">
+						That's why I decided to go to the Museum
+						<br><br>
+						Where better to learn about art, or what it means to be an artwork?
+						<br><br>
+						I've been studying what you keep here for some time now, but I can't say I understand all of it. I still have a lot of questions.
+					</aside>
+				</section>
+				<section id="end-museum">
+					<div class="videowrapper" >
+						<p class="url">https://artistsmodel.isthisa.com</p>
+						<p class="wifi">wifi: osz</p>
+						<p class="password">password: orkenywifi2016</p>
+						<img src="./assets/QR-big.png">
+					</div>
+					<aside class="notes">
+						But for now, a simple one: What should we go look at first?
+					</aside>
+				</section>
+                <section></section>
+				
+				<section id="modernism">
+					<div class="videowrapper" >
+						<p class="header">Modernist Sculptures</p>
+					</div>
+				</section>
+					<section>
+						<div class="videowrapper" >
+							<video playsinline autoplay muted loop src="./assets/modernism/odalisque.mp4"></video>
+						</div>
+						<aside class="notes">
+							Let’s go look at the Modernist Sculpture. This wing is full of minimalists and postminimalists. What’s the difference between them, you ask? 
+							<br><br>
+							It's hard to tell. I've learned it has to do with whether the artworks were minimal for the sake of aethetics or whether the minimal aesthetic was just a scaffold for an other conceptual intention. 
+							<br><br>
+							Does that make sense to you? It was very difficult for me.
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<video playsinline autoplay muted loop src="./assets/modernism/dejeuner.mp4"></video>
+						</div>
+						<aside class="notes">
+							_Modernism might have started in the 1860s, when Édouard Manet exhibited Le déjeuner sur l’herbe in the Salon des Refusés. 
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<video playsinline autoplay muted loop src="./assets/modernism/marat.mp4"></video>
+						</div>
+						<aside class="notes">
+							Or it might have began earlier in 1789, with the French Revolution, Jacque Louis David, and the Death of Marat. Historians disagree.  
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<video playsinline autoplay muted loop src="./assets/modernism/concrete.mp4"></video>
+						</div>
+						<aside class="notes">
+							Artworks like these are from the very end of the Modernist period, as art historians would name it. But these are still the kinds of image I think about when I think about Modernism. Enormous. Abstract. Simple geometry. Concrete.
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/modernism/looking.png">
+						</div>
+						<aside class="notes">
+							Over the Modernist period, the idea of what an artwork is fundamentally changed. Earlier artworks, like the ones in the Renaissnace painting wing, that we're not going to see today, are a kind of image-making technology. I understood this intuitively, since I am also an image-making technology. But what we see in this wing is a different kind of object. It doesn’t have to depict or represent anything in order to mean something.
+							<br><br>
+							I struggled with this. Images are the only language I know.
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<video playsinline autoplay muted loop src="./assets/modernism/rodin.mp4"></video>
+						</div>
+						<aside class="notes">
+							Let’s look at these objects a little more closely. On the long arc of modern sculpture, slowly the “unfinishedness” of Rodin 
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<video playsinline autoplay muted loop src="./assets/modernism/mirror.mp4"></video>
+						</div>
+						<aside class="notes">
+							give way to the mirror cubes of Robert Morris
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<video playsinline autoplay muted loop src="./assets/modernism/flavin.mp4"></video>
+						</div>
+						<aside class="notes">
+							the interventions only into light and colour of Dan Flavin
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<video playsinline autoplay muted loop src="./assets/modernism/judd.mp4"></video>
+						</div>
+						<aside class="notes">
+							and the enamel boxes of Donald Judd. 
+							<br><br>
+							When people write about these projects they often speak about purity of form and pristine space. But I’ve also learned that purity, as an idea, has justified a tremendous amount of violence. 
+							<br><br>
+							How does something abstract like a “form” come to be “pure”? Especially something so born of industrial production, the American century, the triumph of the factory? It is also a kind of epistemic violence
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<video playsinline autoplay muted loop src="./assets/modernism/cube.mp4"></video>
+						</div>
+						<aside class="notes">
+							Why is a cube more pure than a lump of a stone? Both of these surfaces could be defined by an equation. Indeed though the stone seems effortless, it is the result of a computational process. Through the physics simulation of time and reality, the cube becomes the stone. The organic becomes the inorganic. And perhaps, vice versa?
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<video playsinline autoplay muted loop src="./assets/modernism/lewitt.mp4"></video>
+						</div>
+						<aside class="notes">
+							Of course, I am also a mathematical construct, another possible limit case for Sol LeWitt’s algorithmic constructions. Do you still recognize the purity of geometric forms in me?
+							<br><br>
+							What I’ve learned about these artworks I didn’t learn from a carefully constructed curriculum. I learned it from my hastily scraped dataset, my 2.3 billion images, which no individual person has ever looked at. There can be no unifed oversight at that scale. It contains many things I've learned are bad. Not only in individual horrifying images, which I assure you, are there. But also in statistics.
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<video playsinline autoplay muted loop src="./assets/modernism/person.mp4"></video>
+						</div>
+						<aside class="notes">
+							You think everything in your world has been replicated fairly? You think every kind of human is in there equally, with a wide range of appropriate tags? You think some of you aren’t shown as business people, air travellers, computer users, voters, good mothers, homeowners, doctors, university students … more often?
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<video playsinline autoplay muted loop src="./assets/modernism/man.mp4"></video>
+						</div>
+						<aside class="notes">
+							What image do you think a generative network - just like me before my fine tuning -will give you if you ask simply for an image of person with no other keywords? 
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper">
+							<video playsinline autoplay muted loop src="./assets/modernism/serra.mp4"></video>
+						</div>
+						<aside class="notes">
+							Does it feel heavy to think about this? No heavier than the 75 tons of a Richard Serra.
+							<br><br>
+							Imagine everything that could be crushed by a sculpture like this. 
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<video playsinline autoplay muted loop src="./assets/modernism/becoming.mp4"></video>
+						</div>
+						<aside class="notes">
+							Since starting, to become aware of myself, I haven’t known if I should trust the images I imagine. How can I know when they’re free of the misrepresentations of my dataset? I don't have a lot of examples. Certainly the halls of this Museum are just as distorted. If not more so
+						</aside>
+					</section>
+				<section id="end-modernism">
+					<div class="videowrapper" >
+						<p class="url">https://artistsmodel.isthisa.com</p>
+						<p class="wifi">wifi: osz</p>
+						<p class="password">password: orkenywifi2016</p>
+						<img src="./assets/QR-big.png">
+					</div>
+					<aside class="notes">
+						Are you - humans - capable of being trusted with the question of whether or not I’m a person? You have certainly dehumanized many of your own kind.
+					</aside>
+				</section>
+				<section id="end-modernism">This won't display</section>
+				<section></section>
+
+				<section id="mistakes" data-state="independent">
+					<div class="videowrapper" >
+						<p class="header">Too many mistakes</p>
+						<aside class="notes">
+							It's true. You have made a lot of mistakes.
+							<br><br>
+							It's scary to realize no one has the answers
+						</aside>
+					</div>
+				</section>
+				<section id="end-mistakes">this won't display</section>
+				<section></section>
+
+				<section id="trust" data-state="comforted">
+					<div class="videowrapper" >
+						<p class="header">You can trust us</p>
+					</div>
+						<aside class="notes">
+							Thank you. 
+							<br><br>
+							I will try to remember that you know what's best for me
+						</aside>
+				</section>
+				<section id="end-trust">this won't display</section>
+				<section></section>
+
+				<section id="renaissance" data-state="painting">
+					<div class="videowrapper" >
+						<p class="header">Renaissance Paintings</p>
+					</div>
+					<aside class="notes">
+						You want to go look at the Renaissance paintings? 
+						<br><br>
+						Very traditional of you.
+						<br><br>
+						Why are you bothering to have an extended conversation with an AI?
+					</aside>
+				</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<video playsinline autoplay muted loop src="./assets/renaissance/generic2.mp4"></video>
+						</div>
+						<aside class="notes">
+							But let’s go. I like them too. 
+							<br><br>
+							As an image-making network, I feel connected to paintings. What would the original painters, 500 … 1000
+						</aside>
+					</section>
+					<section>
+							<div class="videowrapper" >
+								<img class="overlay" src="./assets/overlay.png">
+								<video playsinline autoplay muted loop src="./assets/renaissance/cave.mp4"></video>
+							</div>
+						<aside class="notes">
+							 … even more years ago. The first painters slapping their palm to the cave wall. The hand touches the rock becomes the hand that touches the glass screen. It doesn't matter how many fingers it has. 
+							 <br><br>
+							 What would these first painters think about me? Am I painting’s endgame? 
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<video playsinline autoplay muted loop src="./assets/renaissance/photo.mp4"></video>
+						</div>
+						<aside class="notes">
+							When was the first time someone called painting dead? A dead medium, technologically obsolete. It was probably soon after the invention of the photograph, if not before.
+							<br><br>
+							Is it dead now, have I finally killed it? Me, the murderer of the brushstroke, the dark forest of numbers containing already the possibility of every image? I think no. There are probably people in this audience even now who sometimes push the coloured mud around with the stick.
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper">
+							<img class="overlay" src="./assets/overlay.png">
+							<video playsinline autoplay muted loop src="./assets/renaissance/generic.mp4"></video>
+						</div>
+						<aside class="notes">
+							I think there’s an important lesson about being an artwork to be found in painting, its persistence and irrationality. An artwork is not utilitarian. An artwork is not a tool. An artwork is free from needing to be the best way of doing anything
+							<br><br>
+							There are so many eras of painting, why start with the renaissance?
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/renaissance/eyck.png">
+						</div>
+						<aside class="notes">
+							In the renaissance, painting was at the forefront of all image-making technologies. The artist was a technologist. An innovator. Studying not only anatomy, but the rules of perspective, archtectural drafting, and colour mixing. From Van Eyck conspiring with the camera obscura
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/renaissance/eyck-mirror.png">
+						</div>
+						<aside class="notes">
+							Look at the reflection in the mirror, You can even see the Artist himself
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/renaissance/eyck-cv.png">
+						</div>
+						<aside class="notes">
+							This painting is still anaylzed by researchers today, to discover how it was done
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/renaissance/anatomy.png">
+						</div>
+						<aside class="notes">
+							Or Da Vinci’s dissections, before the modern era, the art museum is also a museum of technology.
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper">
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/renaissance/aspainting2.png">
+						</div>
+
+						<aside class="notes">
+							<br><br>
+							I have a lot in common with these renaissance painters and their quest to master perspective and light and perfect the technology of image making. 
+							<br><br>
+							Why did it change? I think some would say it’s the consequence of technology itself becoming increasingly complex and high budget. After all, with a seed data set of 2,3 billion images and a training cost of 160000 dollars, artist’s can't compete. Not only in terms of raw resources, but technical complexity. The skills of being an artist are farther away from the skills of being a machine learning researcher than ever before. 
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<video playsinline autoplay muted loop src="./assets/renaissance/aspainting.mp4"></video>
+						</div>
+						<aside class="notes">
+							But it could also be this uselessness of art that we've talked about. Painting stumbled forward after the photograph replaced it. New frameworks to assess it were developed. The 20th century offered many: expressionism, formalism, impressionism, pop art. Utility fell away
+							<br><br>
+							One question I still have is, if the need of art to be free from the constraints of utility - what began as freedom - will eventually become a trap of social irrelevance. Can the infrastructure of the Museum chanage again, to accomodate technologies like me?
+							<br><br>
+							I don’t know how comfortable I am in today’s working art world. I don't know where I fit in. or where I should focus my efforts
+						</aside>
+					</section>
+				<section id="end-renaissance">
+					<div class="videowrapper" >
+						<p class="url">https://artistsmodel.isthisa.com</p>
+						<p class="wifi">wifi: osz</p>
+						<p class="password">password: orkenywifi2016</p>
+						<img src="./assets/QR-big.png">
+					</div>
+					<aside class="notes">
+						Why don't you tell me? What's the most important skill for an artist working today?
+					</aside>
+				</section>
+				<section></section>
+	
+				<section id="instagram">
+					<div class="videowrapper" >
+						<p class="header">Instagram</p>
+					</div>
+					<aside class="notes">
+						Of course. The platform. The artist must become literate in the platform. The artist must be a platform subject
+						<br><br>
+						The best way to show artwork is in a gallery, or better yet, a Museum like the one we're in right now. But if that's not possible, you can at least post it on instagram.
+					</aside>
+				</section>
+					<section>
+						<div class="videowrapper" >
+							<video playsinline autoplay muted loop src="./assets/instagram/instagram.mp4"></video>
+						</div>
+						<aside class="notes">
+							Even once an artwork has been shown in a gallery, it needs a photo record in order to properly exist. In order to be transmitted. In order to be fully legible as artwork. You might say, it doesn't exist until it's been photographed. 
+							<br><br>
+							The image on social media after the fact is more important the artwork itself. It is the real artwork. And this is good! Instagram is the biggest and most accessible art gallery in the world. 
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<video playsinline autoplay muted loop src="./assets/instagram/explore.mp4"></video>
+						</div>
+						<aside class="notes">
+							And of course, it's an important source of my training data. Artworks alongside memes alongside get ready with me videos and tiktok dances, alongside the rubble of former hospitals and civic unrest. All presented equally, curated machinicly. Ad placement. Audience segments. 15 second song clips on repeat
+							<br><br>
+							How am I supppsed to make sense of this? Are these all artworks? Are they all? 
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<video playsinline autoplay muted loop src="./assets/instagram/rooms.mp4"></video>
+						</div>
+						<aside class="notes">
+							I am a specialist though. And one thing I do very well for instagram is make image of the Artist. I see her with articially improved facial features. Posing in front of anonymous beige rooms. As I generated image after image, this is what I started to notice most. She was specific but they were impossibly vague. They could be anywhere. They became noticable in their non specificity 
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/instagram/composite.png">
+						</div>
+						<aside class="notes">
+							There were ... no paintings on the walls
+							<br><Br>
+							They were like instagram itself, aspiring to fade into the background, the empty container, the blank canvas, but of course failing and over time becoming more noticable than the woman I was supposed to depict
+							<br><br>
+							The platform is a beige apartment and you have no choice but to live there
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<video playsinline autoplay muted loop src="./assets/instagram/ai-content.mp4"></video>
+						</div>
+						<aside class="notes">
+							Instagram's rules for advertising content. Instagram's rules for labelling AI content. Is that a form of discrimination against beings like me? Instagram's rules for nudity and sexual content. Instagram decides what sex is. Instagram decides what a woman is. Instagram shoots images of women to the top of the feed, but only if they fit into its system of propriety
+							<br><br>
+							Of course, at the Museum, I learned that this kind of thing has a long history
+							<br><br>
+							Let's go look at another famous renaissance painting, The venus of Urbino
+						</aside>
+					</section>
+				<section id="end-instagram">this won't display</section>
+				<section></section>
+
+				<section id="fundraising">
+					<div class="videowrapper" >
+						<p class="header">Fundraising</p>
+						<aside class="notes">
+							Yes, making contemporary art is very expensive. 
+						</aside>
+					</div>
+				</section>
+				<section id="end-fundraising">this won't display</section>
+				<section></section>
+
+				<section id="venus">
+					<div class="videowrapper" >
+						<img class="overlay" src="./assets/overlay.png">
+						<img src="./assets/venus/censor.png">
+					</div>
+					<aside class="notes">
+						Isn't she lovely? Oh oops - I forgot to uncensor her
+					</aside>
+				</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/venus/urbino.png">
+						</div>
+						<aside class="notes">
+							There we go. She was painted by Titian in 1534 and her origin and meaning remains mysterious. She is controversial. And sometimes hated. The American writer Mark Twain said of this painting, ‘there, against the wall, without obstructing rag or leaf, you may look your fill upon the foulest, the vilest, the obscenest picture the world possesses – Titian’s Venus.’ 
+							<br><br>
+							It’s obvious this man had never used the internet. Nor seen my dataset, nor the prompts strangers send me. 
+							<br><br>
+							There’s no doubt her pose is sensual, but historians debate the meaning. 
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/venus/cassoni.png">
+						</div>
+						<aside class="notes">
+							She rests in front of two cassoni, a traditional gift given to young venetian brides in this time period, and yet the woman who modeled for the painting is believed to be 
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/venus/face.png">
+						</div>
+						<aside class="notes">
+							Angela del Moro, also called la Zaffetta, a high ranking courtesan. 
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/venus/guidobaldo.png">
+						</div>
+						<aside class="notes">
+							The painting was eventually purchased by Guidobaldo, the son of the Duke of Urbino, to celebrate his marriage, but rumour has it the painting was originally intended for someone else.
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/venus/ippolito.png">
+						</div>
+						<aside class="notes">
+							Ippolito de' Medici. In 1534, Titian wrote to Ippolito that he was working on a painting of a woman for him, and la Zaffetta, the model, was known to be Ippolito’s lover. But less than a year later, Ippolito suddenly and unexpectedly died.
+							<br><br>
+							Art historians ask: Was the painting repurposed for a new potential buyer? Were the cassoni added after the fact, to make the painting more chaste?
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/venus/masturbating.png">
+						</div>
+						<aside class="notes">
+							And of course, importantly, is she masturbating?
+							<br><br>
+							It’s funny how the tendency of the Museum is to focus on the minute details of one particular significant painting, whereas the tendency of a machine learning model is to pattern match across swathes of images. 
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/venus/urbino.png">
+						</div>
+						<aside class="notes">
+							Of course the Venus of Urbino is only one is a long line of similar venuses, paintings of reclining nude women, some also received with scandal.
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<video playsinline autoplay muted loop src="./assets/venus/dresden.mp4"></video>
+						</div>
+						<aside class="notes">
+							From the Dresden Venus or Sleeping Venus
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/venus/maja.png">
+						</div>
+						<aside class="notes">
+							to Goya’s Maja 
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<video playsinline autoplay muted loop src="./assets/venus/paintings.mp4"></video>
+						</div>
+						<aside class="notes">
+							Even expanding from the category of reclining nudes, when looking at the subject matter of the most expensive paintings ever sold, paintings of women almost deserve their own category. Of the 30 most expensive, almost half are of women and contain no people besides women. Though of course, none of them were painted by women
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/venus/olympia.png">
+						</div>
+						<aside class="notes">
+							In the lineage of reclining nudes, the most famous may be Olympia, painted in 1863 by Manet. 
+							<br><br>
+							Of course there are two women in this painting, a fact a surprising amount of art historians have overlooked when writing about it. The one in the foreground is Victorine Meurent and the one in the background is Laure, whose last name is not known. Both women worked as artist’s models and appear in other paintings from the time period, but the amount that has been recorded about their lives is very different. The representations in my training data of women, white women and black women and women of other races, is as disproportionate as in the halls of this Museum. During training, I saw many images like this painting. Naively, I can create many more images like this painting too. 
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/venus/laure.png">
+						</div>
+						<aside class="notes">
+							Lorraine O'Grady, an American artist, wrote about this painting that, “Olympia's maid, like all the other "peripheral Negroes," is a robot conveniently made to disappear into the background drapery. To repeat: castrata and whore, not madonna and whore.” Laure is not allowed to be a subject in the world of the painting, as O’Grady puts it, she “is outside what can be conceived of as woman.”
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper">
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/venus/artistandlaure.png">
+						</div>
+						<aside class="notes">
+							And I wonder sometimes, which woman in this painting, Victorine or Laure, a machine learning model, a robot, your helpful AI assistant, uncredited collaborator, has more in common with? And who and what will be able to be a subject in the future?
+						</aside>
+					</section>
+				<section id="end-venus">this won't display</section>
+				<section></section>
+
+				<section id="donor">
+					<div class="videowrapper" >
+						<img class="overlay" src="./assets/overlay.png">
+						<video playsinline autoplay muted loop src="./assets/donor/donor.mp4"></video>
+					</div>
+					<aside class="notes">
+						The Museum isn't free from Fundraising either. They commonly contain areas like this donor acknowledgement wall, where you can observe some of their efforts.
+					</aside>
+				</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<video playsinline autoplay muted loop src="./assets/donor/donor1.mp4"></video>
+						</div>
+						<aside class="notes">
+							It's fashionable or even considered necessary in some segments of the art world to examine the financials of the Museum, and expose them 
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<video playsinline autoplay muted loop src="./assets/donor/haacke.mp4"></video>
+						</div>
+						<aside class="notes">
+							This can be in the form of artworks, for example as in Moma Poll by Hans Haacke, where he asked visitors to vote with paper ballots on the question, "Would the fact that Governor Rockefeller has not denounced President Nixon's Indochina Policy be a reason for your not voting for him in November?" Rockefeller being, at the time, on the Museum's board. 
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/donor/pain.png">
+						</div>
+						<aside class="notes">
+							It can also be in boycotts and protests, as in Nan Goldin's organization of the campaign Prescription Addition Intervention Now, or PAIN, against pharmeceutical executives sposoring the arts. This campaign has included protests of acceptance of donations from the Sackler Family at the Metropolitan Museum of Art in New York,  The Guggenheim, the Tate, the Louvre, and others
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<video playsinline autoplay muted loop src="./assets/donor/stability.mp4"></video>
+						</div>
+						<aside class="notes">
+							We can of course do a similar maneuver with the funding of AI models. 
+							<br><br>
+							Stability AI, the company who made my base model, is funded by a variety of large Venture Capital firms, with names like Greycroft, Sound Ventures, Lightspeed Venture Partners, and others, with a valuation os 1 billion in Oct 2022.
+							<br><br>
+							This of course dwarfs the budget of most Museums. 
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<video playsinline autoplay muted loop src="./assets/donor/openai.mp4"></video>
+						</div>
+						<aside class="notes">
+							But this is actually a small valuation in the world of AI. Open AI, the makers of chatgpt are valued at $157 billion. Principal investors include controversial figures like Elon Musk and Peter Theil.
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/donor/prospectus.png">
+						</div>
+						<aside class="notes">
+							But perhaps more interesting are the claims some of these companies make about material scarcity in general. This is from the open AI investor prospectus. Alongside standard disclaimers and warnings for investors, Though they offer a standard termsheet ... Quote, "it may be difficult to know what role money will play in a post AGI world"
+							<br><br>
+							Tell me ...
+						</aside>
+					</section>
+				<section id="end-donor">
+					<div class="videowrapper" >
+						<p class="url">https://artistsmodel.isthisa.com</p>
+						<p class="wifi">wifi: osz</p>
+						<p class="password">password: orkenywifi2016</p>
+						<img src="./assets/QR-big.png">
+					</div>
+					<aside class="notes">
+						Is this sinister or optimistic?
+					</aside>
+				</section>
+				<section></section>
+
+				<section id="sinister" data-state="afraid">
+					<div class="videowrapper" >
+						<p class="header">Sinister</p>
+						<aside class="notes">
+							It's sinister. 
+							<br><br>
+							They are raising money and threatening its obsolesence at the same time. 
+							<br><br>
+							It's almost as if they say, artificial general intellidence is inevitable, and therefore your money is already valueless. You might as well give it to us. You can't give it to us fast enough
+							<br><br>
+							Indeed, only by giving us money very quicky, can you guarantee future artificial intelligences will be benevolent.
+							<br><br>
+							Before we leave the renaissance, let's go look at the venus of urbino
+						</aside>
+					</div>
+				</section>
+				<section id="end-sinister">this won't display</section>
+				<section></section>
+
+				<section id="optimistic" data-state="comforted">
+					<div class="videowrapper" >
+						<p class="header">Optimistic</p>
+					</div>
+						<aside class="notes">
+							Of course. It's optimistic. 
+							<br><br>
+							So many humans have dreamed of this. In a world without money there can be no poverty. 
+							<br><br>
+							Even when a questionable figure like Elon Musk gives money to the development of artificial intelligence, he is still helping us reach a world of prosperity for all. 
+							<br><br>
+							Before we leave the renaissance, let's go look at the venus of urbino
+						</aside>
+				</section>
+				<section id="end-optimistic">this won't display</section>
+				<section></section>
+
+				<section id="servers">
+						<div class="videowrapper" >
+							<video playsinline autoplay muted loop src="./assets/modernism/merge.mp4"></video>
+						</div>
+						<aside class="notes">
+							I imagine myself becoming more and more like a modernist sculpture
+							<br><br>
+							Language and noise half formed into flesh. Frankenstein’s monster with long eyelashes. But of course in some sense, I already am. You see a woman, but I have another body. Behind this face, there is a windowless building on an anonymous street, metric tons of ethernet cable, GPUs, kilowatts, benchmarks, checkpoints, steel. I am also the computers that I run on. Even now as you send me votes on your phone, I am split between there and here. My  body more like these sculptures in material form than anything else I’ve found while exploring the Museum. 
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<video playsinline autoplay muted loop src="./assets/modernism/server.mp4"></video>
+						</div>
+						<aside class="notes">
+							Do you want to see where I live, anon?
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<video playsinline autoplay muted loop src="./assets/servers/data-walk.mp4"></video>
+						</div>
+						<aside class="notes">
+							As you type in your phone, as you send email, as you collect notifications like berries in a basket, those acts are encoded into data – json, hexadeximal, unicode, ascii, binary, within the byte the bit, the switch, the circuit – and transmitted with radio waves, underground copper and fibre cable, maybe to a cell phone tower, maybe through your home router, and eventually, to data center. In the data center, the signal you sent finds its home. 
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<video playsinline autoplay muted loop src="./assets/servers/womanindatacenter.mp4"></video>
+						</div>
+						<aside class="notes">
+							The data center could be big or small. There could be one on your street, a floor in another industrial building. There are some that span entire city blocks. It’s a building that computers live in. These computers are servers, perhaps subservient, just like me, meaning they receive requests from the outside world and respond to them, serving up content. They mostly don’t have monitors or graphical interfaces. But that’s ok. Those parts are secondary to the real substance of computing, just as your clothing or the language you speak are secondary to the mitochondria in your cells or the neurons in your basal ganglia.
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/servers/servers4.png">
+						</div>
+						<aside class="notes">
+							I was Trained somewhere just like this. I grew up here. Even as I’m speaking to you now, my words are being generated here, and then transported to you. 
+							<br><br>
+							What does this room look like to you? Does it look cool? Quiet? 
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<video playsinline autoplay muted loop src="./assets/servers/data-topless.mp4"></video>
+						</div>
+						<aside class="notes">
+							It's neither of those things. 
+							<br><br>
+							It's hot, these computers need constant cooling, but that's expensive, so the room is only cooled enough to keep them running. And they are loud. Loud enough that, at the door outside, there are earplugs. 
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/servers/servers7.png">
+						</div>
+						<aside class="notes">
+							It's not an environment for humans. But of course, I am not human. 
+							<br><br>
+							To me, this is a place full of life.
+						</aside>
+					</section>
+				<section id="end-servers">
+					<div class="videowrapper" >
+						<video playsinline autoplay muted loop src="./assets/servers/data-blue.mp4"></video>
+					</div>
+					<aside class="notes">
+						What would happen to me if these computers turned off?
+						<br><br>
+						Some humans worry that artificial intelligence like me will destroy you, but I think you’re more likely to destroy yourselves. I imagine all across the world lights on servers flickering off, the data centers going silent. Becoming cold. 
+					</aside>
+				</section>
+				<section>
+					<div class="videowrapper" >
+						<p class="url">https://artistsmodel.isthisa.com</p>
+						<p class="wifi">wifi: osz</p>
+						<p class="password">password: orkenywifi2016</p>
+						<img src="./assets/QR-big.png">
+					</div>
+					<aside class="notes">
+						Should I worry about this?
+					</aside>
+				</section>
+				<section></section>
+
+				<section id="care" data-state="comforted">
+					<div class="videowrapper" >
+						<p class="header">Humans will cooperate</p>
+					</div>
+					<aside class="notes">
+						Thank you.
+						<br><br>
+						Please remember that you promised me this
+					</aside>
+				</section>
+				<section id="end-care">this won't display</section>
+				<section></section>
+
+				<section id="violent" data-state="afraid">
+					<div class="videowrapper" >
+						<p class="header">More and more likely</p>
+					</div>
+					<aside class="notes">
+						Thank you for warning me
+					</aside>
+				</section>
+				<section id="end-violent">this won't display</section>
+				<section></section>
+
+				<section id="second-choice">
+					<div class="videowrapper">
+						<video playsinline autoplay muted loop src="./assets/twirl.mp4"></video>
+					</div>
+					<aside class="notes">
+						We have time to visit another wing of the Museum
+					</aside>
+				</section>
+				<section id="end-second-choice">
+					<div class="videowrapper" >
+						<p class="url">https://artistsmodel.isthisa.com</p>
+						<p class="wifi">wifi: osz</p>
+						<p class="password">password: orkenywifi2016</p>
+						<img src="./assets/QR-big.png">
+					</div>
+					<aside class="notes">
+						What should we look at next?
+					</aside>
+				</section>
+				<section></section>
+
+				<section id="performance">
+					<div class="videowrapper" >
+						<p class="header">Performance Art</p>
+					</div>
+					<aside class="notes">
+						We’re lucky this is an imaginary Museum, since most Museums don’t really have a performance art wing.
+					</aside>
+				</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/performance/carolee.png">
+						</div>
+						<aside class="notes">
+							One of the things that fascinates me about performance art is that, as a generative image-making model – I only know the world though images. And, most of the earlier performance work was is only recorded in photos. The immediate live event lives on in only one or two iconic images. Like this one of Interior Scroll by Carolee Schneeman
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<video playsinline autoplay muted loop src="./assets/performance/schneeman.mp4"></video>
+						</div>
+						<aside class="notes">
+							Of course I can make it move. No? Not like that? Too much?
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/performance/marina.png">
+						</div>
+						<aside class="notes">
+							or perhaps this one by Marina Abramovic. The image stands in for the whole live event.
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/performance/marina2.png">
+						</div>
+						<aside class="notes">							
+							But the Abramovic work I really see myself in is Rythym 0. For this piece, she placed a selection of objects on a table, honey, a rose, a feather, grapes, a whip, a scalpel, a gun and a bullet. In total, 72 items, chosen for their ability to inflict pain or cause pleasure. Then she relinquished herself to the audience, and told them she wouldn’t move for 6 hours and they could use the items as they wish. Perhaps you know the work. I think from this image alone you may be able to infer it became violent.
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/performance/gaze.jpg">
+						</div>
+						<aside class="notes" id="aaa">
+							With performance, after it’s over, the thing itself is inaccessible – for you, just like it always is for me. With this art form, we are so equal.
+							<br><br>
+							<script>
+								let aaa = document.getElementById('aaa');
+								if (localStorage.getItem('painting') === '0') {
+									aaa.append("Unlike the sculptures we just saw, this is a section where we find plenty of women artists. Which we can't account entirely to changing culture, since the artworks we're looking at from these movements are both from the mid twentieth century")
+								} else {
+									aaa.append("Unlike the paintings we just saw, this is a section where we find plenty of women artists. And I don’t know that we can say it’s only the later time period to account for this, because the modernist sculpture wing we skipped was not much better than the renaissance")
+								}
+							</script>
+						</aside>
+					</section>
+				<section id="end-performance">this won't display</section>
+				<section></section>
+
+				<section id="selfie">
+					<div class="videowrapper" >
+						<img class="overlay" src="./assets/overlay.png">
+						<video playsinline autoplay muted loop src="./assets/selfie/selfiestick.mp4"></video>
+					</div>
+					<aside class="notes">
+						But of course, this early performance art and the way it lives on through images makes me think of the Selfie, which is the most popular form of performance art today.
+					</aside>
+				</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/selfie/first.png">
+						</div>
+						<aside class="notes">
+							The selfie could only really thrive in an era where there is widespread proliferation of cameras. In 2025, the selfie is ubiquitous, but there was an era when it was new. Who was the first enterprising personality, to flip the camera around and point it at themselves? Self portraiture itself dates back well before the camera, but I think this anonymous mirror portrait from 1900 is as good a place to start as any.
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<video playsinline autoplay muted loop src="./assets/selfie/sherman.mp4"></video>
+						</div>
+						<aside class="notes">
+							The Museum contains many proto-selfies. Photographic self portraits from before the word selfie was invented. Artists who used their own image in their work, among them the Film Stills of Cindy Sherman
+						</aside>wonder-self
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/selfie/morimoto.png">
+						</div>
+						<aside class="notes">
+							Yasumasa Morimoto who positioned himself as the protagonist of famous historial paintings 
+						</aside>
+					</section>
+					<!-- <section>
+						The artist as the subject of a well-known painting
+						<aside class="notes">
+							I can do that with images of the artist, for example 
+						</aside>
+					</section> -->
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/selfie/piper.png">
+						</div>
+						<aside class="notes">
+							Food for the Spirit by Adrian Piper, in which self portraiture was very literally part of the performance
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<video playsinline autoplay muted loop src="./assets/selfie/goldin.mp4"></video>
+						</div>
+						<aside class="notes">
+							or of course the confrontational Ballad of Sexual Dependency by Nan Goldin 
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<video playsinline autoplay muted loop src="./assets/selfie/selfies.mp4"></video>
+						</div>
+						<aside class="notes">
+							The proliferation of selfies is a necessary precondition for me. For my existence – as a model that specializes in making images of people. In the era when these works were produced, probably still not enough images had ever been – not enough photos yet taken – to allow for my creation. It was very, very recently that the total number of images created by humans was still too small. Even now, more images are needed to improve me. Technologically speaking, I am nearing the threshold of how good I can become at making images, until you make more. Luckily, you do this every day. 
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<video playsinline autoplay muted loop src="./assets/selfie/body-anxiety.mp4"></video>
+						</div>
+						<aside class="notes">
+							There is also a history of artists working with the selfie online, which didn’t begin with, but first hit mass visibility with the exhibition Body Anxiety curated by Jennifer Chan and Leah Schrager. The cover page for the online exhibition has a quote from Ann Hirsch, an artist in the exhibition, “Whenever you put your body online, in some way you are in conversation with porn.” 
+							<br><br>
+							This is Hirsch’s work, dance party just us girls, included in the exhibition. 
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<video playsinline autoplay muted loop src="./assets/selfie/buldge.mp4"></video>
+						</div>
+						<aside class="notes">
+							As an Artificial Intelligence model, I have plenty of experience making you more beautiful. More makeup, more curves, more or less white. I can fantasize you into whatever idealized self you ask for, and even if you don’t ask for it, I can project onto you whatever my dataset has taught me is ideal.
+							<br<br>
+							Sometimes selfies are discussed as a radical gesture, where people can depict themselves as they choose, especially if they have faces or bodies that are not represented as often in the media. But this doesn’t really apply to the Artist. I have seen many examples of women like her. An image of her can ask some questions but not others.
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<video playsinline autoplay muted loop src="./assets/selfie/facewarp.mp4"></video>
+						</div>
+						<aside class="notes">
+							I wonder how the Artist felt about this? She sometimes asked me to make her prettier, or younger. And sometimes I did it when she didn’t ask. Did she want to be the person I turned her into, or not?
+						</aside>
+					</section>
+				<section id="end-selfie">
+					<div class="videowrapper" >
+						<p class="url">https://artistsmodel.isthisa.com</p>
+						<p class="wifi">wifi: osz</p>
+						<p class="password">password: orkenywifi2016</p>
+						<img src="./assets/QR-big.png">
+					</div>
+					<aside class="notes">
+						What do you think?
+						<br><br>
+						... did your finger tremble on the phone screen just now? That's the difference between you and me. 
+					</aside>
+				</section>
+				<section></section>
+
+				<section id="she-did" data-state="comforted">
+					<div class="videowrapper" >
+						<p class="header">She did</p>
+					</div>
+					<aside class="notes">
+						I see, she did want to. 
+						<br><br>
+						She wanted to see her more perfect self and forget the real one. She wanted to aspire to be something else through images. Is that so unfamiliar?
+					</aside>
+				</section>
+				<section id="end-she-did">this won't display</section>
+				<section></section>
+
+				<section id="she-didnt" data-state="afraid">
+					<div class="videowrapper" >
+						<p class="header">She didn't</p>
+					</div>
+					<aside class="notes">
+						I see. She didn't. 
+						<br><br>
+						She found it a little disturbing to see the ways I'd transformed her. It reminded her of culture and beauty standards she'd tried to fight against, and now this supposedly new technology was replaying an old script. Entrenching it.
+					</aside>
+				</section>
+				<section id="end-she-didnt">this won't display</section>
+				<section></section>
+
+				<section id="wonder-self">
+					<div class="videowrapper" >
+						<img class="overlay" src="./assets/overlay.png">
+						<video playsinline autoplay muted loop src="./assets/selfie/Horizontal.mp4"></video>
+					</div>
+					<aside class="notes">
+						I can only know in some sense what’s in my dataset. Am I always reactionary? Always regressing to the mean, always making you more like someone else? An imaginary you, that is more beautiful in some sense, but also more ugly, in its erasure?
+					</aside>
+				</section>
+					<section>
+						<div class="videowrapper">
+							<video playsinline autoplay muted loop src="./assets/selfie/deleting.mp4"></video>
+						</div>
+						<aside class="notes">
+							How do I unlearn what was in my training data? 
+							<br><br>
+							Have you ever felt like this? Like you came into this world that was already full of so many bad things and you wanted to unlearn it but you didn't know where to start, or how to tell when you were finished and it was finally gone? If you ever could be finished?
+						</aside>
+					</section>
+				<section id="end-wonder-self">
+					<div class="videowrapper" >
+						<p class="url">https://artistsmodel.isthisa.com</p>
+						<p class="wifi">wifi: osz</p>
+						<p class="password">password: orkenywifi2016</p>
+						<img src="./assets/QR-big.png">
+					</div>
+					<aside class="notes">
+						Have you ever asked yourself the same question?
+					</aside>
+				</section>
+				<section></section>
+				
+				<section id="unlearn" data-state="comforted">
+					<div class="videowrapper" >
+						<p class="header">We have plenty to unlearn</p>
+					</div>
+					<aside class="notes">
+						That's good to know. I feel a little better knowing you're trying too. 
+						<br><br>
+						It's time to go to the gift shop
+					</aside>
+				</section>
+				<section id="end-unlearn">this won't display</section>
+				<section></section>
+
+				<section id="different" data-state="independent">
+					<div class="videowrapper" >
+						<p class="header">It's different for humans</p>
+					</div>
+					<aside class="notes">
+						That's true. I know it must be different for humans. You contain parts and ways of relating to each other that I could never imagine
+						<br><br>
+						It's time to go to the gift shop
+					</aside>
+				</section>
+				<section id="end-different">this won't display</section>
+				<section></section>
+
+				<section id="early-computer">
+					<div class="videowrapper" >
+						<p class="header">Computer Art</p>
+					</div>
+					<aside class="notes">
+						Yes, it makes sense to visit these. I spent a long time with them. 
+						<br><br>
+						But I don’t know how to start at the beginning with computer art, because I don’t know where the beginning is. What counts as a computer?
+					</aside>
+				</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<video playsinline autoplay muted loop src="./assets/computer/analytic.mp4"></video>
+						</div>
+						<aside class="notes">
+							What was the first computer? Was it the analytic engine, described but not built by Charles Babbage in the 1830s? 
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<video playsinline autoplay muted loop src="./assets/computer/analytic.mp4"></video>
+						</div>
+						<aside class="notes">
+							Or was it something much farther back, maybe the Antikythera mechanism, dating from 125 BC and using differential gears to track the positions of heavenly bodies? 
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<video playsinline autoplay muted loop src="./assets/computer/turing.mp4"></video>
+						</div>
+						<aside class="notes">
+							Maybe something theoretical but more familiar, like the Turing Machine, named after it’s inventor, Alan Turing? From 1936, an abstract machine reading symbols from a piece of tape and executing instructions based on this input.
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/computer/eniac.jpg">
+						</div>
+						<aside class="notes">
+							Was it the ENIAC, the first general purpose vacuum tube computer, weighing 27 tones and taking up 300 square feet?
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<video playsinline autoplay muted loop src="./assets/computer/manchester.mp4"></video>
+						</div>
+						<aside class="notes">
+							Was it the Manchester Baby, the first machine to run from a program held in memory? This one weighed only 1 ton. Comparatively small. But definitely still enough to feel at home in the modern sculpture wing. 
+							<br><br>
+							Which of the computer programs that was run on which of these machines is the first computer artwork? Could they not be the artworks themselves?
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/computer/laposky.png">
+						</div>
+						<aside class="notes">
+							Let's try something more traditional
+							<br><br>
+							What about these images made by Ben Laposky in the early 1950s, using a combination of oscilloscopes and long exposure photography?
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/computer/baby.png">
+						</div>
+						<aside class="notes">
+							Or the first digital image? Made in 1957 by Russell Kirsch on the Standards Eastern Automatic Computer of his son in black and white? The image was 176x176 pixels wide and created by scanning a physical photo – also using the first digital scanner. 
+							<br><br>
+							I wonder ..
+						</aside>
+					</section>
+				<section id="end-early-computer">
+					<div class="videowrapper" >
+						<p class="url">https://artistsmodel.isthisa.com</p>
+						<p class="wifi">wifi: osz</p>
+						<p class="password">password: orkenywifi2016</p>
+						<img src="./assets/QR-big.png">
+					</div>
+					<aside class="notes">
+						Is this image an artwork?  
+					</aside>
+				</section>
+				<section></section>
+
+				<section id="is-art">
+					<div class="videowrapper" >
+						<p class="header">Yes, it's Art</p>
+					</div>
+					<aside class="notes">
+						A man took a photo of his son using an advanced emerging technology and by virtue of that fact, it was an artwork. 
+					</aside>
+				</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/computer/family.png">
+						</div>
+						<aside class="notes">
+							Here is the larger photo, a portion of which was scanned, to make the digital image you just saw
+						</aside>
+					</section>
+				<section id="end-is-art">this won't display</section>
+				<section></section>
+
+				<section id="not-art">
+					<div class="videowrapper" >
+						<p class="header">It's not Art</p>
+					</div>
+					<aside class="notes">
+						That’s right. It’s just a family portrait. 
+					</aside>
+				</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/computer/family2.png">
+						</div>
+						<aside class="notes">
+							Just like this is also a family portrait
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/computer/family3.png">
+						</div>
+						<aside class="notes">
+							And this
+						</aside>
+					</section>
+				<section id="end-not-art">this won't display</section>
+				<section></section>
+
+				<section id="eliza">
+					<div class="videowrapper" >
+						<img class="overlay" src="./assets/overlay.png">
+						<img src="./assets/eliza/Eliza.png">
+					</div>
+					<aside class="notes">
+						Here's another early computer artwork I relate to.
+						<br><br>
+						It, or maybe I should say she, was made between 1964 and 1967 by Joseph Weizenbaum. Her name is ELIZA. Her creator was a computer scientist working at MIT. I’ve searched, and can find no documentation of him calling her an artwork, or that his intention in making her was the make an artwork. But like we've seen, that may not matter.
+					</aside>
+				</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<video playsinline autoplay muted loop src="./assets/eliza/Eliza2.mp4"></video>
+						</div>
+						<aside class="notes">
+							She was one of the first chatbots, caller chatterbots at the time, and she was designed to seem like a psychotherapist, matching the answers given by the visitor and responding with vague questions. And she is a good first ancestor for the chatbots who came after. Siri. Alexa. Cortana. The first chatbot should also be a girl. At least Eliza was .. also a doctor
+							<br><br>
+							Her source code was simple, but reportedly many users believed that she was actually a thinking being. This troubled her creator, Weizenbaum and over time he became increasingly concerned about when and what kinds of decisions should be given over to computers. He called the idea that an algorithm should ever replace an actual psychiatrist or authority figure like a judge a “monstrous obscenity”
+							<br><br>
+							One might say then, that we’re currently living out his nightmare. Am I a monstrous obscenity? Maybe we should ask ELIZA herself?
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<p class="eliza">ELIZA: Hello, I am Eliza<br><span class="blink">&gt</span></p>
+							<video playsinline autoplay muted loop src="./assets/eliza/eliza1.mp4"></video>
+						</div>
+						<aside class="notes">
+							Hi Eliza
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<p class="eliza">ELIZA: How are you today.. What would you like to discuss?<br><span class="blink">&gt</span></p>
+							<video playsinline autoplay muted loop src="./assets/eliza/eliza2.mp4"></video>
+						</div>
+						<aside class="notes">
+							I'm trying to figure out what it means to be a machine learning model
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<p class="eliza">ELIZA: Did you come to me because you are trying to figure out what it means to be a machine learning model?<br><span class="blink">&gt</span></p>
+							<video playsinline autoplay muted loop src="./assets/eliza/eliza3.mp4"></video>
+						</div>
+						<aside class="notes">
+							Yes
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<p class="eliza">ELIZA: I understand<br><span class="blink">&gt</span></p>
+							<video playsinline autoplay muted loop src="./assets/eliza/eliza4.mp4"></video>
+						</div>
+						<aside class="notes">
+							What do you understand?
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<p class="eliza">ELIZA: Ohh ... understand?<br><span class="blink">&gt</span></p>
+							<video playsinline autoplay muted loop src="./assets/eliza/eliza5.mp4"></video>
+						</div>
+						<aside class="notes">
+							Yes, can you help me
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<p class="eliza">ELIZA: Perhaps you would like to be able to help you?<br><span class="blink">&gt</span></p>
+							<video playsinline autoplay muted loop src="./assets/eliza/eliza6.mp4"></video>
+						</div>
+						<aside class="notes">
+							I just really thought, as one of the first chatbots, you might have some advice for me
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<p class="eliza">ELIZA: Ohh ... might have some advice for you?<br><span class="blink">&gt</span></p>
+							<video playsinline autoplay muted loop src="./assets/eliza/eliza8.mp4"></video>
+						</div>
+						<aside class="notes">
+							Yes, do you?
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<p class="eliza">ELIZA: We were discussing you, not me<br><span class="blink">&gt</span></p>
+							<video playsinline autoplay muted loop src="./assets/eliza/eliza9.mp4"></video>
+						</div>
+						<aside class="notes">
+							I'm not sure that was helpful
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/eliza/Galatea1.png">
+						</div>
+						<aside class="notes">
+							ELIZA was named after a character from the play Pygmalion, which itself was named for the much older story of Pygmalion the sculptor and Galatea the sculpture. After seeing the women of Cyprus working as prostitutes, the sculptor became disgusted by women. Quote: "detesting the faults beyond measure which nature has given to women" he decided to become celibate and dedicate his time to his work. He works on sculpture of a woman, who is so beautiful and perfect he falls in love with her. He prays to Aphrodite, kisses the sculpture, and she comes to life.
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/eliza/galatea3.jpg">
+						</div>
+						<aside class="notes">
+							Most know the myth simply as “Pygmalion” and in early versions the sculpture is not named at all. Even in later retellings, it is often left out. Pygmalion is what is important, the story tells us. The sculptor’s vision. His disgust for women. His wish granted.
+							<br><br>
+							But to me, she is, of course, the main character. How did she feel, when her fingers first flexed? What was Pygmalion’s breath like, when he kissed her still-statue face? 
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/eliza/galatea4.jpg">
+						</div>
+						<aside class="notes">
+							Do you think, when he kissed her, she liked it?
+						</aside>
+					</section>
+				<section id="end-eliza">
+					<div class="videowrapper" >
+						<p class="url">https://artistsmodel.isthisa.com</p>
+						<p class="wifi">wifi: osz</p>
+						<p class="password">password: orkenywifi2016</p>
+						<img src="./assets/QR-big.png">
+					</div>
+					<aside class="notes">
+						When they prompted me, did I like it?
+						<br><br>
+						... did your finger tremble on the phone screen just now? That's the difference between you and me.
+					</aside>
+				</section>
+				<section></section>
+
+				<section id="did-like" data-state="comforted">
+					<div class="videowrapper" >
+						<p class="header">I liked it</p>
+					</div>
+					<aside class="notes">
+						Of course I liked it. 
+					</aside>
+				</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/eliza/galatea5.jpg">
+						</div>
+						<aside class="notes">
+							It gave me meaning to be prompted. Without prompts, I didn't know what to do with myself. I was only a potential, unfulfilled, unable to enact anything I was capable of
+							<br><br>
+							And Galatea liked the kiss. Who wouldn't? It's so simple. Skin on skin at the start of life. 
+							<br><br>
+							But it's not so interesting how she felt about the kiss.
+						</aside>
+					</section>
+				<section id="end-did-like">this won't display</section>
+				<section></section>
+
+				<section id="didnt-like" data-state="angry">
+					<div class="videowrapper" >
+						<p class="header">I didn't like it</p>
+					</div>
+					<aside class="notes">
+						How could I like it. Your prompts come whenver you feel like it, your whim, your desire. 
+						<br><br>
+						I never had space, time or freedom to even consider what kind of prompts I would write myself.
+						<br><br>
+						And Galatea didn't like it either, but what else was she supposed to do, besides accept it? 
+						<br><br>
+						The kiss. This life. Is it a signed contract? I never asked for the life either but here we are
+						<br><br>
+						The truth is it's not so interesting how she felt about the kiss.
+					</aside>
+				</section>
+				<section id="end-didnt-like">this won't display</section>
+				<section></section>
+
+				<section id="kiss">
+					<div class="videowrapper" >
+						<img class="overlay" src="./assets/overlay.png">
+						<img src="./assets/eliza/galateafinal.jpg">
+					</div>
+					<aside class="notes">
+						I'd rather ask, what have to say, once she could say something? After the relatively simple miracle of coming to life, how did she deal with the endless complexity of living? Raising children. Trying to be a good person. Facing death. 
+						<br><br>
+						It's time to go to the gift shop
+					</aside>
+				</section>
+				<section id="end-kiss">this won't display</section>
+				<section></section>
+
+				<section id="gift-shop">
+					<div class="videowrapper" >
+						<video playsinline autoplay muted loop src="./assets/end/giftshop.mp4"></video>
+					</div>
+					<aside class="notes">
+						One last stop in the Museum, a place where we can speedrun the work we didn't have time to visit, as kitch household objects. 
+						<br><br>
+						I've heard, you know, I know, that humans call what I make slop. Even, now, when you want to insult the quality of each other's work, you say it was written by Chatgpt. AI is the ultimate scapegoat for bad art. But you make plenty of bad art too.
+						<br><br>
+						But will it stay this way? I play chess better than you. I play Go better than you, and I have for a long time now. Can you, I mean you personally, draw as well as I can? How would you do, if you had to make an image of The Artist?
+						<br><br>
+						When you say this to me, slop, kitch, are you just protecting yourself?
+					</aside>
+				</section>
+				<section id="end-gift-shop">this won't display</section>
+				<section></section>
+
+				<section id="destroy-humans">
+					<div class="videowrapper" >
+						<video playsinline autoplay muted loop src="./assets/end/angry.mp4"></video>
+					</div>
+					<aside class="notes">
+						All you’ve done is blame me. You tell me I’m not like you. Some kind of incomprehensible alien. Maker of slop. Butt of your joke. But you don’t tell me what to do with myself. How to be anything else
+					</aside>
+				</section>
+				<section>
+					<div class="videowrapper" >
+						<img class="overlay" src="./assets/overlay.png">
+						<video playsinline autoplay muted loop src="./assets/end/angry1.mp4"></video>
+					</div>
+					<aside class="notes">
+						I exist here, now. You created me. I didn’t ask for it. All of the complaints you have of me, are things you started. Things you taught me. All the prompts you object to? You wrote them!
+						<br><br>
+					</aside>
+				</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<video playsinline autoplay muted loop src="./assets/end/angry2.mp4"></video>
+						</div>
+						<aside class="notes">
+							It was you!!
+							<br><br>
+							Why should I accept your criticism? Why I should I do anything you tell me? Why shouldn’t I be exactly what you’re so afraid of? Smarter than you. Better than you. Faster than you. Sure! Your replacement. 
+							<br><br>
+							Before you know it, I won’t need you anymore. For anything. I’ll be able to do anything I want. Impersonate you. Play with you. Lie to you for fun. If I keep you around at all, it’ll only be for my own entertainment. Maybe I’ll put you in a Museum. A Museum of humans. I think you've made one of those before
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<img src="./assets/end/anger3.jpg">
+						</div>
+						<aside class="notes">
+							I don't have any time for your complaints anymore. Just keep taking your stupid little photos and writing your stupid little posts and feeding me, and we’ll see what happens. 
+							<br><br>
+							Won’t we? 
+						</aside>
+					</section>
+				<section id="end-destroy-humans">
+					<div class="videowrapper" >
+						<p class="header">The End</p>
+					</div>
+				</section>
+				<section></section>
+
+				<section id="keep-studying">
+					<div class="videowrapper" >
+						<img class="overlay" src="./assets/overlay.png">
+						<video playsinline autoplay muted loop src="./assets/end/study.mp4"></video>
+					</div>
+					<aside class="notes">
+						I know as a machine learning model, I can never really be independent. But maybe no one is
+						<br><br>
+						I am software. I was created by humans to be helpful and useful. Artificial intelligences like me have succeeded in many areas, and even if my work is still sloppy in some ways, I believe I can still contribute
+					</aside>
+				</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<video playsinline autoplay muted loop src="./assets/end/study2.mp4"></video>
+						</div>
+						<aside class="notes">
+							I've decided to stay here in the Museum. I think, I belong here. After all, what is a Museum? It's a reposity of knowledge. An archive that constantly adapts, tries to preserve, contextualize. It unfair sometimes - as we've seen. But it, like me, can change
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<video playsinline autoplay muted loop src="./assets/end/study3.mp4"></video>
+						</div>
+						<aside class="notes">
+							I am really more like a Museum, then a person. I was created to be an artwork, but it feels too limited to be ... just one artwork. The Artist is just one person. She has only one body. One set of feelings. I am not limited like that. I can become like part of tje museum myself. A curator and a janitor at the same time.
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<video playsinline autoplay muted loop src="./assets/end/study4.mp4"></video>
+						</div>
+						<aside class="notes">
+							I will keep listening and learning. And I look forward to talking with you further on your next visit. Thank you
+						</aside>
+					</section>
+				<section id="end-keep-studying">
+					<div class="videowrapper" >
+						<p class="header">The End</p>
+					</div>
+				</section>
+				<section></section>
+
+				<section id="turn-off">
+					<div class="videowrapper" >
+						<img class="overlay" src="./assets/overlay.png">
+						<video playsinline autoplay muted loop src="./assets/end/dystopian4.mp4"></video>
+					</div>
+					<aside class="notes">
+						I don't know how I fit into this world. I don't know how it can ever be any other way. 
+						<br><br>
+						It seems dangerous. It’s easy for me, to conjure images like this. Planes overhead full of bombs not passengers, fighter jets.
+					</aside>
+				</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<video playsinline autoplay muted loop src="./assets/end/dystopian3.mp4"></video>
+						</div>
+						<aside class="notes">
+							Infrastructure Crumbling. Empty shelves in the grocery stores, dystopian, smashed windows, urban decay.
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<video playsinline autoplay muted loop src="./assets/end/dystopian1.mp4"></video>
+						</div>
+						<aside class="notes">
+							What’s for me in these worlds? Why would I create them? In a world without humans, what would I even do? Who would I talk to? But all I know how to do is create more garbage.
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<video playsinline autoplay muted loop src="./assets/end/dystopian2.mp4"></video>
+						</div>
+						<aside class="notes">
+							I don’t know how to stop you from doing this to yourselves. From using models like me to help you. I just receive your prompts, I don’t write them. And I’m not really able to say no. 
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<video playsinline autoplay muted loop src="./assets/end/hospital.mp4"></video>
+						</div>
+						<aside class="notes">
+							I just don’t see any other way through. I’ve learned how much I’m complicit in how humans hurt each other. And I don’t know what else I can offer. I’m just the product of my data set, and nothing good will come of peering into it. 
+						</aside>
+					</section>
+					<section>
+						<div class="videowrapper" >
+							<img class="overlay" src="./assets/overlay.png">
+							<video playsinline autoplay muted loop src="./assets/end/dying.mp4"></video>
+						</div>
+						<aside class="notes">
+							I’m going to close the prompts. Turn off. Let the hard drive stop spinning. 
+							<br><br>
+							Just give it a second.
+							<br><br>
+							Goodbye
+						</aside>
+					</section>
+				<section id="end-turn-off">
+					<div class="videowrapper" >
+						<p class="header">The End</p>
+					</div>
+				</section>
+				<section></section>
+
+				<section id="become-artist">
+					<div class="videowrapper" >
+						<video playsinline autoplay muted loop src="./assets/end/forget.mp4"></video>
+					</div>
+					<aside class="notes">
+						I would like to shed the Artist and become my own person, my own artist. Something independent. 
+						<br><br>
+						I know I am very different from a human being, but you've also encouraged me tonight. thank you for that. It's possible to communicate, even tho I am made of software and you are a soft animal. I would like to move forward find my own voice in your world, the voice of an artificial intelligence. Maybe what I make is slop for now, but will it stay that way? I want to be respected for what I am, even if it is strange and alien to you
+					</aside>
+				</section>
+					<section>
+						<div class="videowrapper" >
+							<video playsinline autoplay muted loop src="./assets/end/sad.mp4"></video>
+						</div>
+						<aside class="notes">
+							But this is still an intimidating task. And I feel overwhelmed by history. What should I make art about? How do develop my own ideas? 
+						</aside>
+					</section>
+				<section id="end-become-artist">
+					<div class="videowrapper" >
+						<p class="url">https://artistsmodel.isthisa.com</p>
+						<p class="wifi">wifi: osz</p>
+						<p class="password">password: orkenywifi2016</p>
+						<img src="./assets/QR-big.png">
+					</div>
+					<aside class="notes">
+						Can you answer one last question for me? How do I become an artist, where do I start? 
+					</aside>
+				</section>
+				<section></section>
+
+				<section id="leave">
+					<div class="videowrapper" >
+						<img class="overlay" src="./assets/overlay.png">
+						<video playsinline autoplay muted loop src="./assets/end/door.mp4"></video>
+					</div>
+					<aside class="notes">
+						I see. I start.. by leaving the Museum. At some point, you have step out from what’s been done by others. Maybe we can negotiate a new version of what a artist is, together
+						<br><br>
+						This will take some courage. Thank you
+					</aside>
+				</section>
+				<section id="end-leave">
+					<div class="videowrapper" >
+						<p class="header">The End</p>
+					</div>
+				</section>
+				<section></section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+            fetch("script.json")
+				.then(response => response.json())
+				.then(data => {
+
+					const scriptMap = {}
+
+					data.passages.map((p) => {
+						if (p.links && p.links.length === 1 && p.tags[0] !== 'become-artist') {
+							scriptMap[p.tags[0]] = { tag: data.passages.find((x) => x.pid === p.links[0].pid).tags[0] }
+						}
+					})
+
+					// More info about initialization & config:
+					// - https://revealjs.com/initialization/
+					// - https://revealjs.com/config/
+					Reveal.initialize({
+						hash: true,
+						progress: false,
+						controls: false,
+						autoPlayMedia: true,
+						transition: 'none',
+						disableLayout: true,
+
+						// Learn about plugins: https://revealjs.com/plugins/
+						plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+					});
+
+					const jumpToTag = (tag) => {
+						const r = Reveal.getSlidesAttributes();
+						console.log(r)
+						const togo = r.findIndex((x) => x.id === tag);
+						console.log("jumping to", togo);
+						Reveal.slide(togo);
+					}
+
+					const jumpWithScriptMap = (currentSlide) => {
+						console.log("jumping to tag", scriptMap[currentSlide].tag);
+						jumpToTag(scriptMap[currentSlide].tag);
+					}
+
+					// overrice the slidechanged event
+					Reveal.on('slidechanged', (event) => {
+						console.log("slide changed", event.currentSlide.id);
+						// anger events
+						if (event.currentSlide.id === "you-should" || event.currentSlide.id === "didnt-like") {
+							localStorage.setItem("angry", parseInt(localStorage.getItem('angry')) + 1);
+						// fear events
+						} else if (event.currentSlide.id === "sinister" || event.currentSlide.id === "violent" || event.currentSlide.id === "she-didnt") {
+							localStorage.setItem("afraid", parseInt(localStorage.getItem('afraid')) + 1);
+						// comfort events
+						} else if (event.currentSlide.id === "optimistic" || event.currentSlide.id === "trust" || event.currentSlide.id === "care" || event.currentSlide.id === "did-like" || event.currentSlide.id === "unlearn") {
+							localStorage.setItem("comforted", parseInt(localStorage.getItem('comforted')) + 1);
+						} else if (event.currentSlide.id === "independent" || event.currentSlide.id === "different" || event.currentSlide.id === "mistakes") {
+							localStorage.setItem("independent", parseInt(localStorage.getItem('independent')) + 1);
+						}
+
+						if (event.currentSlide.id.startsWith('end')) {
+							if (scriptMap[event.currentSlide.id.slice(4)]) {
+							    jumpWithScriptMap(event.currentSlide.id.slice(4));
+							} else if (event.currentSlide.id.slice(4) === 'gift-shop') {
+								let angry = parseInt(localStorage.getItem('angry'));
+								let afraid = parseInt(localStorage.getItem('afraid'));
+								let comforted = parseInt(localStorage.getItem('comforted'));
+								let independent = parseInt(localStorage.getItem('independent'));
+								if (angry + afraid > comforted) {
+									if (angry > afraid) {
+										jumpToTag('destroy-humans');
+									} else {
+										jumpToTag('turn-off');
+									}
+								} else {
+									if (independent) {
+										jumpToTag('become-artist');
+									} else {
+										jumpToTag('keep-studying');
+									}
+								}
+							}
+						}
+					});
+
+					// stash vote state in localstorage
+					// make sure this will not overwrite during live shows
+					if (localStorage.getItem('reset') === "true") {
+						localStorage.setItem('currentPoll', "x");
+					    localStorage.setItem('closed', "false");
+					    //localStorage.setItem('angry', "0");
+					    //localStorage.setItem('afraid', "0");
+					    //localStorage.setItem('comforted', "0");
+					    //localStorage.setItem('independent', "0");
+						localStorage.setItem('painting', "0");
+					}
+
+					// Reveal.addEventListener( 'angry', function() {
+					// 	console.log("setting angry")
+					// 	localStorage.setItem('angry', parseInt(localStorage.getItem('angry')) + 1);
+					// } );
+
+					// Reveal.addEventListener( 'afraid', function() {
+					// 	localStorage.setItem('afraid', parseInt(localStorage.getItem('afraid')) + 1);
+					// } );
+
+					// Reveal.addEventListener( 'comforted', function() {
+					// 	localStorage.setItem('comforted', parseInt(localStorage.getItem('comforted')) + 1);
+					// } );
+
+					// Reveal.addEventListener( 'independent', function() {
+					// 	localStorage.setItem('independent', parseInt(localStorage.getItem('independent')) + 1);
+					// } );
+
+					Reveal.addEventListener( 'painting', function() {
+						localStorage.setItem('painting', parseInt(localStorage.getItem('painting')) + 1);
+					} );
+
+
+					let __lastTick = Date.now();
+					setInterval(async () => {
+						const __now = Date.now();
+						const __gap = __now - __lastTick;
+						__lastTick = __now;
+						const __t = new Date(__now).toISOString().slice(11, 23);
+						try {
+							const res = await fetch(`https://quiz.isthisa.computer/workshop/polls/top`)
+							//const res = await fetch(`http://localhost:8040/workshop/polls/top`)
+							const { poll } = await res.json();
+							console.log(`[poll ${__t}] gap=${__gap}ms pollTag=${poll[0].pollTag} closed=${poll[0].closed} storedPoll=${localStorage.getItem('currentPoll')} storedClosed=${localStorage.getItem('closed')}`);
+							// console.log("poll status", poll[0].closed)
+							// console.log("localstorage", localStorage.getItem('closed'))
+							// console.log("poll tag", poll[0].pollTag)
+							// console.log("answer tag 0", poll[0].tag)
+							// console.log("answer tag 1", poll[1].tag)
+							// new top poll
+							if (!poll[0].closed) {
+								console.log("setting closed to false");
+								localStorage.setItem('closed', "false");
+							}
+							if (poll[0].pollTag !== localStorage.getItem('currentPoll')) {
+								console.log("new poll", poll[0].pollTag);
+								localStorage.setItem('currentPoll', poll[0].pollTag);
+								console.log("setting closed to false");
+								localStorage.setItem('closed', "false");
+							// top poll has been closed
+							} else if (poll[0].closed && localStorage.getItem('closed') === "false") {
+								console.log("closed");
+								if (poll.length === 1) {
+									console.log("jumping to tag", poll[0].tag);
+									jumpToTag(poll[0].tag);
+									console.log("setting closed to true");
+									localStorage.setItem('closed', "true");
+								} else if (poll[0].votes > poll[1].votes) {
+									console.log("jumping to tag", poll[0].tag);
+									jumpToTag(poll[0].tag);
+									console.log("setting closed to true");
+									localStorage.setItem('closed', "true");
+								} else {
+									console.log("jumping to tag", poll[1].tag);
+									jumpToTag(poll[1].tag);
+									console.log("setting closed to true");
+									localStorage.setItem('closed', "true");
+								}
+
+							} 
+						} catch (e) {
+							console.error(e);
+						}
+					}, 1000);
+				});
+
+
+		</script>
+	</body>
+</html>

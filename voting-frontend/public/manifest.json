@@ -1,0 +1,10 @@
+{
+  "short_name": "Sonar Workshop",
+  "name": "Sonar Workshop",
+  "icons": [
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
