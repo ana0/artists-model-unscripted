@@ -2,6 +2,7 @@ const bodyParser = require('body-parser')
 const polls = require('./controllers/polls')
 const sessions = require('./controllers/sessions')
 const votes = require('./controllers/votes')
+const sections = require('./controllers/sections')
 
 module.exports = (app) => {
   app.use(bodyParser.urlencoded({ extended: true }))
@@ -19,6 +20,10 @@ module.exports = (app) => {
   app.get('/workshop/sessions/:top', sessions.readSessions)
   app.post('/workshop/sessions', sessions.createSession)
   app.put('/workshop/sessions', sessions.updateSession)
+
+  app.get('/workshop/sections', sections.listSections)
+  app.get('/workshop/sections/current', sections.readCurrentSection)
+  app.get('/workshop/sections/:tag', sections.readSection)
 
   app.get('/workshop/votes', (req, res) => res.status(200).json('Votes endpoint'))
   app.get('/workshop/votes/:id', votes.readVotes)
