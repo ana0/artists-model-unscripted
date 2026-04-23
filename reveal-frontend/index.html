@@ -140,8 +140,8 @@
 		<script>
 			(function () {
 				// ── Config ──────────────────────────────────────────
-				const API_BASE = 'https://quiz.isthisa.computer';
-				// const API_BASE = 'http://localhost:8040';
+				//const API_BASE = 'https://quiz.isthisa.computer';
+				const API_BASE = 'http://localhost:8040';
 				const POLL_INTERVAL = 1000;
 
 				// ── State (in-memory, not localStorage) ─────────────
@@ -169,26 +169,6 @@
 					const wrapper = document.createElement('div');
 					wrapper.className = 'videowrapper';
 
-					// Media
-					if (slide.video) {
-						const video = document.createElement('video');
-						video.src = slide.video;
-						video.autoplay = true;
-						video.muted = true;
-						video.playsInline = true;
-						wrapper.appendChild(video);
-					}
-
-					if (slide.image) {
-						const img = document.createElement('img');
-						img.src = slide.image;
-						if (slide.overlay) {
-							img.classList.add('overlay');
-						}
-						wrapper.appendChild(img);
-					}
-
-					// Text content varies by slide type
 					switch (slide.type) {
 						case 'header':
 							if (slide['slide-text']) {
@@ -199,20 +179,34 @@
 							}
 							break;
 
-						case 'eliza':
-							if (slide['slide-text']) {
-								const p = document.createElement('p');
-								p.className = 'eliza';
-								p.innerHTML = slide['slide-text'].replace(/\n/g, '<br>');
-								wrapper.appendChild(p);
+						case 'content':
+							if (slide.overlay) {
+								const overlayImg = document.createElement('img');
+								overlayImg.className = 'overlay';
+								overlayImg.src = './assets/overlay.png';
+								wrapper.appendChild(overlayImg);
+							}
+							if (slide.video) {
+								const video = document.createElement('video');
+								video.setAttribute('playsinline', '');
+								video.autoplay = true;
+								video.muted = true;
+								video.loop = true;
+								video.src = slide.video;
+								wrapper.appendChild(video);
+							}
+							if (slide.image) {
+								const img = document.createElement('img');
+								img.src = slide.image;
+								wrapper.appendChild(img);
 							}
 							break;
 
 						case 'question':
 							if (slide['slide-text']) {
-								var lines = slide['slide-text'].split('\n');
+								const lines = slide['slide-text'].split('\n');
 								lines.forEach(function (line) {
-									var p = document.createElement('p');
+									const p = document.createElement('p');
 									if (line.startsWith('http')) {
 										p.className = 'url';
 									} else if (line.startsWith('wifi:')) {
@@ -224,10 +218,43 @@
 									wrapper.appendChild(p);
 								});
 							}
+							if (slide.image) {
+								const img = document.createElement('img');
+								img.src = slide.image;
+								wrapper.appendChild(img);
+							}
+							break;
+
+						case 'eliza':
+							if (slide['slide-text']) {
+								const p = document.createElement('p');
+								p.className = 'eliza';
+								p.innerHTML = slide['slide-text'].replace(/\n/g, '<br>')
+									+ '<br><span class="blink">&gt;</span>';
+								wrapper.appendChild(p);
+							}
+							if (slide.video) {
+								const video = document.createElement('video');
+								video.setAttribute('playsinline', '');
+								video.autoplay = true;
+								video.muted = true;
+								video.loop = true;
+								video.src = slide.video;
+								wrapper.appendChild(video);
+							}
 							break;
 					}
 
 					section.appendChild(wrapper);
+
+					// Speaker notes from the text field
+					if (slide.text) {
+						const aside = document.createElement('aside');
+						aside.className = 'notes';
+						aside.innerHTML = slide.text.replace(/\n\n/g, '<br><br>');
+						section.appendChild(aside);
+					}
+
 					return section;
 				}
 
@@ -287,6 +314,25 @@
 						});
 				}
 
+				function fetchCurrentSection() {
+					return fetch(API_BASE + '/workshop/sections/current')
+						.then(function (res) {
+							if (!res.ok) throw new Error('Current section fetch failed: ' + res.status);
+							return res.json();
+						})
+						.then(function (data) {
+							var tag = data.tag;
+							if (data.ending) {
+								console.log('[section] Ending resolved:', data.ending);
+							}
+							addSectionSlides(data.section, tag);
+							navigateToSection(tag);
+						})
+						.catch(function (err) {
+							console.error('[section] Failed to load current:', err);
+						});
+				}
+
 				// ── Poll loop (setTimeout chain — no overlap) ──────
 
 				function pollOnce() {
@@ -310,28 +356,12 @@
 							// Poll just closed and we haven't acted on it
 							if (isClosed && !hasJumped) {
 								hasJumped = true;
+								console.log('[poll] Closed. Fetching resolved section from server.');
 
-								var winningTag;
-								if (poll.length === 1) {
-									winningTag = poll[0].tag;
-								} else if (poll[0].votes > poll[1].votes) {
-									winningTag = poll[0].tag;
-								} else if (poll[1].votes > poll[0].votes) {
-									winningTag = poll[1].tag;
-								} else {
-									// Tie — default to first option
-									winningTag = poll[0].tag;
-								}
-
-								console.log('[poll] Closed. Winner:', winningTag,
-									'(votes:', poll[0].tag, poll[0].votes,
-									'vs', poll.length > 1 ? poll[1].tag : 'n/a',
-									poll.length > 1 ? poll[1].votes : '', ')');
-
-								// Fetch and display the winning section.
+								// Server picks the winning tag (and ending, if at a terminal branch).
 								// Don't schedule the next poll tick until this completes,
 								// so we never poll while mid-navigation.
-								fetchSection(winningTag).then(scheduleNextPoll);
+								fetchCurrentSection().then(scheduleNextPoll);
 								return;
 							}
 

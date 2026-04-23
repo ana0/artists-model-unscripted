@@ -82,8 +82,8 @@ destinations.forEach(tag => {
   // Concatenate all slide arrays from the chain
   const slides = []
   chain.forEach(t => {
-    if (sections[t]) {
-      slides.push(...sections[t])
+    if (sections[t] && sections[t].slides) {
+      slides.push(...sections[t].slides)
     } else {
       console.warn(`  WARNING: no section data for tag "${t}"`)
     }

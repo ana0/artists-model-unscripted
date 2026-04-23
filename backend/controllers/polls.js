@@ -71,9 +71,9 @@ const createPoll = (req, res) => {
     }
     console.log(`inserted question ${this.lastID}`)
     pollId = this.lastID
-    const stmt = db.prepare("INSERT INTO pollItems(answer, pollsId, nextPoll) VALUES (?, ?, ?, ?)");
+    const stmt = db.prepare("INSERT INTO pollItems(answer, pollsId, nextPoll, tag) VALUES (?, ?, ?, ?)");
     answers.map((a) => {
-      return stmt.run([a.answer, pollId, a.nextPoll]);
+      return stmt.run([a.answer, pollId, a.nextPoll, a.tag]);
     })
     stmt.finalize();
     res.status(200).json(`Created poll ${pollId}`)
@@ -95,9 +95,10 @@ const updatePoll = (req, res)  => {
       }
       // get all answers for this poll, as well as the number of votes for each answer
       const query = `SELECT polls.id, question, answer, closed, pollItems.id as pollItemsId, pollItems.nextPoll as nextPoll,
+      pollItems.angry as angry, pollItems.afraid as afraid, pollItems.comforted as comforted, pollItems.independent as independent,
       (select COUNT(votes.id) from votes where votes.pollItemsId = pollItems.id and votes.sessionId = ${session.sessionId}) as votes
-      FROM polls 
-      INNER JOIN pollItems ON pollItems.pollsId = polls.id 
+      FROM polls
+      INNER JOIN pollItems ON pollItems.pollsId = polls.id
       WHERE polls.id IS ${row.pollsId};`
 
       return db.all(query, async (err, poll) => {
@@ -109,7 +110,36 @@ const updatePoll = (req, res)  => {
         if (!poll) return res.status(401).json({ error: 'Not found' });
         // to-do: handle tie
         let winningAnswer = poll[0].votes > poll[1].votes ? poll[0] : poll[1];
-        // to-do: handle last poll
+
+        // Increment session emotions by the winning answer's values
+        const incrementEmotions = () => new Promise((resolve, reject) => {
+          db.run(
+            `INSERT INTO sessionEmotions(sessionId, angry, afraid, comforted, independent)
+             VALUES (?, ?, ?, ?, ?)
+             ON CONFLICT(sessionId) DO UPDATE SET
+               angry = angry + excluded.angry,
+               afraid = afraid + excluded.afraid,
+               comforted = comforted + excluded.comforted,
+               independent = independent + excluded.independent;`,
+            [session.sessionId, winningAnswer.angry, winningAnswer.afraid, winningAnswer.comforted, winningAnswer.independent],
+            (err) => err ? reject(err) : resolve()
+          )
+        })
+
+        try {
+          await incrementEmotions()
+        } catch (err) {
+          console.log(err)
+          return res.status(500).json({ error: 'Server Error' });
+        }
+
+        // If the winner leads nowhere (chain ends at gift-shop), leave topPoll pointing
+        // at the current closed poll. readCurrentSection resolves the ending from emotions.
+        if (winningAnswer.nextPoll == null) {
+          console.log(`poll ended at terminal branch; topPoll left at ${row.pollsId}`)
+          return res.status(200).json(`Update poll (terminal)`)
+        }
+
         db.run("INSERT OR REPLACE INTO topPoll (ID, pollsId) VALUES (1, ?);", winningAnswer.nextPoll, function(err) {
           if (err) {
             console.log(err)

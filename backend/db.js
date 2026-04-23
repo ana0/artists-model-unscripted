@@ -1,5 +1,6 @@
 const sqlite3 = require('sqlite3').verbose();
 const script = require('./script.json');
+const sections = require('./sectioned.json');
 
 
 const db = new sqlite3.Database('./quiz.db', (err) => {
@@ -13,10 +14,19 @@ db.serialize(async () => {
   db.run("CREATE TABLE IF NOT EXISTS scripts (id INTEGER PRIMARY KEY ASC, name TEXT)");
   db.run("CREATE TABLE IF NOT EXISTS polls (id INTEGER PRIMARY KEY ASC, question TEXT, tag TEXT, closed BOOLEAN DEFAULT 0)");
   db.run("CREATE TABLE IF NOT EXISTS pollItems (id INTEGER PRIMARY KEY ASC, answer TEXT, pollsId INT, nextPoll INT, tag TEXT, " +
+    "angry INT DEFAULT 0, afraid INT DEFAULT 0, comforted INT DEFAULT 0, independent INT DEFAULT 0, " +
     "FOREIGN KEY(pollsId) REFERENCES polls(id))");
+  // Idempotent migration for DBs created before emotion columns existed
+  ['angry', 'afraid', 'comforted', 'independent'].forEach(col => {
+    db.run(`ALTER TABLE pollItems ADD COLUMN ${col} INT DEFAULT 0`, (err) => {
+      if (err && !/duplicate column/i.test(err.message)) console.error(err.message);
+    });
+  });
   db.run("CREATE TABLE IF NOT EXISTS topPoll (id INTEGER PRIMARY KEY ASC, pollsId INT, FOREIGN KEY(pollsId) REFERENCES polls(id))");
   db.run("CREATE TABLE IF NOT EXISTS sessions (id INTEGER PRIMARY KEY ASC, name TEXT, pollsId INT, FOREIGN KEY(pollsId) REFERENCES polls(id))");
   db.run("CREATE TABLE IF NOT EXISTS topSession (id INTEGER PRIMARY KEY ASC, sessionId INT, FOREIGN KEY(sessionId) REFERENCES sessions(id))");
+  db.run("CREATE TABLE IF NOT EXISTS sessionEmotions (sessionId INTEGER PRIMARY KEY, angry INT DEFAULT 0, afraid INT DEFAULT 0, " +
+    "comforted INT DEFAULT 0, independent INT DEFAULT 0, FOREIGN KEY(sessionId) REFERENCES sessions(id))");
   db.run("CREATE TABLE IF NOT EXISTS votes " +
     "(id INTEGER PRIMARY KEY ASC, pollsId INT, pollItemsId INT, sessionId INT, voterId INT," +
     "FOREIGN KEY(pollsId) REFERENCES polls(id), FOREIGN KEY(pollItemsId) REFERENCES pollItems(id), FOREIGN KEY(sessionId) REFERENCES sessions(id))");
@@ -71,15 +81,22 @@ db.serialize(async () => {
         });
       };
 
-      // Function to insert a poll and return the pollId
+      // Function to insert a poll item with emotion values from its destination section
       const insertAnswer = (answer, pollId, nextPoll, tag) => {
+        const e = (sections[tag] && sections[tag].emotions) || {};
+        const angry = e.angry || 0;
+        const afraid = e.afraid || 0;
+        const comforted = e.comforted || 0;
+        const independent = e.independent || 0;
         return new Promise((resolve, reject) => {
-          db.run("INSERT INTO pollItems(answer, pollsId, nextPoll, tag) VALUES (?, ?, ?, ?)", [answer, pollId, nextPoll, tag], function (err) {
-            if (err) {
-              return reject(err);
+          db.run(
+            "INSERT INTO pollItems(answer, pollsId, nextPoll, tag, angry, afraid, comforted, independent) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
+            [answer, pollId, nextPoll, tag, angry, afraid, comforted, independent],
+            function (err) {
+              if (err) return reject(err);
+              resolve(this.lastID);
             }
-            resolve(this.lastID);
-          });
+          );
         });
       };
 
@@ -92,7 +109,7 @@ db.serialize(async () => {
         try {
           let nextPoll = await getNextPollId(script.passages.find(p => p.pid === answers[i].nextPassage).tags[0]);
           await insertAnswer(answers[i].answer, answers[i].pollsId, nextPoll, answers[i].tag);
-          console.log("answer", answers[i].answer, answers[i].pollsId, nextPoll);
+          console.log("answer", answers[i].answer, answers[i].pollsId, nextPoll, answers[i].tag);
 
         } catch (err) {
             console.error(err.message);
@@ -100,6 +117,16 @@ db.serialize(async () => {
       }
 
       db.run("INSERT INTO scripts(name) VALUES (?)", script.name);    //db.run("INSERT INTO scripts(name) VALUES (?)", script.name);
+    }
+
+    // Sync pollItems emotion columns from sectioned.json on every startup so
+    // edits to section emotions are picked up without requiring a db rebuild
+    for (const [tag, data] of Object.entries(sections)) {
+      const e = (data && data.emotions) || {};
+      db.run(
+        "UPDATE pollItems SET angry = ?, afraid = ?, comforted = ?, independent = ? WHERE tag = ?",
+        [e.angry || 0, e.afraid || 0, e.comforted || 0, e.independent || 0, tag]
+      );
     }
   });
 
