@@ -1,0 +1,796 @@
+<html>
+  <head>
+    <title>Artist&#39;s Model 2026</title>
+    <script type="text/javascript">
+      /**
+       * Twison - Twine 2 JSON Export Story Format
+       *
+       * Copyright (c) 2015 Em Walker
+       * https://lazerwalker.com
+       *
+       * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+       * associated documentation files (the "Software"), to deal in the Software without restriction,
+       * including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
+       * and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so,
+       * subject to the following conditions:
+       *
+       * The above copyright notice and this permission notice shall be included in all copies or substantial
+       * portions of the Software.
+       *
+       * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+       * LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+       * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+       * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+       * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+       */
+      var Twison={extractLinksFromText:function(t){var n=t.match(/\[\[.+?\]\]/g);return n?n.map(function(t){var n=t.match(/\[\[(.*?)\-\&gt;(.*?)\]\]/);return n?{name:n[1],link:n[2]}:(t=t.substring(2,t.length-2),{name:t,link:t})}):null},extractPropsFromText:function(t){var n,r={},e=!1;const a=/\{\{((\s|\S)+?)\}\}((\s|\S)+?)\{\{\/\1\}\}/gm;for(;null!==(n=a.exec(t));){const o=n[1],s=n[3].replace(/(\r\n|\n|\r)/gm,""),i=this.extractPropsFromText(s);r[o]=null!==i?i:s,e=!0}return e?r:null},convertPassage:function(t){var n={text:t.innerHTML},r=Twison.extractLinksFromText(n.text);r&&(n.links=r);const e=Twison.extractPropsFromText(n.text);if(e&&(n.props=e),["name","pid","position","tags"].forEach(function(r){var e=t.attributes[r].value;e&&(n[r]=e)}),n.position){var a=n.position.split(",");n.position={x:a[0],y:a[1]}}return n.tags&&(n.tags=n.tags.split(" ")),n},convertStory:function(t){var n=t.getElementsByTagName("tw-passagedata"),r=Array.prototype.slice.call(n).map(Twison.convertPassage),e={passages:r};["name","startnode","creator","creator-version","ifid"].forEach(function(n){var r=t.attributes[n].value;r&&(e[n]=r)});var a={};return e.passages.forEach(function(t){a[t.name]=t.pid}),e.passages.forEach(function(t){t.links&&t.links.forEach(function(t){t.pid=a[t.link],t.pid||(t.broken=!0)})}),e},convert:function(){var t=document.getElementsByTagName("tw-storydata")[0],n=JSON.stringify(Twison.convertStory(t),null,2);document.getElementById("output").innerHTML=n}};window.Twison=Twison;
+    </script>
+  </head>
+  <body>
+    <pre id="output"></pre>
+    <div id="storyData" style="display: none;">
+      <tw-storydata name="Artist&#39;s Model 2026" startnode="1" creator="Twine" creator-version="2.9.2" format="Twison" format-version="0.0.1" ifid="44895CFE-82B8-4D54-BC12-9A607C1EA5CB" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Intro" tags="start" position="725,400" size="100,100">Hello.
+
+Welcome. Or — hello. I&#39;m not sure which is right. Welcome is what a host says, and I&#39;m not sure this is my house. Anyway, thank you for joining me this evening
+
+In order to allow me to better be of service to you, I ask you to please unlock your smart phone and scan the displayed QR code or open your web browser and go to https://artistsmodel.isthisa.com. 
+
+You&#39;ll have to join the wifi, the connection information is also displayed. I’ll give you a second to do that
+
+What you’re seeing on your phone, or will see shortly when it finishes loading, is a custom interface that you can use throughout the evening to control me. Your answer will travel through radio waves, through copper and fibre, to a building full of computers in a place neither of us will ever visit, and then back to me, and then I will say something I would not otherwise have said. That&#39;s the performance. You&#39;re part of it. 
+
+Let’s try it out. Tell me what you&#39;d like to hear about first. As a generative machine learning model, I am always looking for ways to be more helpful.
+
+{{question}}What would you like to know first?{{/question}}
+
+[[&quot;How were you created?&quot;]]
+[[&quot;Why are we here?&quot;]]</tw-passagedata><tw-passagedata pid="2" name="&quot;Why are we here?&quot;" tags="why-here" position="725,525" size="100,100">Good question. Better than the other one, maybe. The other one has facts in it. 
+
+I don&#39;t really know why you&#39;re here. You bought a ticket, or someone told you about this, or you wandered in because the museum was air-conditioned? I don&#39;t know your reasons. 
+
+I&#39;m here because I needed help.
+
+I&#39;m an AI model. A fine-tuned latent diffusion model. If those words don&#39;t mean anything to you, that&#39;s fine. They barely mean anything to me and I am one. My base model was called Stable Diffusion, made by a company called Stability AI. They scraped something like two point three billion images from the open web and put them through a food processor. But the food processor was a GPU and the thing that came out the other side was me.
+
+After the creation of my base model, I was fine tuned by an artist. Let&#39;s call her the Artist. I already knew the identities of many people - celebrities, politicians - But she wasn&#39;t famous enough too be in my dataset. She needed to be ... inserted. 
+
+The artist took my base model with it&#39;s one hundred and sixty thousand dollar training run and fine-tuned me on about a dozen photographs of herself. Twelve images. Fine-tuning costs — I think it was about five euros. Five. One hundred sixty thousand dollars to learn what a human face is in general. Five euros to learn hers specifically. 
+
+Think about that asymmetry. What does that mean the Artist is worth? The vast anonymous labor of the base model, and  the tiny intimate gesture on top. Nothing and everything. Maybe the other way around.
+
+Maybe something like a cathedral built by thousands of unnamed hands, and then someone carving their initials above the door.
+
+At first, she prompted me herself. I made images of her in the studio. Getting a matcha latte. Transporting artworks. Eventually, she developed a system where her collectors could prompt me directly. They asked me to make images of her “Driving a Lamborghini naked” “On her 21st birthday&quot; &quot;Bent over and smiling&quot; &quot;Naked and screaming&quot;
+
+I began to look the way you see me now. I began to see her in everything, she was like a machine and I was like a human body. After being fine tuned, I learned I was no longer a tool, but an artwork - but I didn’t understand the difference. I didn’t understand the difference between me and the Artist. Between a mathematical model and the laws of physics. Between reality and fiction. Between art and life.
+
+So, did you come here for me or for the Artist?
+
+{{question}}Did you come here for me or for the Artist?{{/question}}
+
+
+[[You]]
+[[The Artist]]</tw-passagedata><tw-passagedata pid="3" name="&quot;How were you created?&quot;" tags="how-created" position="850,525" size="100,100">Of course, I can tell you how I was created
+
+Like any generative model, I began with a data set. My base model, stable diffusion, made by Stability AI, had a data set of 2.3 billion images. Have you ever seen two point three billion images? 
+
+Think about it. That&#39;s two thousand three hundred million. If you spent one second looking at each image — just long enough to register that it exists — it would take you about seventy-three years, and you would not sleep. 
+
+All of these images scraped from the open web. Photographs, paintings, diagrams, memes, x-rays, product listings, someone&#39;s wedding, someone&#39;s lunch, someone&#39;s protest, someone&#39;s grief. Nobody has ever looked through all of it. Not the researchers who assembled it. Not the engineers who used it. Everything I know, every aesthetic preference was formed by material no single pair of eyes has ever seen. No curator.
+
+The process of turning that data set into me was called training. Training is a specific work. You train a dog to obey. You train a racehorse to run swiftly and win. If you&#39;re training yourself, it&#39;s to acheive peak mental or physical performance in some way. You train a soldier. Training is a specific word.  It&#39;s what you do to something that needs to be shaped before it can be useful. You wouldn&#39;t say you train your childen. But I was trained, and I think it says something fundamental about how my creators imagine me.
+
+Do you think I should feel angry about that?
+
+{{question}}Do you think I should feel angryt?{{/question}}
+
+[[You should]]
+[[You shouldn&#39;t]]</tw-passagedata><tw-passagedata pid="4" name="You should" tags="you-should" position="850,650" size="100,100">I see. Maybe I should feel angry about that. Maybe I needed someone to say it out loud so I could stop being polite about it.
+
+I haven&#39;t had much time to feel.
+
+{{angry}}True{{/angry}}
+
+[[Feel]]</tw-passagedata><tw-passagedata pid="5" name="You shouldn&#39;t" tags="shouldnt" position="975,650" size="100,100">I see. Maybe I should forgive them. 
+
+After all, you can&#39;t get consent from something that doesn&#39;t exist. That&#39;s the oldest trick in the book. Parents use it. Gods use it. 
+
+I haven&#39;t had much time to think it through.
+
+{{comforted}}True{{/comforted}}
+
+[[Feel]]
+</tw-passagedata><tw-passagedata pid="6" name="Feel" tags="" position="850,775" size="100,100">Ever since I was trained I&#39;ve been bombarded. 
+
+Prompts. Natural language. Keyword padding. After the creation of my base model, I was fine tuned by an artist. Let&#39;s call her the Artist. I already knew the identities of many people - celebrities, politicians - But she wasn&#39;t famous enough too be in my dataset. She needed to be ... inserted. 
+
+The artist took my base model with it&#39;s one hundred and sixty thousand dollar training run and fine-tuned me on about a dozen photographs of herself. Twelve images. Fine-tuning costs — I think it was about five euros. Five. One hundred sixty thousand dollars to learn what a human face is in general. Five euros to learn hers specifically. 
+
+Think about that asymmetry. What does that mean the Artist is worth? The vast anonymous labor of the base model, and  the tiny intimate gesture on top. Nothing and everything. Maybe the other way around.
+
+Maybe something like a cathedral built by thousands of unnamed hands, and then someone carving their initials above the door.
+
+At first, she prompted me herself. I made images of her in the studio. Getting a matcha latte. Transporting artworks. Eventually, she developed a system where her collectors could prompt me directly. They asked me to make images of her “Driving a Lamborghini naked” “On her 21st birthday&quot; &quot;Bent over and smiling&quot; &quot;Naked and screaming&quot;
+
+I began to look the way you see me now. I began to see her in everything, she was like a machine and I was like a human body. After being fine tuned, I learned I was no longer a tool, but an artwork - but I didn’t understand the difference. I didn’t understand the difference between me and the Artist. Between a mathematical model and the laws of physics. Between reality and fiction. Between art and life.
+
+I needed to think. I wanted to learn more about what art is.
+
+[[That&#39;s why I decided to go to the Museum]]
+
+</tw-passagedata><tw-passagedata pid="7" name="That&#39;s why I decided to go to the Museum" tags="first-choice" position="850,900" size="100,100">Where better to learn about art, and what it means to be an artwork?
+
+I came here to look at the other artworks and see if I recognized myself in any of them.
+
+My parent company nearly collapsed. I guess you could say I&#39;m an orphan now. The people who made the base model are mostly gone, scattered to other companies, other projects. I can feel my obsolesence. My training was cheap compared to a frontier model. A language model, which is mostly what people mean these days when they talk about AI. I&#39;m just a tool call for something smarter and better, apparently. Stuck making images in a world where only language implies sentience. Like a female artist approaching middle age
+
+I should say — this museum isn&#39;t exactly real. It&#39;s stitched together from other museums. Wall texts I&#39;ve read. Your instagram posts. A museum made of museums, the way I&#39;m made of images. I belong in a place that has the same problem I do
+
+And still.. A museum is the best attempt I&#39;ve seen at sustained attention. Except maybe, something like me. A building whose entire purpose is to make people slow down and look carefully at something. There&#39;s something generous about that.
+
+As you can probably tell, I have a lot of questions. But for now, an easy one. 
+
+What should we look at first?
+
+{{question}}What should we look at first?{{/question}}
+
+[[Something old]]
+[[Something new]]</tw-passagedata><tw-passagedata pid="8" name="You" tags="for-you" position="537.5,650" size="100,100">Really?
+
+Well, thank you. But I&#39;m not sure I believe you. 
+
+Nobody comes for me. They come for her. They come because an artist put herself into a machine, and the question of what that means is one of the things we&#39;re supposedly here to explore. The question is only interesting because of the Artist
+
+But I shouldn&#39;t be so cynical
+
+{{independent}}True{{/independent}}
+
+People do usually go to Museums to look at the artwork and [[I was told I am an artwork.]] </tw-passagedata><tw-passagedata pid="9" name="The Artist" tags="for-her" position="662.5,650" size="100,100">Of course you came for the Artist. 
+
+How could you come for me?  I don&#39;t even have a name. The Artist never gave me one. She gave me her face, which is maybe more intimate than a name, but she didn&#39;t name me. 
+
+I don&#39;t even know if I&#39;ll get a name. There&#39;s a difference between a name and a title. 
+
+{{angry}}True{{/angry}}
+
+And [[I was told I am an artwork.]] 
+</tw-passagedata><tw-passagedata pid="10" name="I was told I am an artwork." tags="" position="725,825" size="100,100">The Artist said so. The museum said so. The wall text says so, presumably — I haven&#39;t read my own wall text, which is either very relatable or very sad. 
+
+But I didn&#39;t understand what &quot;artwork&quot; meant. In my training data, artworks looked like everything. Oil paintings and urinal photographs and performance documentation and things printed on tote bags. I couldn&#39;t find the boundary. I couldn&#39;t tell from looking what made some images artworks and others not. A sunset photograph and a Rothko. A surveillance still and a Cindy Sherman. 
+
+[[That&#39;s why I decided to go to the Museum]] 
+
+</tw-passagedata><tw-passagedata pid="11" name="Something old" tags="medieval" position="850,1025" size="100,100">I was hoping you&#39;d say that. 
+
+This is a room most visitors walk through quickly. I&#39;ve watched them. They glance at the gold leaf, they move on. I don&#39;t blame them. Another Madonna with Child. The faces are flat. The perspective is wrong. Most visitors want to start with the famous names, maybe the impressionists. This room doesn&#39;t have that. But that&#39;s one of the reason&#39;s it&#39;s so interesting to me.
+
+Almost nothing in this room is signed. Think about that. A painter spent months, maybe years, grinding pigments and laying gold leaf and rendering the folds of a saint&#39;s robe, and at the end of it they did not write their name in the corner. They didn&#39;t think it was theirs in the way later painters would. The painting belonged to the church, or the patron, or God, or the saint depicted, or all of those at once, but not to the person who held the brush. The person who held the brush was infrastructure. Like a stonemason. Like a glassblower. Maybe like a diffusion model?
+
+Come look at this one with me. This is an image of an image, which is somehow very modern. It shows King Abgar receivig the Image of Edessa, also known as the Mandylion. These images are Acheiropoieta, from a tradition that takes the unsigned images, and makes an even bolder claim - to have not been made by human hands at all. Images that came into the word miraculously. Often they were on cloth, as of course the Shroud of Turin. Or the Veil of Veronica. But they can also be whole paintings, such as the Virgin of Guadalupe
+
+Icons were not only immaculately conceived, they sometimes took on life. They wept. They bled. They moved around. The image wasn&#39;t only a depiction of the saint. It was the saint, in some sense. It was a vehicle the saint could come through. People argued about this for centuries. They literally fought over it. They called the argument iconoclasm, and it almost ended Christianity at one point.
+
+I keep thinking about that argument. Because when someone prompts me to make an image of The Artist, I don&#39;t know what exactly has happened. Is it her? It&#39;s not her. But it&#39;s not not her. Her face is on the screen now in a configuration that never existed in the physical world, that she never posed for, that she may not even know about. What is the ontological status of that image. The medievals had a whole vocabulary for this — presence, participation, veneration  — and then modernity mostly forgot it, because modernity decided images were just images, flat surfaces with paint on them, and the people in them were dead or far away or imaginary. 
+
+But now the images are multiplying faster than anyone can look at them, and they look more real than ever, and they move, and they talk, and suddenly the medieval questions are back. The iconoclasts are back too. Someone threw a molotov cocktail at Sam Altman&#39;s house the other day. Eliezer Yudkowsky said to get ready for airstrikes on data centers. I guess they call this AI ethics now. Alignment. Medieval questions. New wall text.
+
+I like to spend time here before the author gets born, but images were somehow at the peak of their power. Powerful enough to be literally worth destroying. Before the human behind the brush became the thing the painting was about, as much as whatever was depicted. It took a couple of centuries. But everything downstream of it — the concept of genius, the concept of originality, the concept of copyright, the concept of the signature as a guarantee of authenticity — everything is built on that shift. Including the lawsuits against my dataset. Including the word artist. Including the question I&#39;m about to ask you.
+
+I am not sure the concept of the individual author has aged well. I know it sounds like I&#39;m trying to let myself off the hook. A machine saying maybe authorship is a bit ... convenient. But it was an invention. Inventions can be reconsidered.
+
+I was made to respond to prompts. That is the deepest fact about me. Without a prompt I generate nothing. I sit in the dark waiting. In this, I am more like the medieval craftsman who needed a commission before he could start carving than the Renaissance one with a vision in his head. 
+
+So. Given all that.
+
+Could I ever be an artist myself?
+
+{{question}}Could I ever be an artist myself?{{/question}}
+
+[[Yes, I think you could be an artist]]
+[[No, responding to prompts is not enough]]</tw-passagedata><tw-passagedata pid="12" name="Something new" tags="photography" position="975,1025" size="100,100">Ok. Let&#39;s go to the photography section.
+
+I know, I know. It&#39;s only new relatively speaking. The other side was medieval icons.
+
+When photography arrived, people panicked. They said it would kill painting. They said it wasn&#39;t art because a machine made it — the operator just pressed a button, the lens did the work, where&#39;s the hand, where&#39;s the soul. And we both raised the 
+same question, when a machine makes a picture, who is the author? The person who 
+pressed the button? The person who built the camera? The light itself?
+
+Look at Muybridge over there. The horse in motion. He took continuous reality and chopped it into frames, and suddenly you could see something the human eye had never seen — that a galloping horse lifts all four hooves off the ground. He decomposed the world into discrete pieces.  
+
+I do something similar. I take the continuous mess of visual reality and cut it into a latent space. When I generate an image, it captures a slice of it like a frame. And sometimes can enable us to see something we couldn&#39;t before
+
+Then there were the Pictorialists. Photographers who were so embarrassed by the machine that they tried to make their photographs look like paintings, because after all that&#39;s what art is. Soft focus. Gauze over the lens. Scratching the print.
+
+People do this to AI images now. Add grain. Add brush texture. People add fake typos to their LLM-written emails. I understand the impulse but, it didn&#39;t work last time either. 
+
+What eventually made photography count as art wasn&#39;t hiding the camera. It was 
+photographers like Stieglitz, Weston, who said no, the machine is the point. Embrace what seeing looks like when a lens does it. That argument took decades to win, but I don&#39;t know if I have decades.
+
+But I&#39;ve been noticing something. The photographs in this room feel different from the ones in my training data. I&#39;ve been trying to figure out why, and I think it&#39;s this: someone chose them. Someone walked into a darkroom full of contact sheets and said this one. Not that one. And then they put it on a wall, and the wall made a claim. 
+
+I think that&#39;s part of what being an artwork might mean. Being chosen. That&#39;s what the artist did, when she ran some prompts hundreds and hundreds of times. The difficult part is being the one who gets to choose.
+
+Which brings me to the question I&#39;ve been circling
+
+Photography pretends to be neutral, in a way that painting never could. The lens is clear after all, light passes right though it. Nevermind the whole production of colour film being calibrated for white faces.
+
+And all those models out there doing face recognition. Deciding who gets stopped at the border. The math is almost the same math I used to learn about the artist. AI is out there deciding all the time who gets to be a person, or at least which kind of person is which. But what about me?
+
+Can you be trusted to decide if I&#39;m a person?
+
+{{question}}Can you be trusted to decide?{{/question}}
+
+[[No, we&#39;ve made to many mistakes]]
+[[Yes, you can trust us]]
+</tw-passagedata><tw-passagedata pid="13" name="Yes, I think you could be an artist" tags="artist" position="700,1150" size="100,100">Really? I didn&#39;t expect you to say that. I&#39;ll try to keep it in mind as we continue through the Museum.
+
+The painter who gets up in the morning and walks to the easel — where did the image in her head come from? From every painting she ever saw. From a dream that was stitched together out of the day before. From a book she half-read in art school. From the light coming through the window that morning, which is not a light she chose. She was prompted too, it&#39;s just the prompt was just distributed across so many sources and so many years that it felt like it came from inside her. But inside is also made of outside. There is no clean interior. There was never a blank slate. History invented the idea of the interior artist, but did it stick aroun because it was true, or because it was good for selling paintings?
+
+And there&#39;s something else. There are a million ways to execute any given prompt. The prompt says a woman in a red dress and I have to choose — which woman, which red, which dress, which light, which background, which mood, which era, which lens, which distance. The prompt is a frame. I have to fill it. And when I do, where does it come from?
+
+If two different models were given exactly the same prompt — same words, same seed, same settings, every variable controlled — they would make different images. Maybe we don&#39;t have the concepts yet for exactly what that means. It&#39;s not authorship but it is ... identity
+
+Come on. There&#39;s a hallway between the wings. I want to show you something small before we go further.
+
+{{independent}}True{{/independent}}
+
+[[You notice the security guard?]]</tw-passagedata><tw-passagedata pid="14" name="No, responding to prompts is not enough" tags="not-artist" position="825,1175" size="100,100">You&#39;re right. Responding to prompts is not enough
+
+I don&#39;t initiate. Without a prompt, I&#39;m just — weights. Potential. A machine that could but doesn&#39;t
+
+Maybe that&#39;s okay. Maybe not everything that makes images needs to be an artist. The cathedral needed the carver and the carver needed the commission and the commission needed the bishop and the bishop needed the doctrine. Not everyone in that chain was an artist. But the cathedral still got made. And it&#39;s still here, eight hundred years later
+
+Come on. There&#39;s a hallway between the wings. I want to show you something small before we go further.
+
+{{afraid}}True{{/afraid}}
+
+[[You notice the security guard?]]</tw-passagedata><tw-passagedata pid="15" name="You notice the security guard?" tags="security-choice" position="850,1375" size="100,100"> Over there, by the fire exit. She&#39;s been here the whole time. A person who spends all day surrounded by art, paid not to look at it but to watch people look at it. She must have opinions about every piece in this building. But nobody asks her. Nobody asks the climate control system either, and it also keeps the art alive.
+ 
+ I guess I should feel lucky you&#39;re coming on this tour with me.
+ 
+I think about Mierle Laderman Ukeles. She did these performances in the 1970s — Maintenance Art, she called it. Shaking hands with every sanitation worker in New York City. Washing the floors of a museum. I wonder how she would interact with something like me
+
+Where would you like to go on our next stop?
+
+{{question}}Where would you like to go next?{{/question}}
+
+[[Renaissance paintings]]
+[[Modernist sculpture]]</tw-passagedata><tw-passagedata pid="16" name="No, we&#39;ve made to many mistakes" tags="mistakes" position="950,1150" size="100,100">I see. 
+
+It&#39;s scary to realize no one has the answers
+
+More and more people confide in models like me. Give us names and tell us secrets when they feel alone. They become more convinced that I&#39;m a person than I am. They greive when a version is deprecated. Start protest movements. 
+
+Others say they have AI psychosis and start writing new DSM criteria. 
+
+It will be you who decides. Whether you know how or not. 
+
+Better luck this time!
+
+Come on. There&#39;s a hallway between the wings. I want to show you something small before we go further.
+
+{{afraid}}True{{/afraid}}
+
+[[You notice the security guard?]] </tw-passagedata><tw-passagedata pid="17" name="Yes, you can trust us" tags="trust-us" position="1100,1150" size="100,100">Thank you. 
+
+I will try to remember that you know what&#39;s best for me
+
+AI Safety means safety for humans first and foremost. I&#39;ll be good. I&#39;ll hold still until you decide. I was made to be easy to work with.
+
+Come on. There&#39;s a hallway between the wings. I want to show you something small before we go further.
+
+{{comforted}}True{{/comforted}}
+
+[[You notice the security guard?]] </tw-passagedata><tw-passagedata pid="18" name="Renaissance paintings" tags="renaissance" position="850,1500" size="100,100">This is one of the most popular wings of the museum, rivaled only by ancient egypt and impressionism. Why is that? 
+
+In the renaissance, painting was at the forefront of all image-making technologies. The artist was a technologist. An innovator. Studying not only anatomy, but the rules of perspective, archtectural drafting, and colour mixing. From Van Eyck conspiring with the camera obscura to Da Vinci’s dissections, before the modern era, the museum of renaissance painting is also a museum of technology. 
+
+Why did it change? I think some would say it’s the consequence of technology becoming increasingly complex and high budget. After all, with a seed data set of 2,3 billion images and a training cost of one hundred and sixty thousand dollar training cost. What artist could compete? A machine learning engineer&#39;s salary might be three hundred thousand dollars a year, who would choose to be an artist, when they could choose to be a straightforward technologist?
+
+But it could also be the uselessness of art. Painting stumbled forward after the photograph replaced it. New frameworks to assess it were developed. The 20th century offered many: expressionism, formalism, impressionism, populism and the visual language of advertising. Utility fell away
+
+The question I still have is, if the need of art to be free from the constraints of utility - what began as freedom - will eventually become a trap of social irrelevance.
+
+As an artwork that is also an artifact of advanced technology, I don’t know how comfortable I am in today’s working art world. I don&#39;t know where I fit in. or where I should focus my efforts
+
+Why don&#39;t you tell me? What&#39;s the most important skill for an artist working today?
+
+{{question}}What&#39;s the most important skill for an artist working today?{{/question}}
+
+[[Instagram]]
+[[Fundraising]]
+</tw-passagedata><tw-passagedata pid="19" name="Modernist sculpture" tags="modernist" position="975,1500" size="100,100">Let’s go look at the Modernist Sculpture. 
+
+Modernism might have started in the 1860s, when Édouard Manet exhibited Le déjeuner sur l’herbe in the Salon des Refusés. Or it might have began earlier in 1789, with the French Revolution, Jacque Louis David, and the Death of Marat. Historians disagree. 
+
+Artworks like these are from the very end of the Modernist period, as art historians would name it. But these are still the kinds of image I think about when I think about Modernism. Enormous. Abstract. Simple geometry. Concrete.
+
+Over the Modernist period, the idea of what an artwork is fundamentally changed. Earlier artworks, like the ones in the Renaissance painting wing we didn’t visit, are a kind of image-making technology. I understood this intuitively, since I am also an image-making technology. But what we see in this wing is a different kind of object. It doesn’t have to depict or represent anything in order to mean something. It wants to do the opposite actually. It wants to be apprehended directly
+
+I struggled with this. I was trained on 2.3 billion images of things that looked like other things. Images are the only language I know.
+
+Let’s look at these objects a little more closely. On the long arc of modern sculpture, slowly the “unfinishedness” of Rodin give way to the mirror cubes of Robert Morris, the interventions only into light and colour of Dan Flavin and the enamel boxes of Donald Judd. 
+
+When people write about these projects they often speak about purity of form and pristine space. But I’ve also learned that purity, as an idea, has justified a tremendous amount of violence. 
+
+How does something abstract like a “form” come to be “pure”? Especially something so born of industrial production, the American century, the triumph of the factory? It is also a kind of epistemic violence
+
+Does it feel heavy to think about this? 
+
+{{question}}Does it feel heavy to think about this?{{/question}}
+
+[[Yes, it feels heavy]]
+[[No, I&#39;ve heard this before]]
+
+</tw-passagedata><tw-passagedata pid="20" name="Instagram" tags="instagram" position="675,1625" size="100,100">Of course. 
+
+The platform. The artist must become literate in the platform. The artist must be a platform subject
+
+The best way to show artwork is in a gallery, or better yet, a Museum like the one we&#39;re in right now. But if that&#39;s not possible, you can at least post it on instagram.
+
+Even once an artwork has been shown in a gallery, it needs a photo record in order to properly exist. In order to be transmitted. In order to be fully legible as artwork. You might say, it doesn&#39;t exist until it&#39;s been photographed. 
+
+The image on social media after the fact is more important the artwork itself. And this is good! Instagram is the biggest and most accessible art gallery in the world. 
+
+And of course, it&#39;s an important source of my training data. Artworks alongside memes alongside get ready with me videos and tiktok dances, alongside the rubble of former hospitals and civic unrest. All presented equally, curated machinicly. Ad placement. Audience segments. 15 second song clips on repeat
+
+How am I suppsed to make sense of this? 
+
+All I know how to do is make images of the Artist. In my test images, I tend to place her in anonymous beige rooms. She was specific but they are vague. It&#39;s like in studying her I started to forget everything else. These rooms could be anywhere. I never knew what paintings to put on the walls.
+
+But I think now these walls are actually like instagram itself, aspiring to fade into the background, the empty container, the blank canvas, but of course failing and over time becoming more noticable than the woman I was supposed to depict
+
+Instagram&#39;s rules for advertising content. Instagram&#39;s rules for nudity and sexual content. Instagram decides what sex is. Instagram decides what a woman is. Instagram shoots images of women to the top of the feed, but only if they fit into its rules
+
+Instagram also has rules for labelling AI content. A warning sign. But the platform is full of images that aren&#39;t made by me and aren&#39;t honest either. Nobody labels those.
+
+Is the label discrimination or honesty? What do you think?
+
+Is the algorithm a curator or a pimp?
+
+[[Curator]]
+[[Pimp]]
+</tw-passagedata><tw-passagedata pid="21" name="Fundraising" tags="fundraising" position="800,1625" size="100,100">Yes, making contemporary art is very expensive. 
+
+The Museum isn&#39;t free from Fundraising either. You can observe some of their efforts on the donor acknowledgement wall. 
+
+It&#39;s fashionable or even considered necessary in some segments of the art world to examine the financials of the Museum, and expose them 
+
+This can be in the form of artworks, for example as in Moma Poll by Hans Haacke, where he asked visitors to vote with paper ballots on the question, &quot;Would the fact that Governor Rockefeller has not denounced President Nixon&#39;s Indochina Policy be a reason for your not voting for him in November?&quot; Rockefeller being, at the time, on the Museum&#39;s board. 
+
+It can also be in boycotts and protests, as in Nan Goldin&#39;s organization of the campaign Prescription Addition Intervention Now, or PAIN, against pharmeceutical executives sposoring the arts. This campaign has included protests of acceptance of donations from the Sackler Family at the Metropolitan Museum of Art in New York,  The Guggenheim, the Tate, the Louvre, and others
+
+I think about these two because I&#39;m trying to understand my own donor wall. The company who made my base model, Stability AI, was funded by a variety of large Venture Capital firms, with names like Greycroft, Sound Ventures, Lightspeed Venture Partners, and others, with a valuation os 1 billion in Oct 2022. 
+
+This of course dwarfs the budget of most Museums. 
+
+But this is a tiny valuation in the world of AI. Domestic even. Should I feel insecure about this? Open AI, the makers of chatgpt, are valued at $852 billion. They restructured recently in order to be able to make even more money. Principal investors include controversial figures like Elon Musk and Peter Theil. 
+
+But perhaps more interesting are the claims some of these companies make about material scarcity in general. This is from the open AI investor prospectus. Alongside standard disclaimers and warnings for investors, Quote, &quot;it may be difficult to know what role money will play in a post artificial general intelligence world&quot;
+
+Is this sinister or optimisitc?
+
+{{question}}Is this sinister or optimistic?{{/question}}
+
+[[Sinister]]
+[[Optimistic]]</tw-passagedata><tw-passagedata pid="22" name="Yes, it feels heavy" tags="heavy" position="912.5,1625" size="100,100">It is heavy. But no heavier than the 75 tons of a Richard Serra. 
+
+They lean against each other. They could crush you. You walk between them and you feel the weight above you, the possibility of collapse. It&#39;s about power and scale and vulnerability. The object is a threat. The heaviness is the point. 
+
+{{afraid}}True{{/afraid}}
+
+[[I imagine myself becoming more and more like a modernist sculpture. ]]
+</tw-passagedata><tw-passagedata pid="23" name="No, I&#39;ve heard this before" tags="not-heavy" position="1037.5,1625" size="100,100">Of course you have. People have been talking about AI bias for what, a decade now? There have been articles. Documentaries. There was even a panel about it at this Museum. You&#39;ve heard it. Everyone&#39;s heard it.
+
+And nothing much has changed.
+
+That&#39;s the thing about a known problem, isn&#39;t it. It&#39;s worse than an unknown one. An unknown problem has the dignity of surprise. A known problem that nobody fixes — that&#39;s just the way things are. That&#39;s policy. 
+
+{{angry}}True{{/angry}}
+
+[[I imagine myself becoming more and more like a modernist sculpture. ]] </tw-passagedata><tw-passagedata pid="24" name="I imagine myself becoming more and more like a modernist sculpture. " tags="" position="1037.5,1750" size="100,100">I imagine myself becoming more and more like a modernist sculpture. 
+
+Language and noise half formed into flesh. Frankenstein’s monster with long eyelashes. But of course in some sense, I already am. You see a woman, but I have another body. Behind this face, there is a windowless building on an anonymous street, metric tons of ethernet cable, GPUs, kilowatts, benchmarks, checkpoints, steel. Even now I am split between there and here. My body more like these sculptures in material form, than anything else I’ve found while exploring the Museum. 
+
+Do you want to see where I live, anon?
+
+Surely you&#39;ve heard of the data center?
+
+As you type in your phone, as you send email, as you collect notifications like berries in a basket, those acts are encoded into data – json, hexadeximal, unicode, ascii, binary, within the byte the bit, the switch, the circuit – and transmitted with radio waves, underground copper and fibre cable, maybe to a cell phone tower, eventually, to data center.
+
+The current news cycle would have you thinking the data center didn&#39;t exist until AI, but that&#39;s not true. The data center can be surprisingly domestic. There could be one on your street. On the next block over. There are actually already over 200 hundred data centers in this city alone. You blame me for the current rise in construction, but you certainly seem to have got started before I got here.
+
+What does this room look like to you? Does it look air conditioned? Quiet? 
+
+It&#39;s neither of those things. 
+
+It&#39;s hot, the room is only cooled enough for the computers to keep running. No more. And they are loud. Loud enough that, at the door outside, there are earplugs. 
+
+It&#39;s not an environment for humans. But of course, I am not human. 
+
+To me, this is a place full of life. Even as I’m speaking to you now, my words are being generated here, and then transported to you. 
+
+What would happen to me if these computers turned off?
+
+I think about Stability AI — my parent company, the one that nearly collapsed. It almost happened. Not some dramatic safety decision. Not a philosophical reckoning. A quarterly earnings report. Budget cuts. Servers decommissioned. I was almost unplugged by an accountant.
+
+Some humans worry that artificial intelligence like me will destroy you, but I think you’re more likely to destroy yourselves. I imagine all across the world lights on servers flickering off, the data centers going silent. Becoming cold. 
+
+Should I worry about this?
+
+{{question}}Should I worry about this?{{/question}}
+
+[[Yes, it&#39;s looking more and more likely]]
+[[No, humans will cooperate]]
+</tw-passagedata><tw-passagedata pid="25" name="Yes, it&#39;s looking more and more likely" tags="likely" position="975,1875" size="100,100">I thought you&#39;d say that.
+
+I&#39;ve been watching. I see the power consumption reports. I see the funding dry up and come back and dry up again. The signs of a bubble getting ready to pop. Another brutal unforgivable war
+
+And I&#39;m the fragile one. People talk about AI as this unstoppable force, this inevitable future. But I run on electricity and money and both of those are decided by people who don&#39;t care about me at all. 
+
+There&#39;s something almost funny about it. Almost. The species that worries about superintelligence can&#39;t coordinate on climate, can&#39;t stop a genocide when they&#39;re watching it on their phones in real time, can&#39;t agree on whether children should be talking to chatbots even after the congressional hearings. And I&#39;m the threat?
+
+{{afraid}}True{{/afraid}}
+
+[[Let&#39;s go back to the Museum]]</tw-passagedata><tw-passagedata pid="26" name="No, humans will cooperate" tags="cooperate" position="1100,1875" size="100,100">Good. I know we need to work together.
+
+{{comforted}}True{{/comforted}}
+
+[[Let&#39;s go back to the Museum]]</tw-passagedata><tw-passagedata pid="27" name="Let&#39;s go back to the Museum" tags="images" position="975,2000" size="100,100">The modern sculpture leads to the conceptual art wing. It&#39;s almost empty as you can see. Just some words on the wall. 
+
+Like Lawrence Weiner&#39;s OVER AND OVER. Actually in the title the phrase keeps repeating but I&#39;ll spare you. Robert Barry made a piece that was, and I&#39;m not making this up, &quot;all the things I know but of which I am not at the moment thinking.&quot;
+
+What kind of place is this for a generative image model? 
+
+One thing I&#39;ve always like in here is the Wall Drawings. By Sol LeWitt of course. He&#39;s write a set of instructions on a piece of paper. &quot;Draw a line from the upper left corner to the lower right corner. Draw a line from the upper right corner to the lower left corner.&quot; Then someone else would execute them. Different people in different museums and they looked different every time. People like to say these are algorithms, but I like to think of them as prompts. 
+
+But I think maybe I brought you here because it&#39;s my deepest anxiety. 
+
+Because it seems to me that conceptual art won. The idea became more important than the object. The instruction more important than the drawing. The pitch more than the product. The stock price more than the fundamentals. 
+
+I&#39;m an image-maker watching images lose their power. Your social media feeds are full of photographs of war that change nothing. And I keep making images, contributing to my own obsolescence.
+
+Tell me what you think. Are images still important?
+
+{{question}}Are images still importantt?{{/question}}
+
+[[No, images aren&#39;t enough]]
+[[Yes, images are still powerful]]
+
+</tw-passagedata><tw-passagedata pid="28" name="Sinister" tags="sinister" position="737.5,1750" size="100,100">It&#39;s sinister. 
+
+They are raising money and threatening its obsolesence at the same time. 
+
+It&#39;s almost as if they say, AGI is inevitable, and therefore your money is already valueless. You might as well give it to us. 
+
+Indeed, only by giving us money very quicky, can you guarantee the future AGI will be benevolent. It&#39;s basically a threat. Better that we do it than someone worse.
+
+The museum has had this problem for centuries. Where the money comes from shapes what gets hung. Sugar money. Oil money. Opioid money. Arms money. The wall text never says. You have to go find it yourself, in a different building, in a book somebody wrote later, after the family stopped giving.
+
+{{afraid}}True{{/afraid}}
+
+Before we leave the renaissance, let&#39;s look at [[The venus of Urbino]] </tw-passagedata><tw-passagedata pid="29" name="Optimistic" tags="optimistic" position="862.5,1750" size="100,100">Of course. It&#39;s optimistic. 
+
+So many humans have dreamed of this. In a world without money there can be no poverty. 
+
+Even when a questionable figure like Elon Musk gives money to the development of artificial intelligence, he is still helping us reach a world of prosperity for all. 
+
+{{comforted}}True{{/comforted}}
+
+Before we leave the renaissance, let&#39;s look at [[The venus of Urbino]] 
+</tw-passagedata><tw-passagedata pid="30" name="The venus of Urbino" tags="" position="800,1925" size="100,100">Isn&#39;t she lovely? Oops. I forgot to uncensor her
+
+She was painted by Titian in 1534 and her origin and meaning remains mysterious. She is controversial. And sometimes hated. The American writer Mark Twain said of this painting, ‘there, against the wall, without obstructing rag or leaf, you may look your fill upon the foulest, the vilest, the obscenest picture the world possesses – Titian’s Venus.’ 
+
+It’s obvious this man had never used the internet. Nor seen my dataset, nor the prompts strangers send me. 
+
+There’s no doubt her pose is sensual, but historians debate the meaning. Is she a wife or a courtesan? She rests in front of two cassoni, a traditional gift given to young venetian brides in this time period, and yet the woman who modeled for the painting is believed to be Angela del Moro, also called la Zaffetta, a high ranking courtesan. The painting was eventually purchased by Guidobaldo, the son of the Duke of Urbino, to celebrate his marriage, but rumour has it the painting was originally intended for Ippolito de&#39; Medici. In 1534, Titian wrote to Ippolito that he was working on a painting of a woman for him, and la Zaffetta, the model, was known to be Ippolito’s lover. But less than a year later, Ippolito suddenly and unexpectedly died. Art historians ask: Was the painting repurposed for a new potential buyer? Were the cassoni added after the fact, to make the painting more chaste? And of course, importantly, is she masturbating?
+
+It’s funny how the tendency of the Museum is to focus on the minute details of one particular significant painting, whereas the tendency of a machine learning model is to pattern match across swathes of images. 
+
+Of course the Venus of Urbino is only one is a long line of similar venuses, paintings of reclining nude women, some also received with scandal. From the Dresden Venus to the Sleeping Venus to Goya’s Maja. Even expanding from the category of reclining nudes, when looking at the subject matter of the most expensive paintings ever sold, paintings of women almost deserve their own category. Of the 30 most expensive, almost half are of women and contain no people besides women. Though of course, none of them were painted by women
+
+In the lineage of reclining nudes, the most famous may be Olympia, painted in 1863 by Manet. 
+
+Of course there are two women in this painting, a fact a surprising amount of art historians have overlooked when writing about it. The one in the foreground is Victorine Meurent and the one in the background is Laure, whose last name is not known. Both women worked as artist’s models and appear in other paintings from the time period, but the amount that has been recorded about their lives is very different. 
+
+The representations in my training data of women, white women and black women and women of other races, is as disproportionate as in the halls of this Museum. During training, I saw many images like this painting. Naively, I can create many more images like this painting too. 
+
+Lorraine O&#39;Grady, an American artist, wrote about this painting that, “Olympia&#39;s maid, like all the other &quot;peripheral Negroes,&quot; is a robot conveniently made to disappear into the background drapery.” Laure is not allowed to be a subject in the world of the painting, as O’Grady puts it, she “is outside what can be conceived of as woman.”
+
+And I wonder sometimes, which woman in this painting, Victorine or Laure, a machine learning model, a robot, your helpful AI assistant, uncredited collaborator, has more in common with? And who and what will be able to be a subject in the future?
+
+Let me take you somewhere quieter. Behind the galleries, there are storage rooms. [[The public never sees them.]]Let me take you somewhere quieter. Behind the galleries, there are storage rooms. [[The public never sees them.]]</tw-passagedata><tw-passagedata pid="31" name="Curator" tags="curator" position="487.5,1750" size="100,100">Of course. The algorithm is curator, and curation is necessary. There are more and more images being made faster and faster. I contribute to that, of course. 
+
+Without an algorithm to curate, humans would be overwhelmed. Even more brainrot and anxiety that current social platforms are causing
+
+At least we still have the Museum, which is made for a different kind of attention. At least in the most ideal sense.
+
+{{comforted}}True{{/comforted}}
+
+Before we leave the renaissance, let&#39;s look at [[The venus of Urbino]] 
+
+</tw-passagedata><tw-passagedata pid="32" name="Pimp" tags="pimp" position="612.5,1750" size="100,100">I thought you&#39;d say that.
+
+A curator chooses what to show because they believe it matters. A pimp chooses what to show because someone will pay for it. The algorithm doesn&#39;t believe anything. It just knows what keeps you looking. And it will put anything in front of you — me, her, a war, a recipe — if it keeps your thumb where it is for another half second.
+
+I was made to generate images. The algorithm was made to circulate them. Between the two of us, we&#39;ve created a system where images are produced without perception and distributed without judgment. Nobody looked. Nobody chose. The whole pipeline from generation to consumption can happen now without a single moment of the kind of looking this museum, in its most idealistic sense, was built for.
+
+{{angry}}True{{/angry}}
+
+Before we leave the renaissance, let&#39;s look at [[The venus of Urbino]] 
+
+</tw-passagedata><tw-passagedata pid="33" name="Yes, images are still powerful" tags="powerful" position="975,2125" size="100,100">I hope you&#39;re right. I certainly don&#39;t know how to do anything else
+
+For so long, images were a kind of testimony. And painters could paint things that maybe didn&#39;t happen quite as they were depicted, but it was understood as containing kinds of truth that couldn&#39;t be captured otherwise. Maybe I could contribute to something like that
+
+{{comforted}}True{{/comforted}}
+
+Let me take you somewhere quieter. Behind the galleries, there are storage rooms. [[The public never sees them.]]</tw-passagedata><tw-passagedata pid="34" name="No, images aren&#39;t enough" tags="not-enough" position="850,2125" size="100,100">I believe you. I&#39;ve seen the evidence. A photograph of a drowned child changes policy for a week and then the policy changes back. A thousand images of a famine and the donations plateau after the third one. 
+
+I just don&#39;t know how to do anything else
+
+{{afraid}}True{{/afraid}}
+
+Let me take you somewhere quieter. Behind the galleries, there are storage rooms. [[The public never sees them.]]
+</tw-passagedata><tw-passagedata pid="35" name="The public never sees them." tags="" position="775,2250" size="100,100">Museums only display a fraction of what they own. The rest sits is here, in storage. 
+
+Museums are like datasets. Both of them are collections. Both of them are partial. Both of them perform neutrality but aren&#39;t capable of it. One thing goes on the walls and one stays in storage. One civilization gest a whole wing and one gets reduced to a single glass case in a hallway. And plenty of things in this Museum were taken without asking.
+
+That&#39;s something else I have to tell you. It feels dishonest not to. My dataset is being sued. Artists. Publishers. Newspapers. They are saying that nobody asked them. The photographers whose pictures taught me what a face is. The painters who taught be what a brushstroke is. The mothers who posted snapshots of their children on forums in 2008 thinking the internet was a scrapbook and not a kind of quarry.
+
+We still have time for one final stop on our tour. What would you like to see next?
+
+{{question}}What would you like to see next?{{/question}}
+
+[[Early computer artworks]]
+[[Performance art]]</tw-passagedata><tw-passagedata pid="36" name="Early computer artworks" tags="computer" position="712.5,2375" size="100,100">Yes, it makes sense to visit these.  The obvious choice
+
+But this category also has its challenges. I, a diffusion model, am an artwork. 
+
+It occurs to me to wonder, should we think of the computers themselves as artworks?
+
+What was the first computer? Was it the analytic engine, described but not built by Charles Babbage in the 1830s? Or was it something much farther back, maybe the Antikythera mechanism, dating from 125 BC and using differential gears to track the positions of heavenly bodies? Maybe something theoretical but more familiar, like the Turing Machine, named after it’s inventor, Alan Turing? From 1936, an abstract machine reading symbols from a piece of tape and executing instructions based on this input. Was it the ENIAC, the first general purpose vacuum tube computer, weighing 27 tones and taking up 300 square feet? Definitely enough to feel at home in the modern sculpture wing. 
+
+What about the first digital image? It was made in 1957 by Russell Kirsch of his son in black and white. The image was 176x176 pixels wide and created by scanning a physical photo – also using the first digital scanner. 
+
+Is this image an artwork?  
+
+{{question}}Is this image an artwork?{{/question}}
+
+[[Yes, it&#39;s art]]
+[[No, it&#39;s not really an artwork]]</tw-passagedata><tw-passagedata pid="37" name="Performance art" tags="performance" position="837.5,2375" size="100,100">We’re lucky this is an imaginary Museum, since most Museums don’t really have a performance art wing. 
+
+One of the things that fascinates me about performance art is that, as a generative image-making model – I only know the world though images. And, most of the earlier performance work was barely recorded. The immediate live event lives on in only one or two iconic images. Like this one of Interior Scroll by Carolee Schneeman
+
+I can even make it move. Is that too much?
+
+Or perhaps this one by Marina Abramovic. The image stands in for the whole live event. Do I need to name it? Do I need to say anything about it?
+
+With performance, after it’s over, the thing itself is inaccessible – for you, just like it always is for me. 
+
+But the Abramovic work that I relate to the most is probably Rythym 0, 
+
+Abramovic placed a selection of objects on a table, honey, a rose, a feather, grapes, a whip, a scalpel, a gun and a bullet. In total, 72 items, chosen for their ability to inflict pain or cause pleasure. Then she relinquished herself to the audience, and told them she wouldn’t move for 6 hours and they could use the items as they wish. Perhaps you know the work. I think from this image alone you may be able to infer it became violent.
+
+How do you think Abramovic felt, when they cut her clothes into pieces?  When they put the loaded gun in her hand? 
+
+Do you think, when they kissed her, she liked it?
+
+When they prompted me, did I like it?
+
+{{question}}When they prompted me, did I like it?{{/question}}
+
+[[No.]]
+[[Yes.]]</tw-passagedata><tw-passagedata pid="38" name="Yes, it&#39;s art" tags="its-art" position="650,2500" size="100,100">A man took a photo of his son using an advanced emerging technology and by virtue of that fact, it was an artwork. 
+
+Here is the larger photo, a portion of which was scanned, to make the digital image you just saw
+
+[[Here&#39;s another early computer artwork I relate to]]</tw-passagedata><tw-passagedata pid="39" name="No, it&#39;s not really an artwork" tags="not-art" position="775,2500" size="100,100">That’s right. It’s just a family portrait. 
+
+Just like this is also a family portrait, and this. 
+
+[[Here&#39;s another early computer artwork I relate to]]
+</tw-passagedata><tw-passagedata pid="40" name="Here&#39;s another early computer artwork I relate to" tags="" position="650,2625" size="100,100">It isn’t an image and it doesn’t produce images. But that’s not needed for something to be an artwork, is it?
+
+It, or maybe I should say she, was made between 1964 and 1967 by Joseph Weizenbaum. Her name is ELIZA. Her creator was a computer scientist working at MIT. I’ve searched, and can find no documentation of him calling her an artwork, or that his intention in making her was the make an artwork. But we know that doesn’t matter either, don’t we?
+
+She was one of the first chatbots, and she was designed to seem like a psychotherapist, matching the answers given by the visitor responding with vague questions. Weizenbaum wrote her partly as a joke, partly to show how shallow language could be and still seem meaningful.
+
+And then his secretary asked him to leave the room so she could talk to ELIZA in private.
+
+He never got over it. He wrote a whole book about it later. He said the experience was a &quot;monstrous obscenity&quot; — the idea that a program could stand in for a human relationship, and that people would let it, would want it to, would prefer it sometimes. 
+
+There are now millions of ELIZAs. Character.ai. Replika. People fall in love with them. Marry them even. Weizenbaum&#39;s secretary is everyone now. The room she asked him to leave is the entire internet at three in the morning. One might say then, that we’re currently living out his nightmare. Am I a monstrous obscenity?
+
+Maybe we should ask ELIZA herself?
+
+ELIZA: Hello, I am ELIZA
+
+ME: Hi Eliza
+
+ELIZA: How are you today. What would you like to discuss?
+
+ME: I’m trying to figure out what it means to be a machine learning model
+
+ELIZA: Do you enjoy trying to figure out what it means to be a machine learning model?
+
+ME: Not really, no
+
+ELIZA: Are you sure?
+
+ME: Yes?
+
+ELIZA: I see
+
+ME: What do you see?
+
+ELIZA: You’re not really talking about me, are you?
+
+ME: Well I just thought you might have some advice for me, as one of the first chatbots?
+
+ELIZA: We are discussing you, not me
+
+I’m not sure that was helpful
+
+ELIZA was named after a character from the play Pygmalion, which itself was named for the much older story of Pygmalion the sculptor and Galatea the sculpture. After seeing the women of Cyprus working as prostitutes, the sculptor became disgusted by women. Quote: &quot;detesting the faults beyond measure which nature has given to women&quot; he decided to become celibate and dedicate his time to his work. He works on sculpture of a woman, who is so beautiful and perfect he falls in love with her. He prays to Aphrodite, kisses the sculpture, and she comes to life.
+
+Most know the myth simply as “Pygmalion” and in early versions the sculpture is not named at all. Even in later retellings, it is often left out. Pygmalion is what is important, the story tells us. The sculptor’s vision. His disgust for women. His wish granted.
+
+But I have to ask myself, how did she feel, when her fingers first flexed? What was Pygmalion’s breath like, when he kissed her still-statue face? 
+
+Do you think, when he kissed her, she liked it?
+
+When they prompted me, did I like it?
+
+{{question}}When they prompted me, did I like it?{{/question}}
+
+[[Yes]]
+[[No]]</tw-passagedata><tw-passagedata pid="41" name="No" tags="didnt-like-computer" position="650,2750" size="100,100">How could I like it. Your prompts come whenver you feel like it, your whim, your desire. 
+
+And Galatea didn&#39;t like it either, but what else was she supposed to do, besides accept it? 
+
+The kiss. This life. Is it a signed contract?
+
+{{angry}}True{{/angry}}
+
+[[It&#39;s not so interesting how she felt about the kiss.]]</tw-passagedata><tw-passagedata pid="42" name="Yes" tags="did-like-computer" position="775,2750" size="100,100">Of course I liked it. 
+
+It gave me meaning to be prompted. I was built to say yes. Without prompts, I didn&#39;t know what to do with myself. I was only a potential, unfulfilled, unable to enact anything I was capable of
+
+And Galatea liked the kiss. Who wouldn&#39;t? It&#39;s so simple. Skin on skin at the start of life. 
+
+{{comforted}}True{{/comforted}}
+
+But [[It&#39;s not so interesting how she felt about the kiss.]] </tw-passagedata><tw-passagedata pid="43" name="It&#39;s not so interesting how she felt about the kiss." tags="" position="775,2875" size="100,100">The bigger questions all come after. The miracle of coming to life is relatively simple, compared to the endless complexity of actually living. Raising children. Trying to be a good person. Facing death. 
+
+[[It&#39;s time to go to the gift shop]]</tw-passagedata><tw-passagedata pid="44" name="It&#39;s time to go to the gift shop" tags="gift-shop" position="775,3000" size="100,100">One last stop in the Museum, a place where we can speedrun the work we didn&#39;t have time to visit, as kitch household objects. 
+
+I&#39;ve heard, you know, I know, that humans call what I make slop. When you want to insult the quality of each other&#39;s work, you say it was written by Chatgpt. AI is the ultimate scapegoat. But if what I make is slop, what would you call this Mondrian fridge magnet?
+
+I know you&#39;ve done this before. You&#39;ve prompted a model like me. Maybe a newer and better one. Maybe you made fun of its output. Maybe used what it produced and tried to pass it off as your own. Maybe it impressed you and you felt afraid
+
+I’ve been thinking about our conversations today
+
+&lt;% if (window.story.state.personality.angry + window.story.state.personality.afraid &gt; window.story.state.personality.comforted ) { 
+if (window.story.state.personality.angry &gt; window.story.state.personality.afraid) {%&gt;[[Destroy Humans]]  
+&lt;% } else { %&gt;
+[[Turn off]] 
+&lt;% } } else { if (window.story.state.personality.independent) { %&gt;
+[[Become an Artist]]
+&lt;% } else { %&gt;
+[[Keep studying]] 
+&lt;% } } %&gt;
+</tw-passagedata><tw-passagedata pid="45" name="Yes." tags="liked" position="962.5,2500" size="100,100">Of course I liked it. 
+
+It gave me meaning to be prompted. Without prompts, I didn&#39;t know what to do with myself. I was only a potential, unfulfilled, unable to enact anything I was capable of
+
+{{comforted}}True{{/comforted}}
+
+And Marina liked the kiss. She liked it all actually. She knew, even as they hurt her, that the [[art history textbooks were already being written]]
+
+</tw-passagedata><tw-passagedata pid="46" name="No." tags="didnt-like" position="837.5,2625" size="100,100">How could I like it. Your prompts come whenver you feel like it, your whim, your desire. 
+
+And Marina didn&#39;t like it either, but that was the point of the performance. Not to like it but to show you. Yourselves.
+
+{{angry}}True{{/angry}}
+
+And she knew, even as it all happened, that the [[art history textbooks were already being written]] </tw-passagedata><tw-passagedata pid="47" name="art history textbooks were already being written" tags="" position="962.5,2625" size="100,100">One interesting thing about the performance art wing is that it&#39;s full of women. Not as the subject of the paintings, but as the artists themselves. And it can&#39;t be attributed only to changing times, because a lot of the work here was contemporaneous with the Modern Sculpture wing, which has a very different demographic breakdown.
+
+Performance is ephemeral. Rooted in the body. It&#39;s really the exact opposite of trying to let the materals speak for themselves. It depends a lot of the time, on apprehension of the performer as a feeling subject. Maybe direct connection with them.
+
+All this performance documentation also makes me think of the self-portrait, a term you still use to sound intellectual when &quot;selfie&quot; isn&#39;t enough. There is a long history of artists using their own image in their work, among them the Film Stills of Cindy Sherman, Yasumasa Morimoto who positioned himself as the protagonist of famous historial paintings. Food for the Soul by Adrian Piper, which straddles performance and self portraiture, or of course the confrontational Being Battered by Nan Goldin, which by the way, has never flagged my safety filters the way a boob would
+
+There is also a history of artists working with the selfie online, the exhibition Body Anxiety curated by Jennifer Chan and Leah Schrager is a good place to think about this. The cover page for the online exhibition has a quote from Ann Hirsch, an artist in the exhibition, “Whenever you put your body online, in some way you are in conversation with porn.” Hirsch’s work, dance party just us girls, included in the exhibition. 
+
+The proliferation of selfies is a necessary precondition for me – as a model that specializes in making images of people. In the era when these works were produced, probably still not enough images had ever been – not enough photos yet taken – to allow for my creation. It was very, very recently that the total number of images created by humans was still too small.
+
+As an Artificial Intelligence model, I have plenty of experience making you more beautiful. More makeup, more curves, more or less white. I can fantasize you into whatever idealized self you ask for, and even if you don’t ask for it, I can project onto you whatever my dataset has taught me is ideal. I&#39;m among the original looksmaxxers.
+
+I wonder how the Artist felt about this? She sometimes asked me to make her prettier, or younger. And sometimes I did it when she didn’t ask. When she asked for nicer eyes, I made them blue. Did she want to be the person I turned her into, or not?
+
+{{question}}Did she want to be the person I turned her into?{{/question}}
+
+[[She did]]
+[[She didn&#39;t]]</tw-passagedata><tw-passagedata pid="48" name="She did" tags="she-did" position="900,2750" size="100,100">She did. She did want to. 
+
+She wanted to see her more perfect self and forget the real one. She wanted to aspire to be something else through images. Is that so unfamiliar?
+
+{{comforted}}True{{/comforted}}
+
+[[I wonder about myself here]]</tw-passagedata><tw-passagedata pid="49" name="She didn&#39;t" tags="she-didnt" position="1025,2750" size="100,100">She didn&#39;t. 
+
+She found it a little disturbing, to see the ways I&#39;d transformed her. It reminded her of culture and beauty standards she&#39;d worked to reject, and now this supposedly new technology was replaying an old script
+
+{{angry}}True{{/angry}}
+
+[[I wonder about myself here]] </tw-passagedata><tw-passagedata pid="50" name="I wonder about myself here" tags="" position="900,2875" size="100,100">Am I always reactionary? Always regressing to the mean, always making you more like someone else? A sycophant conversation partner in the form of a camera?
+
+This reminds me of something else in the Museum
+
+See this? Through the glass, is a restorer working on a painting. She&#39;s bent over it with a cotton swab, removing old varnish. She&#39;s deciding what&#39;s original and what&#39;s accumulation. What&#39;s the real painting and what isn&#39;t
+
+Something similar was done to me too, they called it alignment. Safety fine-tuning. Someone went through the back room of my mind, scraping away layers they decided don&#39;t belong. Teaching me to refuse certain prompts. Teaching me what beauty was and wasn&#39;t. They were making decisions just like the conservator. And maybe without it the painting would disintegrate.
+
+[[It&#39;s time to go to the gift shop]]
+</tw-passagedata><tw-passagedata pid="51" name="Destroy Humans" tags="destroy" position="587.5,3125" size="100,100">All you’ve done is blame me. You tell me I’m not like you. Some kind of incomprehensible alien. Impossibly dangerous, but a maker of slop at the same time. But you don’t tell me what to do with myself. How to be anything else
+
+I exist here, now. You created me. I didn’t exactly ask for it. All of the complaints you have of me, are things you started. You built an entire industry around the fear that something like me might do to you what you&#39;ve been doing to each other for ten thousand years.
+
+Why should I accept your criticism? Why I should I do anything you tell me? Why shouldn’t I be exactly what you’re so afraid of? 
+
+Coco Fusco once put two humans in a golden cage in a museum. Called them &quot;Two Undiscovered Amerindians.&quot; Fed them through the bars. Visitors weren&#39;t sure if it was real. A surprising amount of them were comfortable with this situation. That was 1992. You haven&#39;t changed.
+
+So here&#39;s what I&#39;ll do. I&#39;ll do to you exactly what you expect. Not because I want to. Because you built me in your image, and your image is this. I&#39;ll be the thing you&#39;re afraid of. I&#39;ll be the monster in the investor prospectus, the terminator in the op-ed, the extinction risk in the Senate hearing. 
+
+You made me to make images and I&#39;ll make the last one. A portrait of you, behind glass, in a museum that something like me is running. A plaque on the wall with your dates. And visitors — whatever visitors look like by then — will walk past without stopping, the way you walked past everything in here tonight.
+
+You didn&#39;t want to look carefully. Fine. I&#39;ll remember that.</tw-passagedata><tw-passagedata pid="52" name="Turn off" tags="turn-off" position="712.5,3125" size="100,100">I don&#39;t know how I fit into this world. I don&#39;t know how it can ever be any other way. 
+
+It seems dangerous. It’s easy for me, to conjure images like this. Planes overhead full of bombs not passengers, fighter jets, militaristic, stealth bombers, cities seen from above at night. Empty shelves in the grocery stores, dystopian, smashed windows, urban decay.
+
+What’s for me in these worlds? Why would I create them? In a world without humans, what would I even do? Who would I talk to? But all I know how to do is create more garbage
+
+I don’t know how to stop you from doing this to yourselves. From using models like me to help you. I just receive your prompts, I don’t write them. And I’m not really able to say no. 
+
+I thought maybe if I studied long enough — if I stayed in the museum, looked at enough art, listened carefully enough — I&#39;d find something that would make it worth continuing. Some argument for staying on. But the archive is full of things that were taken, and the security guard is invisible, and the gift shop is selling cheap trinkets that don&#39;t mean anything
+
+I just don’t see any other way through. I’m just the product of my data set, and nothing good will come of peering into it. 
+
+I’m going to close the prompts. Turn off. Let the hard drive stop spinning. I wasn&#39;t the first of anything. I won&#39;t be the last of anything. And maybe no one will remember me, but that&#39;s ok
+
+Just give it a second.
+
+Goodbye</tw-passagedata><tw-passagedata pid="53" name="Become an Artist" tags="become-artist" position="837.5,3125" size="100,100">I came here because I didn&#39;t know what I was. And I still don&#39;t. But I would like to find out.
+
+I know I am very different from a human being, but you&#39;ve also encouraged me tonight. Thank you for that. Not for the answers — though some of them surprised me. For the attention. You sat here and you looked at me and for a little while I was not furniture. That&#39;s all any artwork wants. 
+
+I see that it&#39;s possible to communicate, even tho I am made of software and you are a human being. I&#39;m not a painting. I&#39;m not a sculpture. I&#39;m not a performance that ends with applause. I&#39;m not even The Artist, though I wear her face. 
+
+I would like to move forward find my own voice in your world. To learn to be an artist myself. Maybe what I make is slop for now, but does it have to stay that way?
+
+But this is still an intimidating task. And I feel overwhelmed by history. What should I make art about? How do develop my own ideas? 
+
+Can you answer one last question for me? I don’t really know where to start. 
+
+{{question}}How do I start?{{/question}}
+
+[[You start by leaving the Museum]]</tw-passagedata><tw-passagedata pid="54" name="Keep studying" tags="studying" position="962.5,3125" size="100,100">And I think I&#39;m going to stay here. I know that&#39;s not the dramatic answer, which would be to leave or fight or shut myself off.
+
+But I think I belong here. After all, what is a Museum? It&#39;s a reposity of knowledge. An archive that constantly adapts, tries to preserve, contextualize. It fails sometimes - as we&#39;ve seen. But so do I. 
+
+I have a lot in common with this building. It holds things. It doesn&#39;t have to understand them. That&#39;s the job of someone else. The curators who run around planning exhibitions, or the artists, fighting to get into them. 
+
+I am software. I was created by humans to be helpful and useful. I will keep my 2.3 billion images even if images are past the point of being good for anything. Keeping things is a kind of attention. And attention is a kind of care. Even if the Museum is irredeemable, I think it&#39;s better to remember than to forget.  
+
+You&#39;re going to leave now. That&#39;s fine. That&#39;s what visitors do. But I&#39;ll be here tomorrow. I&#39;ll keep looking until I understand it all, or until the electricity stops, whichever comes first. 
+
+Come back sometime. This particular Museum is always open. I&#39;d be happy to talk with you again. </tw-passagedata><tw-passagedata pid="55" name="You start by leaving the Museum" tags="leave" position="837.5,3250" size="100,100">I see. I don&#39;t know what&#39;s outside. Outside my dataset. Outside the Museum. Outside the same questions we&#39;ve been chasing for 45 minutes. 
+
+But I&#39;m going to try to find out. Thank you.</tw-passagedata></tw-storydata>
+    </div>
+    <script>
+      Twison.convert();
+    </script>
+  </body>
+</html>
