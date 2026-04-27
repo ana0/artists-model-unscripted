@@ -2,6 +2,7 @@
 // all slides from a vote destination through to the next question/vote point.
 // This minimizes API calls by making each section self-contained.
 
+const path = require('path')
 const script = require('./script.json')
 const sections = require('./sectioned.json')
 
@@ -114,6 +115,6 @@ Object.entries(restructured).forEach(([tag, slides]) => {
 
 // Write output
 const fs = require('fs')
-const outPath = './sectioned-restructured.json'
+const outPath = path.resolve(__dirname, 'sectioned-restructured.json')
 fs.writeFileSync(outPath, JSON.stringify(restructured, null, 2) + '\n')
 console.log(`\nWrote ${outPath} with ${Object.keys(restructured).length} sections`)

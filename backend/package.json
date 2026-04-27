@@ -5,6 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node -r dotenv/config index.js",
+    "build": "node v2/build-sections.js",
+    "build:v1": "node v1/build-sections.js",
+    "build:v2": "node v2/build-sections.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

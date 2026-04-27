@@ -6,6 +6,7 @@ import DisplaySession from "./DisplaySession";
 import SetTopSession from './SetTopSession';
 import SetTopQuestion from './SetTopQuestion';
 import CloseQuestion from "./CloseQuestion";
+import PollStatusBar from "./PollStatusBar";
 import { useQuery } from "@tanstack/react-query";
 
 import { getQuestions, getSessions, getTopSession } from "../services";
@@ -32,6 +33,7 @@ const Admin = () => {
 
   return (
     <Fragment>
+      <PollStatusBar />
       <View>
         <CreateQuestion />
         <h3>Questions</h3>

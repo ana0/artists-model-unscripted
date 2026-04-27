@@ -170,7 +170,7 @@
 					wrapper.className = 'videowrapper';
 
 					switch (slide.type) {
-						case 'header':
+						case 'heading':
 							if (slide['slide-text']) {
 								const p = document.createElement('p');
 								p.className = 'header';
@@ -223,6 +223,10 @@
 								img.src = slide.image;
 								wrapper.appendChild(img);
 							}
+							const p = document.createElement('p');
+								p.className = 'header';
+								p.textContent = "question";
+								wrapper.appendChild(p);
 							break;
 
 						case 'eliza':

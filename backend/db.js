@@ -1,6 +1,6 @@
 const sqlite3 = require('sqlite3').verbose();
-const script = require('./script.json');
-const sections = require('./sectioned.json');
+const script = require('./v2/script.json');
+const sections = require('./v2/sectioned.json');
 
 
 const db = new sqlite3.Database('./quiz.db', (err) => {
@@ -54,7 +54,7 @@ db.serialize(async () => {
       // Insert polls
       for (let i = 0; i < script.passages.length; i++) {
         let passage = script.passages[i];
-        if (passage.links && passage.links.length > 1 && passage.tags[0] !== 'gift-shop') {
+        if (passage.props && passage.props.question && passage.tags[0] !== 'gift-shop') {
           try {
             let pollId = await insertPoll(passage.props.question, passage.tags[0]);
             passage.links.forEach((l) => {

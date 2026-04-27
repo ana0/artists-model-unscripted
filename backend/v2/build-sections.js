@@ -1,4 +1,4 @@
-// Generate sectioned-v2.json from script-v2.json.
+// Generate sectioned.json from script.json (both colocated in this v2/ folder).
 //
 // For each tagged passage (a "section head"):
 //   - Walk the chain through any untagged single-link merge passages
@@ -14,8 +14,8 @@
 const fs = require('fs')
 const path = require('path')
 
-const SCRIPT_PATH = path.resolve(__dirname, '..', 'script-v2.json')
-const OUT_PATH = path.resolve(__dirname, 'sectioned-v2.json')
+const SCRIPT_PATH = path.resolve(__dirname, 'script.json')
+const OUT_PATH = path.resolve(__dirname, 'sectioned.json')
 
 const EMOTIONS = ['angry', 'afraid', 'comforted', 'independent']
 const INLINE_TAG = /\{\{(\w+)\}\}([\s\S]*?)\{\{\/\1\}\}/g
@@ -73,8 +73,14 @@ function makeSlide(type, slideText, text) {
   }
 }
 
-// Walk from a section head through every single-link passage (whether tagged
-// or not) until reaching a vote (multi-link) or a terminal (no links). The
+// A passage triggers a vote if it has a `props.question`. This includes
+// multi-link passages and the special single-link case (pid 53 'become-artist'
+// has only one continuation but still asks the audience to click through).
+function isVotePassage(p) {
+  return !!(p.props && p.props.question)
+}
+
+// Walk from a section head until reaching a vote-passage or a terminal. The
 // stopping passage is included in the chain so its question text is in the
 // section. Tagged passages traversed mid-chain still get their own top-level
 // section, so their content is intentionally duplicated.
@@ -82,6 +88,7 @@ function buildChain(head) {
   const chain = [head]
   let current = head
   while (true) {
+    if (isVotePassage(current)) break
     const nexts = uniqueNext(current)
     if (nexts.length !== 1) break
     const next = pidToPassage[nexts[0]]
@@ -99,7 +106,7 @@ for (const head of sectionHeads) {
   const tag = head.tags[0]
   const chain = buildChain(head)
   const finalPassage = chain[chain.length - 1]
-  const finalIsQuestion = uniqueNext(finalPassage).length > 1
+  const finalIsQuestion = isVotePassage(finalPassage)
 
   const slides = []
   slides.push(makeSlide('heading', head.name, ''))

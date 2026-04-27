@@ -1,5 +1,6 @@
 const db = require('../db')
-const sections = require('../sectioned.json')
+const sections = require('../v2/sectioned.json')
+const { ENDING_POLL_TAGS, pickEnding } = require('../utils/endings')
 
 const slidesFor = (tag) => (sections[tag] && sections[tag].slides) || null
 
@@ -13,13 +14,6 @@ const readSection = (req, res) => {
     return res.status(404).json({ error: `Section not found for tag: ${tag}` })
   }
   return res.status(200).json({ tag, section: slides })
-}
-
-const pickEnding = ({ angry, afraid, comforted, independent }) => {
-  if (angry + afraid > comforted) {
-    return angry > afraid ? 'destroy-humans' : 'turn-off'
-  }
-  return independent ? 'become-artist' : 'keep-studying'
 }
 
 const readCurrentSection = (req, res) => {
@@ -72,8 +66,20 @@ const readCurrentSection = (req, res) => {
 
         const winningSlides = slidesFor(winner.tag) || []
 
-        // Terminal branch: no next poll. Pick ending from session emotions and concatenate.
+        // Terminal branch: no next poll. Two flavors:
+        //   - Closing poll is one of the ending polls (e.g. become-artist after
+        //     audience clicked "Leave"): we're already past gift-shop dispatch.
+        //     Just return the chosen continuation slides.
+        //   - Otherwise: chain ended at gift-shop. Pick ending from session
+        //     emotions and concatenate the ending slides into the response.
         if (winner.nextPoll == null) {
+          if (ENDING_POLL_TAGS.has(poll[0].pollTag)) {
+            return res.status(200).json({
+              tag: winner.tag,
+              closed: true,
+              section: winningSlides
+            })
+          }
           return db.get(
             'SELECT angry, afraid, comforted, independent FROM sessionEmotions WHERE sessionId = ?;',
             session.sessionId,

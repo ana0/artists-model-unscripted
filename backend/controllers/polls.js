@@ -1,5 +1,6 @@
 const e = require('cors')
 const db = require('../db')
+const { ENDING_POLL_TAGS, pickEnding } = require('../utils/endings')
 
 const readPolls = (req, res)  => {
   if (req.params.top) {
@@ -94,7 +95,7 @@ const updatePoll = (req, res)  => {
         return res.status(500).json({ error: 'Server Error' });
       }
       // get all answers for this poll, as well as the number of votes for each answer
-      const query = `SELECT polls.id, question, answer, closed, pollItems.id as pollItemsId, pollItems.nextPoll as nextPoll,
+      const query = `SELECT polls.id, question, polls.tag as pollTag, answer, closed, pollItems.id as pollItemsId, pollItems.nextPoll as nextPoll,
       pollItems.angry as angry, pollItems.afraid as afraid, pollItems.comforted as comforted, pollItems.independent as independent,
       (select COUNT(votes.id) from votes where votes.pollItemsId = pollItems.id and votes.sessionId = ${session.sessionId}) as votes
       FROM polls
@@ -107,9 +108,14 @@ const updatePoll = (req, res)  => {
           return res.status(500).json({ error: 'Server Error' });
         }
         console.log("poll", poll)
-        if (!poll) return res.status(401).json({ error: 'Not found' });
+        if (!poll || poll.length === 0) return res.status(401).json({ error: 'Not found' });
         // to-do: handle tie
-        let winningAnswer = poll[0].votes > poll[1].votes ? poll[0] : poll[1];
+        let winningAnswer
+        if (poll.length === 1) {
+          winningAnswer = poll[0]
+        } else {
+          winningAnswer = poll[0].votes >= poll[1].votes ? poll[0] : poll[1]
+        }
 
         // Increment session emotions by the winning answer's values
         const incrementEmotions = () => new Promise((resolve, reject) => {
@@ -133,11 +139,49 @@ const updatePoll = (req, res)  => {
           return res.status(500).json({ error: 'Server Error' });
         }
 
-        // If the winner leads nowhere (chain ends at gift-shop), leave topPoll pointing
-        // at the current closed poll. readCurrentSection resolves the ending from emotions.
+        // No next poll: terminal branch. Two cases:
+        //   1. Closing poll IS one of the ending polls (e.g. become-artist after
+        //      the audience clicked "Leave"): show is ending, leave topPoll alone.
+        //   2. Otherwise: the chain ended at gift-shop. Pick the ending from
+        //      session emotions; if it has its own follow-up poll (only
+        //      become-artist currently does), advance topPoll to it. Endings
+        //      without polls (destroy/turn-off/studying) are terminal — leave
+        //      topPoll alone and let readCurrentSection concatenate the slides.
         if (winningAnswer.nextPoll == null) {
-          console.log(`poll ended at terminal branch; topPoll left at ${row.pollsId}`)
-          return res.status(200).json(`Update poll (terminal)`)
+          if (ENDING_POLL_TAGS.has(poll[0].pollTag)) {
+            console.log(`poll ended after ending '${poll[0].pollTag}'; topPoll left at ${row.pollsId}`)
+            return res.status(200).json(`Update poll (post-ending terminal)`)
+          }
+
+          return db.get(
+            'SELECT angry, afraid, comforted, independent FROM sessionEmotions WHERE sessionId = ?;',
+            session.sessionId,
+            (err3, emotions) => {
+              if (err3) {
+                console.log(err3)
+                return res.status(500).json({ error: 'Server Error' })
+              }
+              const endingTag = pickEnding(emotions || {})
+              return db.get('SELECT id FROM polls WHERE tag = ?;', endingTag, (err4, endingPoll) => {
+                if (err4) {
+                  console.log(err4)
+                  return res.status(500).json({ error: 'Server Error' })
+                }
+                if (!endingPoll) {
+                  console.log(`gift-shop dispatched to terminal ending '${endingTag}'; topPoll left at ${row.pollsId}`)
+                  return res.status(200).json(`Update poll (gift-shop dispatch, terminal ending '${endingTag}')`)
+                }
+                db.run('INSERT OR REPLACE INTO topPoll (ID, pollsId) VALUES (1, ?);', endingPoll.id, function (err5) {
+                  if (err5) {
+                    console.log(err5)
+                    return res.status(500).json({ error: 'Server Error' })
+                  }
+                  console.log(`gift-shop dispatched to '${endingTag}'; advanced topPoll to ${endingPoll.id}`)
+                  return res.status(200).json(`Update poll (gift-shop dispatch to ${endingTag})`)
+                })
+              })
+            }
+          )
         }
 
         db.run("INSERT OR REPLACE INTO topPoll (ID, pollsId) VALUES (1, ?);", winningAnswer.nextPoll, function(err) {
