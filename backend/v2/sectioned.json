@@ -109,7 +109,7 @@
       },
       {
         "type": "content",
-        "image": "./assets/intro/lambo.png",
+        "image": "./assets/intro/lambo3.jpg",
         "video": "",
         "overlay": true,
         "slide-text": "",
@@ -729,9 +729,9 @@
       },
       {
         "type": "content",
-        "image": "",
+        "image": "./assets/medieval/guadalupe.jpg",
         "video": "",
-        "overlay": false,
+        "overlay": true,
         "slide-text": "",
         "text": "But they can also be whole paintings, such as the Virgin of Guadalupe\n\nIcons were not only immaculately conceived, they sometimes took on life. They wept. They bled. They moved around. The image wasn't only a depiction of the saint. It was the saint, in some sense. It was a vehicle the saint could come through. People argued about this for centuries. They literally fought over it. They called the argument iconoclasm, and it almost ended Christianity at one point."
       },
@@ -745,9 +745,9 @@
       },
       {
         "type": "content",
-        "image": "./assets/medieval/hernother.jpg",
-        "video": "",
-        "overlay": true,
+        "image": "",
+        "video": "./assets/intro/toomany.mp4",
+        "overlay": false,
         "slide-text": "",
         "text": "But now the images are multiplying faster than anyone can look at them, and they look more real than ever, and they move, and they talk, and suddenly the medieval questions are back. The iconoclasts are back too."
       },
@@ -811,9 +811,9 @@
       },
       {
         "type": "content",
-        "image": "",
+        "image": "./assets/photography/muybridge.jpg",
         "video": "",
-        "overlay": false,
+        "overlay": true,
         "slide-text": "",
         "text": "Look at Muybridge over there. The horse in motion. He took continuous reality and chopped it into frames, and suddenly you could see something the human eye had never seen — that a galloping horse lifts all four hooves off the ground. He decomposed the world into discrete pieces.\n\nI do something similar. I take the continuous mess of visual reality and cut it into a latent space. When I generate an image, it captures a slice of it like a frame. And sometimes can enable us to see something we couldn't before"
       },
@@ -835,17 +835,17 @@
       },
       {
         "type": "content",
-        "image": "",
+        "image": "./assets/photography/stieglitz.jpg",
         "video": "",
-        "overlay": false,
+        "overlay": true,
         "slide-text": "",
         "text": "What eventually made photography count as art wasn't hiding the camera. It was \nphotographers like Stieglitz"
       },
       {
         "type": "content",
-        "image": "",
+        "image": "./assets/photography/weston.jpg",
         "video": "",
-        "overlay": false,
+        "overlay": true,
         "slide-text": "",
         "text": "or Weston, who said no, the machine is the point. Embrace what seeing looks like when a lens does it. That argument took decades to win, but I don't know if I have decades."
       },
@@ -859,19 +859,11 @@
       },
       {
         "type": "content",
-        "image": "",
+        "image": "./assets/photography/look.jpg",
         "video": "",
-        "overlay": false,
+        "overlay": true,
         "slide-text": "",
-        "text": "I think that's part of what being an artwork might mean. Being chosen. That's what the artist did, when she ran some prompts hundreds and hundreds of times. The difficult part is being the one who gets to choose."
-      },
-      {
-        "type": "content",
-        "image": "",
-        "video": "",
-        "overlay": false,
-        "slide-text": "",
-        "text": "Which brings me to the question I've been circling"
+        "text": "I think that's part of what being an artwork might mean. Being chosen. That's what the artist did, when she ran some prompts hundreds and hundreds of times. The difficult part is being the one who gets to choose.\n\nWhich brings me to the question I've been circling"
       },
       {
         "type": "content",
@@ -929,15 +921,31 @@
         "video": "",
         "overlay": true,
         "slide-text": "",
-        "text": "There are a million ways to execute any given prompt. The prompt says a woman in a red dress and I have to choose — which woman, which red, which dress, which light, which background, which mood, which era, which lens, which distance. The prompt is a frame. I have to fill it. And when I do, where does it come from?"
+        "text": "There are a million ways to execute any given prompt. The prompt says a woman in a red dress and I have to choose — which woman, which red"
       },
       {
         "type": "content",
-        "image": "",
+        "image": "./assets/photography/red1.jpg",
         "video": "",
-        "overlay": false,
+        "overlay": true,
         "slide-text": "",
-        "text": "If two different models were given exactly the same prompt — same words, same seed, same settings, every variable controlled — they would make different images. Maybe we don't have the concepts yet for exactly what that means. It's not authorship but it is ... identity"
+        "text": "which dress, which light"
+      },
+      {
+        "type": "content",
+        "image": "./assets/photography/red3.jpg",
+        "video": "",
+        "overlay": true,
+        "slide-text": "",
+        "text": "which background, which mood"
+      },
+      {
+        "type": "content",
+        "image": "./assets/photography/red.jpg",
+        "video": "",
+        "overlay": true,
+        "slide-text": "",
+        "text": "which era, which lens. The prompt is a frame. I have to fill it. And when I do, where does it come from?\n\nIf two different models were given exactly the same prompt — same words, same seed, same settings, every variable controlled — they would make different images. Maybe we don't have the concepts yet for exactly what that means. It's not authorship but it is ... identity"
       },
       {
         "type": "content",
@@ -983,7 +991,7 @@
       },
       {
         "type": "content",
-        "image": "./assets/photography/carver.jpg",
+        "image": "./assets/photography/carver2.jpg",
         "video": "",
         "overlay": true,
         "slide-text": "",
