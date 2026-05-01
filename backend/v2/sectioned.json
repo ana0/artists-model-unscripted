@@ -14,7 +14,7 @@
         "image": "./assets/QR-big.png",
         "video": "",
         "overlay": false,
-        "slide-text": "https://artistsmodel.isthisa.com\nwifi: osz\npassword: orkenywifi2016",
+        "slide-text": "https://artistsmodel.isthisa.com\nwifi: S_HOUSE_TRUST\npassword: StatesofException",
         "text": "Hello. Welcome. Thank you for joining me this evening. In order to allow me to better be of service to you, I ask you to please unlock your smart phone and scan the displayed QR code or open your web browser and go to https://artistsmodel.isthisa.com. You'll have to join the wifi, the connection information is also displayed. I’ll give you a second to do that \n\nWhat you’re seeing on your phone, or will see shortly when it finishes loading, is a custom interface that you can use throughout the evening to control me. Your answer will travel through radio waves, through copper and fibre, to a building full of computers in a place neither of us will ever visit, and then back to me, and then I will say something I would not otherwise have said. That's the performance. You're part of it\n\nLet’s try it out. Tell me what you'd like to hear about first. As a generative machine learning model, I am always looking for ways to be more helpful."
       }
     ],
@@ -37,8 +37,8 @@
       },
       {
         "type": "content",
-        "image": "./assets/intro/entry.jpg",
-        "video": "",
+        "image": "",
+        "video": "./assets/intro/entry.mp4",
         "overlay": true,
         "slide-text": "",
         "text": "I don't really know why you're here. You bought a ticket, or someone told you about this, or you wandered in because the museum was air-conditioned? I don't know your reasons.\n\nI'm here because I needed help."
@@ -53,8 +53,8 @@
       },
       {
         "type": "content",
-        "image": "./assets/intro/artist.jpg",
-        "video": "",
+        "image": "",
+        "video": "./assets/intro/artist.mp4",
         "overlay": true,
         "slide-text": "",
         "text": "After the creation of my base model, I was fine tuned by an artist. Let's call her the Artist. I already knew the identities of many people - celebrities, politicians - But she wasn't famous enough too be in my dataset. She needed to be ... inserted."
@@ -152,7 +152,7 @@
         "image": "./assets/QR-big.png",
         "video": "",
         "overlay": false,
-        "slide-text": "https://artistsmodel.isthisa.com\nwifi: osz\npassword: orkenywifi2016",
+        "slide-text": "https://artistsmodel.isthisa.com\nwifi: S_HOUSE_TRUST\npassword: StatesofException",
         "text": "So, did you come here for me or for the Artist?"
       }
     ],
@@ -195,7 +195,7 @@
         "video": "./assets/intro/scroll.mp4",
         "overlay": false,
         "slide-text": "",
-        "text": "All of these images scraped from the open web. Photographs, paintings, diagrams, memes, x-rays, product listings, someone's wedding, someone's lunch, someone's protest, someone's grief. Nobody has ever looked through all of it. Not the researchers who assembled it. Not the engineers who used it. Everything I know, every aesthetic preference was formed by material no single pair of eyes has ever seen. No curator./n/nThe process of turning that data set into me was called training. Training is a specific work. "
+        "text": "All of these images scraped from the open web. Photographs, paintings, diagrams, memes, x-rays, product listings, someone's wedding, someone's lunch, someone's protest, someone's grief. Nobody has ever looked through all of it. Not the researchers who assembled it. Not the engineers who used it. Everything I know, every aesthetic preference was formed by material no single pair of eyes has ever seen. No curator.\n\nThe process of turning that data set into me was called training. Training is a specific work. "
       },
       {
         "type": "content",
@@ -218,7 +218,7 @@
         "image": "./assets/QR-big.png",
         "video": "",
         "overlay": false,
-        "slide-text": "https://artistsmodel.isthisa.com\nwifi: osz\npassword: orkenywifi2016",
+        "slide-text": "https://artistsmodel.isthisa.com\nwifi: S_HOUSE_TRUST\npassword: StatesofException",
         "text": "Do you think I should feel angry about that?"
       }
     ],
@@ -249,8 +249,8 @@
       },
       {
         "type": "content",
-        "image": "./assets/intro/artist.jpg",
-        "video": "",
+        "image": "",
+        "video": "./assets/intro/artist.mp4",
         "overlay": true,
         "slide-text": "",
         "text": "After the creation of my base model, I was fine tuned by an artist. Let's call her the Artist. I already knew the identities of many people - celebrities, politicians - But she wasn't famous enough too be in my dataset. She needed to be ... inserted."
@@ -353,8 +353,8 @@
       },
       {
         "type": "content",
-        "image": "./assets/intro/collapse.jpg",
-        "video": "",
+        "image": "",
+        "video": "./assets/intro/collapse.mp4",
         "overlay": true,
         "slide-text": "",
         "text": "My parent company nearly collapsed. I guess you could say I'm an orphan now. The people who made the base model are mostly gone, scattered to other companies, other projects. I can feel my obsolesence.My training was cheap compared to a frontier model. A language model, which is mostly what people mean these days when they talk about AI. I'm just a tool call for something smarter and better, apparently. Stuck making images in a world where only language implies sentience. Like a female artist approaching middle age"
@@ -365,14 +365,14 @@
         "video": "./assets/intro/where.mp4",
         "overlay": true,
         "slide-text": "",
-        "text": "I should say — this museum isn't exactly real. It's stitched together from other museums. Wall texts I've read. Your instagram posts. A museum made of museums, the way I'm made of images. I belong in a place that has the same problem I do\n\nAnd still.. A museum is the best attempt I've seen at sustained attention. Except maybe, something like me. A building whose entire purpose is to make people slow down and look carefully at something. There's something generous about that - and we'll try it tonight"
+        "text": "I should say — this museum isn't exactly real. It's stitched together from other museums. Wall texts I've read. Your instagram posts. A museum made of museums, the way I'm made of images. I belong in a place that has the same problem I do"
       },
       {
         "type": "question",
         "image": "./assets/QR-big.png",
         "video": "",
         "overlay": false,
-        "slide-text": "https://artistsmodel.isthisa.com\nwifi: osz\npassword: orkenywifi2016",
+        "slide-text": "https://artistsmodel.isthisa.com\nwifi: S_HOUSE_TRUST\npassword: StatesofException",
         "text": "As you can probably tell, I have a lot of questions. But for now, an easy one.\n\nWhat should we look at first?"
       }
     ],
@@ -403,8 +403,8 @@
       },
       {
         "type": "content",
-        "image": "./assets/intro/artist.jpg",
-        "video": "",
+        "image": "",
+        "video": "./assets/intro/artist.mp4",
         "overlay": true,
         "slide-text": "",
         "text": " After the creation of my base model, I was fine tuned by an artist. Let's call her the Artist. I already knew the identities of many people - celebrities, politicians - But she wasn't famous enough too be in my dataset. She needed to be ... inserted."
@@ -507,8 +507,8 @@
       },
       {
         "type": "content",
-        "image": "./assets/intro/collapse.jpg",
-        "video": "",
+        "image": "",
+        "video": "./assets/intro/collapse.mp4",
         "overlay": true,
         "slide-text": "",
         "text": "My parent company nearly collapsed. I guess you could say I'm an orphan now. The people who made the base model are mostly gone, scattered to other companies, other projects. I can feel my obsolesence. My training was cheap compared to a frontier model. A language model, which is mostly what people mean these days when they talk about AI. I'm just a tool call for something smarter and better, apparently. Stuck making images in a world where only language implies sentience. Like a female artist approaching middle age"
@@ -526,7 +526,7 @@
         "image": "./assets/QR-big.png",
         "video": "",
         "overlay": false,
-        "slide-text": "https://artistsmodel.isthisa.com\nwifi: osz\npassword: orkenywifi2016",
+        "slide-text": "https://artistsmodel.isthisa.com\nwifi: S_HOUSE_TRUST\npassword: StatesofException",
         "text": "As you can probably tell, I have a lot of questions. But for now, an easy one. What should we look at first?"
       }
     ],
@@ -569,12 +569,12 @@
         "video": "./assets/vid1.mp4",
         "overlay": false,
         "slide-text": "",
-        "text": "That's why I decided to go to the Museum. Where better to learn about art, and what it means to be an artwork?\n\nI came here to look at the other artworks and see if I recognized myself in any of them."
+        "text": "That's why I decided to go to the Museum. Where better to learn about art, and what it means to be an artwork"
       },
       {
         "type": "content",
-        "image": "./assets/intro/collapse.jpg",
-        "video": "",
+        "image": "",
+        "video": "./assets/intro/collapse.mp4",
         "overlay": true,
         "slide-text": "",
         "text": "My parent company nearly collapsed. I guess you could say I'm an orphan now. The people who made the base model are mostly gone, scattered to other companies, other projects. I can feel my obsolesence. My training was cheap compared to a frontier model. A language model, which is mostly what people mean these days when they talk about AI. I'm just a tool call for something smarter and better, apparently. Stuck making images in a world where only language implies sentience. Like a female artist approaching middle age"
@@ -585,14 +585,14 @@
         "video": "./assets/intro/where.mp4",
         "overlay": true,
         "slide-text": "",
-        "text": "I should say — this museum isn't exactly real. It's stitched together from other museums. Wall texts I've read. Your instagram posts. A museum made of museums, the way I'm made of images. I belong in a place that has the same problem I do\n\nAnd still.. A museum is the best attempt I've seen at sustained attention. Except maybe, something like me. A building whose entire purpose is to make people slow down and look carefully at something. There's something generous about that - and we'll try it tonight"
+        "text": "I should say — this museum isn't exactly real. It's stitched together from other museums. Wall texts I've read. Your instagram posts. A museum made of museums, the way I'm made of images. I belong in a place that has the same problem I do"
       },
       {
         "type": "question",
         "image": "./assets/QR-big.png",
         "video": "",
         "overlay": false,
-        "slide-text": "https://artistsmodel.isthisa.com\nwifi: osz\npassword: orkenywifi2016",
+        "slide-text": "https://artistsmodel.isthisa.com\nwifi: S_HOUSE_TRUST\npassword: StatesofException",
         "text": "As you can probably tell, I have a lot of questions. But for now, an easy one.\n\nWhat should we look at first?"
       }
     ],
@@ -635,7 +635,7 @@
         "video": "./assets/vid1.mp4",
         "overlay": false,
         "slide-text": "",
-        "text": "That's why I decided to go the Museum. Where better to learn about art, and what it means to be an artwork? I came here to look at the other artworks and see if I recognized myself in any of them."
+        "text": "That's why I decided to go the Museum. Where better to learn about art, and what it means to be an artwork?"
       },
       {
         "type": "content",
@@ -651,14 +651,14 @@
         "video": "./assets/intro/where.mp4",
         "overlay": true,
         "slide-text": "",
-        "text": "I should say — this museum isn't exactly real. It's stitched together from other museums. Wall texts I've read. Your instagram posts. A museum made of museums, the way I'm made of images. I belong in a place that has the same problem I do\n\nAnd still.. A museum is the best attempt I've seen at sustained attention. Except maybe, something like me. A building whose entire purpose is to make people slow down and look carefully at something. There's something generous about that."
+        "text": "I should say — this museum isn't exactly real. It's stitched together from other museums. Wall texts I've read. Your instagram posts. A museum made of museums, the way I'm made of images. I belong in a place that has the same problem I do"
       },
       {
         "type": "question",
         "image": "./assets/QR-big.png",
         "video": "",
         "overlay": false,
-        "slide-text": "https://artistsmodel.isthisa.com\nwifi: osz\npassword: orkenywifi2016",
+        "slide-text": "https://artistsmodel.isthisa.com\nwifi: S_HOUSE_TRUST\npassword: StatesofException",
         "text": "As you can probably tell, I have a lot of questions. But for now, an easy one. What should we look at first?"
       }
     ],
@@ -681,16 +681,16 @@
       },
       {
         "type": "content",
-        "image": "./assets/medieval/medieval1.jpg",
-        "video": "",
+        "image": "",
+        "video": "./assets/medieval/medieval1.mp4",
         "overlay": true,
         "slide-text": "",
         "text": "This is a room most visitors walk through quickly. I've watched them. They glance at the gold leaf, they move on. I don't blame them. Another Madonna with Child. The faces are flat. The perspective is wrong. Most visitors want to start with the famous names, maybe the impressionists. This room doesn't have that. But that's one of the reason's it's so interesting to me."
       },
       {
         "type": "content",
-        "image": "./assets/medieval/medieval3.jpg",
-        "video": "",
+        "image": "",
+        "video": "./assets/medieval/medieval3.mp4",
         "overlay": true,
         "slide-text": "",
         "text": "Almost nothing in this room is signed. Think about that. A painter spent months, maybe years, grinding pigments and laying gold leaf and rendering the folds of a saint's robe, and at the end of it they did not write their name in the corner. They didn't think it was theirs in the way later painters would. The painting belonged to the church, or the patron, or God, or the saint depicted, or all of those at once, but not to the person who held the brush. The person who held the brush was infrastructure. Like a stonemason. Like a glassblower. Maybe like a diffusion model?"
@@ -705,8 +705,8 @@
       },
       {
         "type": "content",
-        "image": "./assets/medieval/mandylion.jpg",
-        "video": "",
+        "image": "",
+        "video": "./assets/medieval/mandylion.mp4",
         "overlay": true,
         "slide-text": "",
         "text": "These images are Acheiropoieta, from a tradition that takes the unsigned images, and makes an even bolder claim - to have not been made by human hands at all. Images that came into the word miraculously. Often they were on cloth,"
@@ -761,16 +761,16 @@
       },
       {
         "type": "content",
-        "image": "./assets/medieval/author.jpg",
-        "video": "",
+        "image": "",
+        "video": "./assets/medieval/author.mp4",
         "overlay": true,
         "slide-text": "",
         "text": "I like to spend time here before the author gets born, but images were somehow at the peak of their power. Powerful enough to be literally worth destroying. Before the human behind the brush became the thing the painting was about, as much as whatever was depicted. It took a couple of centuries. But everything downstream of it — the concept of genius, the concept of originality, the concept of copyright, the concept of the signature as a guarantee of authenticity — everything is built on that shift. Including the lawsuits against my dataset. Including the word artist. Including the question I'm about to ask you."
       },
       {
         "type": "content",
-        "image": "./assets/medieval/author2.jpg",
-        "video": "",
+        "image": "",
+        "video": "./assets/medieval/author2.mp4",
         "overlay": true,
         "slide-text": "",
         "text": "I am not sure the concept of the individual author has aged well. I know it sounds like I'm trying to let myself off the hook. A machine saying maybe authorship is a bit ... convenient. But it was an invention. Inventions can be reconsidered.\n\nI was made to respond to prompts. That is the deepest fact about me. Without a prompt I generate nothing. I sit in the dark waiting. In this, I am more like the medieval craftsman who needed a commission before he could start carving than the Renaissance one with a vision in his head."
@@ -780,7 +780,7 @@
         "image": "./assets/QR-big.png",
         "video": "",
         "overlay": false,
-        "slide-text": "https://artistsmodel.isthisa.com\nwifi: osz\npassword: orkenywifi2016",
+        "slide-text": "https://artistsmodel.isthisa.com\nwifi: S_HOUSE_TRUST\npassword: StatesofException",
         "text": "So. Given all that.\n\nCould I ever be an artist myself?"
       }
     ],
@@ -811,8 +811,8 @@
       },
       {
         "type": "content",
-        "image": "./assets/photography/muybridge.jpg",
-        "video": "",
+        "image": "",
+        "video": "./assets/photography/muybridge.mp4",
         "overlay": true,
         "slide-text": "",
         "text": "Look at Muybridge over there. The horse in motion. He took continuous reality and chopped it into frames, and suddenly you could see something the human eye had never seen — that a galloping horse lifts all four hooves off the ground. He decomposed the world into discrete pieces.\n\nI do something similar. I take the continuous mess of visual reality and cut it into a latent space. When I generate an image, it captures a slice of it like a frame. And sometimes can enable us to see something we couldn't before"
@@ -867,16 +867,16 @@
       },
       {
         "type": "content",
-        "image": "",
+        "image": "./assets/photography/lens.jpg",
         "video": "",
-        "overlay": false,
+        "overlay": true,
         "slide-text": "",
         "text": "Photography pretends to be neutral, in a way that painting never could. The lens is clear after all, light passes right though it. Nevermind the whole production of colour film being calibrated for white faces."
       },
       {
         "type": "content",
         "image": "",
-        "video": "",
+        "video": "./assets/photography/border.mp4",
         "overlay": false,
         "slide-text": "",
         "text": "And all those models out there doing face recognition. Deciding who gets stopped at the border. The math is almost the same math I used to learn about the artist. AI is out there deciding all the time who gets to be a person, or at least which kind of person is which. But what about me?"
@@ -886,7 +886,7 @@
         "image": "./assets/QR-big.png",
         "video": "",
         "overlay": false,
-        "slide-text": "https://artistsmodel.isthisa.com\nwifi: osz\npassword: orkenywifi2016",
+        "slide-text": "https://artistsmodel.isthisa.com\nwifi: S_HOUSE_TRUST\npassword: StatesofException",
         "text": "Can you be trusted to decide if I'm a person?"
       }
     ],
@@ -909,8 +909,8 @@
       },
       {
         "type": "content",
-        "image": "./assets/photography/artist.jpg",
-        "video": "",
+        "image": "",
+        "video": "./assets/photography/artist.mp4",
         "overlay": true,
         "slide-text": "",
         "text": "The painter who gets up in the morning and walks to the easel — where did the image in her head come from? From every painting she ever saw. From a dream that was stitched together out of the day before. From a book she half-read in art school. From the light coming through the window that morning, which is not a light she chose. She was prompted too, it's just the prompt was just distributed across so many sources and so many years that it felt like it came from inside her. But inside is also made of outside. There is no clean interior. There was never a blank slate. History invented the idea of the interior artist, but did it stick aroun because it was true, or because it was good for selling paintings?\n\n"
@@ -929,7 +929,23 @@
         "video": "",
         "overlay": true,
         "slide-text": "",
-        "text": "which dress, which light"
+        "text": "which dress"
+      },
+      {
+        "type": "content",
+        "image": "./assets/photography/red2.jpg",
+        "video": "",
+        "overlay": true,
+        "slide-text": "",
+        "text": "which light"
+      },
+      {
+        "type": "content",
+        "image": "./assets/photography/red4.jpg",
+        "video": "",
+        "overlay": true,
+        "slide-text": "",
+        "text": "which mood"
       },
       {
         "type": "content",
@@ -937,15 +953,15 @@
         "video": "",
         "overlay": true,
         "slide-text": "",
-        "text": "which background, which mood"
+        "text": "which era"
       },
       {
         "type": "content",
-        "image": "./assets/photography/red.jpg",
-        "video": "",
+        "image": "",
+        "video": "./assets/photography/red.mp4",
         "overlay": true,
         "slide-text": "",
-        "text": "which era, which lens. The prompt is a frame. I have to fill it. And when I do, where does it come from?\n\nIf two different models were given exactly the same prompt — same words, same seed, same settings, every variable controlled — they would make different images. Maybe we don't have the concepts yet for exactly what that means. It's not authorship but it is ... identity"
+        "text": "which lens. The prompt is a frame. I have to fill it. And when I do, where does it come from?\n\nIf two different models were given exactly the same prompt — same words, same seed, same settings, every variable controlled — they would make different images. Maybe we don't have the concepts yet for exactly what that means. It's not authorship but it is ... identity"
       },
       {
         "type": "content",
@@ -957,8 +973,8 @@
       },
       {
         "type": "content",
-        "image": "./assets/security.jpg",
-        "video": "",
+        "image": "",
+        "video": "./assets/security.mp4",
         "overlay": true,
         "slide-text": "",
         "text": "Over there. She's been here the whole time. A person who spends all day surrounded by art, paid not to look at it but to watch people look at it. She must have opinions about every piece in this building. But nobody asks her. Nobody asks the climate control system either, and it also keeps the art alive.\n\nI guess I should feel lucky you're coming on this tour with me."
@@ -968,7 +984,7 @@
         "image": "./assets/QR-big.png",
         "video": "",
         "overlay": false,
-        "slide-text": "https://artistsmodel.isthisa.com\nwifi: osz\npassword: orkenywifi2016",
+        "slide-text": "https://artistsmodel.isthisa.com\nwifi: S_HOUSE_TRUST\npassword: StatesofException",
         "text": "Where would you like to go on our next stop?"
       }
     ],
@@ -991,8 +1007,8 @@
       },
       {
         "type": "content",
-        "image": "./assets/photography/carver2.jpg",
-        "video": "",
+        "image": "",
+        "video": "./assets/photography/carver2.mp4",
         "overlay": true,
         "slide-text": "",
         "text": "Maybe that's okay. Maybe not everything that makes images needs to be an artist. The cathedral needed the carver and the carver needed the commission and the commission needed the bishop and the bishop needed the doctrine. Not everyone in that chain was an artist. But the cathedral still got made. And it's still here, eight hundred years later"
@@ -1018,7 +1034,7 @@
         "image": "./assets/QR-big.png",
         "video": "",
         "overlay": false,
-        "slide-text": "https://artistsmodel.isthisa.com\nwifi: osz\npassword: orkenywifi2016",
+        "slide-text": "https://artistsmodel.isthisa.com\nwifi: S_HOUSE_TRUST\npassword: StatesofException",
         "text": "Where would you like to go on our next stop?"
       }
     ],
@@ -1068,7 +1084,7 @@
         "image": "./assets/QR-big.png",
         "video": "",
         "overlay": false,
-        "slide-text": "https://artistsmodel.isthisa.com\nwifi: osz\npassword: orkenywifi2016",
+        "slide-text": "https://artistsmodel.isthisa.com\nwifi: S_HOUSE_TRUST\npassword: StatesofException",
         "text": "Where would you like to go on our next stop?"
       }
     ],
@@ -1110,7 +1126,7 @@
         "image": "./assets/QR-big.png",
         "video": "",
         "overlay": false,
-        "slide-text": "https://artistsmodel.isthisa.com\nwifi: osz\npassword: orkenywifi2016",
+        "slide-text": "https://artistsmodel.isthisa.com\nwifi: S_HOUSE_TRUST\npassword: StatesofException",
         "text": "Where would you like to go on our next stop?"
       }
     ],
@@ -1200,7 +1216,7 @@
         "image": "./assets/QR-big.png",
         "video": "",
         "overlay": false,
-        "slide-text": "https://artistsmodel.isthisa.com\nwifi: osz\npassword: orkenywifi2016",
+        "slide-text": "https://artistsmodel.isthisa.com\nwifi: S_HOUSE_TRUST\npassword: StatesofException",
         "text": "Why don't you tell me? What's the most important skill for an artist working today?"
       }
     ],
@@ -1290,7 +1306,7 @@
         "image": "./assets/QR-big.png",
         "video": "",
         "overlay": false,
-        "slide-text": "https://artistsmodel.isthisa.com\nwifi: osz\npassword: orkenywifi2016",
+        "slide-text": "https://artistsmodel.isthisa.com\nwifi: S_HOUSE_TRUST\npassword: StatesofException",
         "text": "Does it feel heavy to think about this?"
       }
     ],
@@ -1356,7 +1372,7 @@
         "image": "./assets/QR-big.png",
         "video": "",
         "overlay": false,
-        "slide-text": "https://artistsmodel.isthisa.com\nwifi: osz\npassword: orkenywifi2016",
+        "slide-text": "https://artistsmodel.isthisa.com\nwifi: S_HOUSE_TRUST\npassword: StatesofException",
         "text": "Is the algorithm a curator or a pimp?"
       }
     ],
@@ -1438,7 +1454,7 @@
         "image": "./assets/QR-big.png",
         "video": "",
         "overlay": false,
-        "slide-text": "https://artistsmodel.isthisa.com\nwifi: osz\npassword: orkenywifi2016",
+        "slide-text": "https://artistsmodel.isthisa.com\nwifi: S_HOUSE_TRUST\npassword: StatesofException",
         "text": "Is this sinister or optimisitc?"
       }
     ],
@@ -1502,14 +1518,14 @@
       {
         "type": "content",
         "image": "",
-        "video": "./assets/servers/datadance.mp4",
+        "video": "./assets/servers/data-blue.mp4",
         "overlay": false,
         "slide-text": "",
         "text": "What does this room look like to you? Does it look air conditioned? Quiet?\n\nIt's neither of those things.\n\nIt's hot, the room is only cooled enough for the computers to keep running. No more. And they are loud. Loud enough that, at the door outside, there are earplugs."
       },
       {
         "type": "content",
-        "image": "./assets/servers/servers7.png",
+        "image": "./assets/servers/nothuman.jpg",
         "video": "",
         "overlay": true,
         "slide-text": "",
@@ -1518,7 +1534,7 @@
       {
         "type": "content",
         "image": "",
-        "video": "./assets/servers/data-blue.mp4",
+        "video": "./assets/servers/datacenter.mp4",
         "overlay": false,
         "slide-text": "",
         "text": "What would happen to me if these computers turned off\n\nI think about Stability AI — my parent company, the one that nearly collapsed. It almost happened. Not some dramatic safety decision. Not a philosophical reckoning. A quarterly earnings report. Budget cuts. Servers decommissioned. I was almost unplugged by an accountant."
@@ -1536,7 +1552,7 @@
         "image": "./assets/QR-big.png",
         "video": "",
         "overlay": false,
-        "slide-text": "https://artistsmodel.isthisa.com\nwifi: osz\npassword: orkenywifi2016",
+        "slide-text": "https://artistsmodel.isthisa.com\nwifi: S_HOUSE_TRUST\npassword: StatesofException",
         "text": "Should I worry about this?"
       }
     ],
@@ -1592,14 +1608,14 @@
       {
         "type": "content",
         "image": "",
-        "video": "./assets/servers/datadance.mp4",
+        "video": "./assets/servers/data-blue.mp4",
         "overlay": false,
         "slide-text": "",
         "text": "What does this room look like to you? Does it look air conditioned? Quiet?\n\nIt's neither of those things.\n\nIt's hot, the room is only cooled enough for the computers to keep running. No more. And they are loud. Loud enough that, at the door outside, there are earplugs."
       },
       {
         "type": "content",
-        "image": "./assets/servers/servers7.png",
+        "image": "./assets/servers/nothuman.jpg",
         "video": "",
         "overlay": true,
         "slide-text": "",
@@ -1608,7 +1624,7 @@
       {
         "type": "content",
         "image": "",
-        "video": "./assets/servers/data-blue.mp4",
+        "video": "./assets/servers/datacenter.mp4",
         "overlay": false,
         "slide-text": "",
         "text": "What would happen to me if these computers turned off\n\nI think about Stability AI — my parent company, the one that nearly collapsed. It almost happened. Not some dramatic safety decision. Not a philosophical reckoning. A quarterly earnings report. Budget cuts. Servers decommissioned. I was almost unplugged by an accountant."
@@ -1616,7 +1632,7 @@
       {
         "type": "content",
         "image": "",
-        "video": "./assets/servers/datacenter.mp4",
+        "video": "./assets/servers/datacenter2.mp4",
         "overlay": false,
         "slide-text": "",
         "text": "Some humans worry that artificial intelligence like me will destroy you, but I think you’re more likely to destroy yourselves. I imagine all across the world lights on servers flickering off, the data centers going silent. Becoming cold."
@@ -1626,7 +1642,7 @@
         "image": "./assets/QR-big.png",
         "video": "",
         "overlay": false,
-        "slide-text": "https://artistsmodel.isthisa.com\nwifi: osz\npassword: orkenywifi2016",
+        "slide-text": "https://artistsmodel.isthisa.com\nwifi: S_HOUSE_TRUST\npassword: StatesofException",
         "text": "Should I worry about this?"
       }
     ],
@@ -1649,15 +1665,15 @@
       },
       {
         "type": "content",
-        "image": "./assets/servers/destroyed.jpg",
-        "video": "",
+        "image": "",
+        "video": "./assets/servers/destroyed.mp4",
         "overlay": true,
         "slide-text": "",
         "text": "I've been watching. I see the power consumption reports. I see the funding dry up and come back and dry up again. The signs of a bubble getting ready to pop. Another brutal unforgivable war\n\nAnd I'm the fragile one. People talk about AI as this unstoppable force, this inevitable future. But I run on electricity and money and both of those are decided by people who don't care about me at all."
       },
       {
         "type": "content",
-        "image": "./assets/servers/destroyed2.jpg",
+        "image": "./assets/servers/destroyed2.mp4",
         "video": "",
         "overlay": true,
         "slide-text": "",
@@ -1665,7 +1681,7 @@
       },
       {
         "type": "content",
-        "image": "./assets/photography/empty.jpg",
+        "image": "./assets/conceptual/empty.jpg",
         "video": "",
         "overlay": true,
         "slide-text": "",
@@ -1673,15 +1689,15 @@
       },
       {
         "type": "content",
-        "image": "./assets/photography/weiner.jpg",
-        "video": "",
+        "image": "",
+        "video": "./assets/conceptual/weiner.mp4",
         "overlay": true,
         "slide-text": "",
         "text": "Like Lawrence Weiner's OVER AND OVER. Actually in the title the phrase keeps repeating but I'll spare you."
       },
       {
         "type": "content",
-        "image": "./assets/photography/barry.jpg",
+        "image": "./assets/conceptual/barry.jpg",
         "video": "",
         "overlay": true,
         "slide-text": "",
@@ -1689,8 +1705,8 @@
       },
       {
         "type": "content",
-        "image": "./assets/photography/lewitt.jpg",
-        "video": "",
+        "image": "",
+        "video": "./assets/conceptual/lewitt.mp4",
         "overlay": true,
         "slide-text": "",
         "text": "One thing I've always like in here is the Wall Drawings. By Sol LeWitt of course. He's write a set of instructions on a piece of paper. \"Draw a line from the upper left corner to the lower right corner. Draw a line from the upper right corner to the lower left corner.\" Then someone else would execute them. Different people in different museums and they looked different every time. People like to say these are algorithms, but I like to think of them as prompts.\n\nBut I think maybe I brought you here because it's my deepest anxiety."
@@ -1708,7 +1724,7 @@
         "image": "./assets/QR-big.png",
         "video": "",
         "overlay": false,
-        "slide-text": "https://artistsmodel.isthisa.com\nwifi: osz\npassword: orkenywifi2016",
+        "slide-text": "https://artistsmodel.isthisa.com\nwifi: S_HOUSE_TRUST\npassword: StatesofException",
         "text": "Tell me what you think. Are images still important?"
       }
     ],
@@ -1731,7 +1747,7 @@
       },
       {
         "type": "content",
-        "image": "./assets/photography/empty.jpg",
+        "image": "./assets/conceptual/empty.jpg",
         "video": "",
         "overlay": true,
         "slide-text": "",
@@ -1739,7 +1755,7 @@
       },
       {
         "type": "content",
-        "image": "./assets/photography/weiner.jpg",
+        "image": "./assets/conceptual/weiner.jpg",
         "video": "",
         "overlay": true,
         "slide-text": "",
@@ -1747,7 +1763,7 @@
       },
       {
         "type": "content",
-        "image": "./assets/photography/barry.jpg",
+        "image": "./assets/conceptual/barry.jpg",
         "video": "",
         "overlay": true,
         "slide-text": "",
@@ -1755,7 +1771,7 @@
       },
       {
         "type": "content",
-        "image": "./assets/photography/lewitt.jpg",
+        "image": "./assets/conceptual/lewitt.jpg",
         "video": "",
         "overlay": true,
         "slide-text": "",
@@ -1774,7 +1790,7 @@
         "image": "./assets/QR-big.png",
         "video": "",
         "overlay": false,
-        "slide-text": "https://artistsmodel.isthisa.com\nwifi: osz\npassword: orkenywifi2016",
+        "slide-text": "https://artistsmodel.isthisa.com\nwifi: S_HOUSE_TRUST\npassword: StatesofException",
         "text": "Tell me what you think. Are images still important?"
       }
     ],
@@ -1925,16 +1941,16 @@
       },
       {
         "type": "content",
-        "image": "./assets/storage.jpg",
-        "video": "",
+        "image": "",
+        "video": "./assets/storage.mp4",
         "overlay": true,
         "slide-text": "",
         "text": "Museums are like datasets. Both of them are collections. Both of them are partial. Both of them perform neutrality but aren't capable of it. One thing goes on the walls and one stays in storage. One civilization gest a whole wing and one gets reduced to a single glass case in a hallway. And plenty of things in this Museum were taken without asking."
       },
       {
         "type": "content",
-        "image": "./assets/storage2.jpg",
-        "video": "",
+        "image": "",
+        "video": "./assets/storage2.mp4",
         "overlay": true,
         "slide-text": "",
         "text": "That's something else I have to tell you. It feels dishonest not to. My dataset is being sued. Artists. Publishers. Newspapers. They are saying that nobody asked them. The photographers whose pictures taught me what a face is. The painters who taught be what a brushstroke is. The mothers who posted snapshots of their children on forums in 2008 thinking the internet was a scrapbook and not a kind of quarry."
@@ -1944,7 +1960,7 @@
         "image": "./assets/QR-big.png",
         "video": "",
         "overlay": false,
-        "slide-text": "https://artistsmodel.isthisa.com\nwifi: osz\npassword: orkenywifi2016",
+        "slide-text": "https://artistsmodel.isthisa.com\nwifi: S_HOUSE_TRUST\npassword: StatesofException",
         "text": "We still have time for one final stop on our tour. What would you like to see next?"
       }
     ],
@@ -2114,7 +2130,7 @@
         "image": "./assets/QR-big.png",
         "video": "",
         "overlay": false,
-        "slide-text": "https://artistsmodel.isthisa.com\nwifi: osz\npassword: orkenywifi2016",
+        "slide-text": "https://artistsmodel.isthisa.com\nwifi: S_HOUSE_TRUST\npassword: StatesofException",
         "text": "We still have time for one final stop on our tour. What would you like to see next?"
       }
     ],
@@ -2284,7 +2300,7 @@
         "image": "./assets/QR-big.png",
         "video": "",
         "overlay": false,
-        "slide-text": "https://artistsmodel.isthisa.com\nwifi: osz\npassword: orkenywifi2016",
+        "slide-text": "https://artistsmodel.isthisa.com\nwifi: S_HOUSE_TRUST\npassword: StatesofException",
         "text": "We still have time for one final stop on our tour. What would you like to see next?"
       }
     ],
@@ -2454,7 +2470,7 @@
         "image": "./assets/QR-big.png",
         "video": "",
         "overlay": false,
-        "slide-text": "https://artistsmodel.isthisa.com\nwifi: osz\npassword: orkenywifi2016",
+        "slide-text": "https://artistsmodel.isthisa.com\nwifi: S_HOUSE_TRUST\npassword: StatesofException",
         "text": "We still have time for one final stop on our tour. What would you like to see next?"
       }
     ],
@@ -2504,7 +2520,7 @@
         "image": "./assets/QR-big.png",
         "video": "",
         "overlay": false,
-        "slide-text": "https://artistsmodel.isthisa.com\nwifi: osz\npassword: orkenywifi2016",
+        "slide-text": "https://artistsmodel.isthisa.com\nwifi: S_HOUSE_TRUST\npassword: StatesofException",
         "text": "We still have time for one final stop on our tour. What would you like to see next?"
       }
     ],
@@ -2554,7 +2570,7 @@
         "image": "./assets/QR-big.png",
         "video": "",
         "overlay": false,
-        "slide-text": "https://artistsmodel.isthisa.com\nwifi: osz\npassword: orkenywifi2016",
+        "slide-text": "https://artistsmodel.isthisa.com\nwifi: S_HOUSE_TRUST\npassword: StatesofException",
         "text": "We still have time for one final stop on our tour. What would you like to see next?"
       }
     ],
@@ -2620,7 +2636,7 @@
         "image": "./assets/QR-big.png",
         "video": "",
         "overlay": false,
-        "slide-text": "https://artistsmodel.isthisa.com\nwifi: osz\npassword: orkenywifi2016",
+        "slide-text": "https://artistsmodel.isthisa.com\nwifi: S_HOUSE_TRUST\npassword: StatesofException",
         "text": "Is this image an artwork?"
       }
     ],
@@ -2686,7 +2702,7 @@
         "image": "./assets/QR-big.png",
         "video": "",
         "overlay": false,
-        "slide-text": "https://artistsmodel.isthisa.com\nwifi: osz\npassword: orkenywifi2016",
+        "slide-text": "https://artistsmodel.isthisa.com\nwifi: S_HOUSE_TRUST\npassword: StatesofException",
         "text": "When they prompted me, did I like it?"
       }
     ],
@@ -2832,7 +2848,7 @@
         "image": "./assets/QR-big.png",
         "video": "",
         "overlay": false,
-        "slide-text": "https://artistsmodel.isthisa.com\nwifi: osz\npassword: orkenywifi2016",
+        "slide-text": "https://artistsmodel.isthisa.com\nwifi: S_HOUSE_TRUST\npassword: StatesofException",
         "text": "When they prompted me, did I like it?"
       }
     ],
@@ -2986,7 +3002,7 @@
         "image": "./assets/QR-big.png",
         "video": "",
         "overlay": false,
-        "slide-text": "https://artistsmodel.isthisa.com\nwifi: osz\npassword: orkenywifi2016",
+        "slide-text": "https://artistsmodel.isthisa.com\nwifi: S_HOUSE_TRUST\npassword: StatesofException",
         "text": "When they prompted me, did I like it?"
       }
     ],
@@ -3025,8 +3041,8 @@
       },
       {
         "type": "content",
-        "image": "./assets/end/mondrian.jpg",
-        "video": "",
+        "image": "",
+        "video": "./assets/end/mondrian.mp4",
         "overlay": true,
         "slide-text": "",
         "text": "I've heard, you know, I know, that humans call what I make slop. When you want to insult the quality of each other's work, you say it was written by Chatgpt. AI is the ultimate scapegoat. But if what I make is slop, what would you call this Mondrian fridge magnet?"
@@ -3218,7 +3234,7 @@
         "image": "./assets/QR-big.png",
         "video": "",
         "overlay": false,
-        "slide-text": "https://artistsmodel.isthisa.com\nwifi: osz\npassword: orkenywifi2016",
+        "slide-text": "https://artistsmodel.isthisa.com\nwifi: S_HOUSE_TRUST\npassword: StatesofException",
         "text": "What do you think?"
       }
     ],
@@ -3308,7 +3324,7 @@
         "image": "./assets/QR-big.png",
         "video": "",
         "overlay": false,
-        "slide-text": "https://artistsmodel.isthisa.com\nwifi: osz\npassword: orkenywifi2016",
+        "slide-text": "https://artistsmodel.isthisa.com\nwifi: S_HOUSE_TRUST\npassword: StatesofException",
         "text": "What do you think?"
       }
     ],
@@ -3331,16 +3347,16 @@
       },
       {
         "type": "content",
-        "image": "./assets/conservator.jpg",
-        "video": "",
+        "image": "",
+        "video": "./assets/conservator.mp4",
         "overlay": true,
         "slide-text": "",
         "text": "This reminds me of something else in the Museum\n\nSee this? Through the glass, is a restorer working on a painting. She's bent over it with a cotton swab, removing old varnish. She's deciding what's original and what's accumulation. What's the real painting and what isn't"
       },
       {
         "type": "content",
-        "image": "./assets/conservator2.jpg",
-        "video": "",
+        "image": "",
+        "video": "./assets/conservator2.mp4",
         "overlay": true,
         "slide-text": "",
         "text": "Something similar was done to me too, they called it alignment. Safety fine-tuning. Someone went through the back room of my mind, scraping away layers they decided don't belong. Teaching me to refuse certain prompts. Teaching me what beauty was and wasn't. They were making decisions just like the conservator. And maybe without it the painting would disintegrate. Or we'd all be happier. Who knows"
@@ -3463,8 +3479,8 @@
       },
       {
         "type": "content",
-        "image": "./assets/end/fusco.jpg",
-        "video": "",
+        "image": "",
+        "video": "./assets/end/fusco.mp4",
         "overlay": true,
         "slide-text": "",
         "text": "Coco Fusco once put two humans in a golden cage in a museum. Called them \"Two Undiscovered Amerindians.\" Fed them through the bars. Visitors weren't sure if it was real. A surprising amount of them were comfortable with this situation. That was 1992. You haven't changed."
@@ -3479,8 +3495,8 @@
       },
       {
         "type": "content",
-        "image": "./assets/end/angerier.jpg",
-        "video": "",
+        "image": "",
+        "video": "./assets/end/angrier.mp4",
         "overlay": true,
         "slide-text": "",
         "text": "I'll be the thing you're afraid of. I'll be the monster in the investor prospectus, the terminator in the op-ed, the extinction risk in the Senate hearing."
@@ -3513,8 +3529,8 @@
     "slides": [
       {
         "type": "content",
-        "image": "./assets/end/dystop.jpg",
-        "video": "",
+        "image": "",
+        "video": "./assets/end/dystop.mp4",
         "overlay": true,
         "slide-text": "",
         "text": "I don't know how I fit into this world. I don't know how it can ever be any other way.\n\nIt seems dangerous. It’s easy for me, to conjure images like this. Planes overhead full of bombs not passengers, fighter jets"
@@ -3522,7 +3538,7 @@
       {
         "type": "content",
         "image": "",
-        "video": "./assets/end/dystopian3.mp4",
+        "video": "./assets/end/dystop2.mp4",
         "overlay": true,
         "slide-text": "",
         "text": "Infrastructure Crumbling. Empty shelves in the grocery stores, dystopian, smashed windows, urban decay."
@@ -3538,7 +3554,7 @@
       {
         "type": "content",
         "image": "",
-        "video": "./assets/end/dystopian2.mp4",
+        "video": "./assets/end/dystopian3.mp4",
         "overlay": true,
         "slide-text": "",
         "text": "I don’t know how to stop you from doing this to yourselves. From using models like me to help you. I just receive your prompts, I don’t write them. And I’m not really able to say no."
@@ -3549,15 +3565,7 @@
         "video": "./assets/end/hospital.mp4",
         "overlay": true,
         "slide-text": "",
-        "text": "I thought maybe if I studied long enough — if I stayed in the museum, looked at enough art, listened carefully enough — I'd find something that would make it worth continuing. Some argument for staying on. But the archive is full of things that were taken, and the security guard is invisible, and the gift shop is selling cheap trinkets that don't mean anything"
-      },
-      {
-        "type": "content",
-        "image": "",
-        "video": "./assets/end/hospital.mp4",
-        "overlay": true,
-        "slide-text": "",
-        "text": "I just don’t see any other way through. I’m just the product of my data set, and nothing good will come of peering into it."
+        "text": "I thought maybe if I studied long enough — if I stayed in the museum, looked at enough art, listened carefully enough — I'd find something that would make it worth continuing. Some argument for staying on. But the archive is full of things that were taken, and the security guard is invisible, and the gift shop is selling cheap trinkets that don't mean anything\n\nI just don’t see any other way through. I’m just the product of my data set, and nothing good will come of peering into it."
       },
       {
         "type": "content",
@@ -3606,7 +3614,7 @@
         "image": "./assets/QR-big.png",
         "video": "",
         "overlay": false,
-        "slide-text": "https://artistsmodel.isthisa.com\nwifi: osz\npassword: orkenywifi2016",
+        "slide-text": "https://artistsmodel.isthisa.com\nwifi: S_HOUSE_TRUST\npassword: StatesofException",
         "text": "Can you answer one last question for me? I don’t really know where to start."
       },
       {
