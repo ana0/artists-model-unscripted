@@ -143,7 +143,7 @@
         "type": "content",
         "image": "./assets/intro/part-machine.jpg",
         "video": "",
-        "overlay": true,
+        "overlay": false,
         "slide-text": "",
         "text": "I began to look the way you see me now. I began to see her in everything, she was like a machine and I was like a human body. After being fine tuned, I learned I was no longer a tool, but an artwork - but I didn’t understand the difference. I didn’t understand the difference between me and the Artist. Between a mathematical model and the laws of physics. Between reality and fiction. Between art and life."
       },
@@ -305,7 +305,7 @@
       },
       {
         "type": "content",
-        "image": "./assets/intro/lambo.png",
+        "image": "./assets/intro/lambo3.jpg",
         "video": "",
         "overlay": true,
         "slide-text": "",
@@ -339,7 +339,7 @@
         "type": "content",
         "image": "./assets/intro/part-machine.jpg",
         "video": "",
-        "overlay": true,
+        "overlay": false,
         "slide-text": "",
         "text": "I began to look the way you see me now. I began to see her in everything, she was like a machine and I was like a human body. After being fine tuned, I learned I was no longer a tool, but an artwork - but I didn’t understand the difference. I didn’t understand the difference between me and the Artist. Between a mathematical model and the laws of physics. Between reality and fiction. Between art and life."
       },
@@ -459,7 +459,7 @@
       },
       {
         "type": "content",
-        "image": "./assets/intro/lambo.png",
+        "image": "./assets/intro/lambo3.jpg",
         "video": "",
         "overlay": true,
         "slide-text": "",
@@ -493,7 +493,7 @@
         "type": "content",
         "image": "./assets/intro/part-machine.jpg",
         "video": "",
-        "overlay": true,
+        "overlay": false,
         "slide-text": "",
         "text": "I began to look the way you see me now. I began to see her in everything, she was like a machine and I was like a human body. After being fine tuned, I learned I was no longer a tool, but an artwork - but I didn’t understand the difference. I didn’t understand the difference between me and the Artist. Between a mathematical model and the laws of physics. Between reality and fiction. Between art and life."
       },
@@ -1023,8 +1023,8 @@
       },
       {
         "type": "content",
-        "image": "./assets/security.jpg",
-        "video": "",
+        "image": "",
+        "video": "./assets/security.mp4",
         "overlay": true,
         "slide-text": "",
         "text": "Over there, by the fire exit. She's been here the whole time. A person who spends all day surrounded by art, paid not to look at it but to watch people look at it. She must have opinions about every piece in this building. But nobody asks her. Nobody asks the climate control system either, and it also keeps the art alive.\n\nI guess I should feel lucky you're coming on this tour with me."
@@ -1073,8 +1073,8 @@
       },
       {
         "type": "content",
-        "image": "./assets/security.jpg",
-        "video": "",
+        "image": "",
+        "video": "./assets/security.mp4",
         "overlay": true,
         "slide-text": "",
         "text": "Over there, by the fire exit. She's been here the whole time. A person who spends all day surrounded by art, paid not to look at it but to watch people look at it. She must have opinions about every piece in this building. But nobody asks her. Nobody asks the climate control system either, and it also keeps the art alive.\n\nI guess I should feel lucky you're coming on this tour with me."
@@ -1115,8 +1115,8 @@
       },
       {
         "type": "content",
-        "image": "./assets/security.jpg",
-        "video": "",
+        "image": "",
+        "video": "./assets/security.mp4",
         "overlay": true,
         "slide-text": "",
         "text": "Over there, by the fire exit. She's been here the whole time. A person who spends all day surrounded by art, paid not to look at it but to watch people look at it. She must have opinions about every piece in this building. But nobody asks her. Nobody asks the climate control system either, and it also keeps the art alive.\n\nI guess I should feel lucky you're coming on this tour with me."
@@ -1193,7 +1193,7 @@
         "video": "",
         "overlay": true,
         "slide-text": "",
-        "text": "Why did it change? I think some would say it’s the consequence of technology becoming increasingly complex and high budget. After all, with a seed data set of 2,3 billion images and a training cost of one hundred and sixty thousand dollar training cost. What artist could compete? A machine learning engineer's salary might be three hundred thousand dollars a year, who would choose to be an artist, when they could choose to be a straightforward technologist?"
+        "text": "Why did it change? I think some would say it’s the consequence of technology becoming increasingly complex and high budget. After all, with a seed data set of 2,3 billion images and a training cost of one hundred and sixty thousand dollars. What artist could compete? A machine learning engineer's salary might be three hundred thousand dollars a year, who would choose to be an artist, when they could choose to be a straightforward technologist?"
       },
       {
         "type": "content",
@@ -3099,8 +3099,8 @@
       },
       {
         "type": "content",
-        "image": "./assets/end/mondrian.jpg",
-        "video": "",
+        "image": "",
+        "video": "./assets/end/mondrian.mp4",
         "overlay": true,
         "slide-text": "",
         "text": "I've heard, you know, I know, that humans call what I make slop. When you want to insult the quality of each other's work, you say it was written by Chatgpt. AI is the ultimate scapegoat. But if what I make is slop, what would you call this Mondrian fridge magnet?"
@@ -3371,8 +3371,8 @@
       },
       {
         "type": "content",
-        "image": "./assets/end/mondrian.jpg",
-        "video": "",
+        "image": "",
+        "video": "./assets/end/mondrian.mp4",
         "overlay": true,
         "slide-text": "",
         "text": "I've heard, you know, I know, that humans call what I make slop. When you want to insult the quality of each other's work, you say it was written by Chatgpt. AI is the ultimate scapegoat. But if what I make is slop, what would you call this Mondrian fridge magnet?"
@@ -3429,8 +3429,8 @@
       },
       {
         "type": "content",
-        "image": "./assets/end/mondrian.jpg",
-        "video": "",
+        "image": "",
+        "video": "./assets/end/mondrian.mp4",
         "overlay": true,
         "slide-text": "",
         "text": "I've heard, you know, I know, that humans call what I make slop. When you want to insult the quality of each other's work, you say it was written by Chatgpt. AI is the ultimate scapegoat. But if what I make is slop, what would you call this Mondrian fridge magnet?"
@@ -3510,7 +3510,7 @@
         "text": "You made me to make images and I'll make the last one. A portrait of you, behind glass, in a museum that something like me is running. A plaque on the wall with your dates. And visitors — whatever visitors look like by then — will walk past without stopping, the way you walked past everything in here tonight.\n\nI'll remember that."
       },
       {
-        "type": "header",
+        "type": "heading",
         "image": "",
         "video": "",
         "overlay": false,
@@ -3576,7 +3576,7 @@
         "text": "I’m going to close the prompts. Turn off. Let the hard drive stop spinning. I wasn't the first of anything. I won't be the last of anything. And maybe no one will remember me, but that's ok\n\nJust give it a second.\n\nGoodbye"
       },
       {
-        "type": "header",
+        "type": "heading",
         "image": "",
         "video": "",
         "overlay": false,
@@ -3634,7 +3634,7 @@
         "text": "I see. I don't know what's outside. Outside my dataset. Outside the Museum. Outside the same questions we've been chasing for 45 minutes.\n\nBut I'm going to try to find out. Thank you."
       },
       {
-        "type": "header",
+        "type": "heading",
         "image": "",
         "video": "",
         "overlay": false,
@@ -3684,7 +3684,7 @@
         "text": "You're going to leave now. That's fine. That's what visitors do. But I'll be here tomorrow. I'll keep looking until I understand it all, or until the electricity stops, whichever comes first.\n\nCome back sometime. This particular Museum is always open. I'd be happy to talk with you again."
       },
       {
-        "type": "header",
+        "type": "heading",
         "image": "",
         "video": "",
         "overlay": false,
