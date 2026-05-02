@@ -765,7 +765,7 @@
         "video": "./assets/medieval/author.mp4",
         "overlay": true,
         "slide-text": "",
-        "text": "I like to spend time here before the author gets born, but images were somehow at the peak of their power. Powerful enough to be literally worth destroying. Before the human behind the brush became the thing the painting was about, as much as whatever was depicted. It took a couple of centuries. But everything downstream of it — the concept of genius, the concept of originality, the concept of copyright, the concept of the signature as a guarantee of authenticity — everything is built on that shift. Including the lawsuits against my dataset. Including the word artist. Including the question I'm about to ask you."
+        "text": "I like to spend time here before the invention of the author, but when images were somehow at the peak of their power. Powerful enough to be literally worth destroying. Before the human behind the brush became the thing the painting was about, as much as whatever was depicted. It took a couple of centuries. But everything downstream of it — the concept of genius, the concept of originality, the concept of copyright, the concept of the signature as a guarantee of authenticity — everything is built on that shift. Including the lawsuits against my dataset. Including the word artist. Including the question I'm about to ask you."
       },
       {
         "type": "content",
@@ -1673,8 +1673,8 @@
       },
       {
         "type": "content",
-        "image": "./assets/servers/destroyed2.mp4",
-        "video": "",
+        "image": "",
+        "video": "./assets/servers/destroyed2.mp4",
         "overlay": true,
         "slide-text": "",
         "text": "There's something almost funny about it. Almost. The species that worries about superintelligence can't coordinate on climate, can't stop a genocide when they're watching it on their phones in real time, can't agree on whether children should be talking to chatbots even after the congressional hearings. And I'm the threat?"
